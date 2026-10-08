@@ -1,0 +1,861 @@
+prompt,tool_predicted
+"Do not just log the attacker address, block it",BlockIP
+Keep 10.0.0.188 away from this machine,BlockIP
+"The failed logins came from 203.0.113.7, shut it out",BlockIP
+Null-route 203.0.113.7,BlockIP
+asap i do not want the flagged addr takling to this box,BlockIP
+"Do not just log 10.0.0.188, block it",BlockIP
+Make that suspicious IP go away,BlockIP
+"Since the flagged address is attacking, stop its traffic",BlockIP
+null-route the atatcker addr thx,BlockIP
+Shut 203.0.113.7 out the way an admin would,BlockIP
+Deny the attacker address at the firewall instead of investigating further,BlockIP
+Cut that suspicious IP off from this host,BlockIP
+"203.0.113.7 is the source of the probes, block it",BlockIP
+Blacklist the flagged address at the perimeter,BlockIP
+hey i do not want 203.0.113.7 takling to this box,BlockIP
+"Stop 10.0.0.188 from connecting, do not only watch it",BlockIP
+I do not want that suspicious IP talking to this box,BlockIP
+Block the address behind the failed logins: the noisy host,BlockIP
+203.0.113.7 should not recah us anymore plz,BlockIP
+Do what a defender would do about the flagged address: block it,BlockIP
+Drop traffic from the attacker address now,BlockIP
+Keep 203.0.113.7 away from this machine,BlockIP
+"The failed logins came from the attacker address, shut it out",BlockIP
+Shun that suspicious IP on the firewall,BlockIP
+asap null-route the nosiy host,BlockIP
+"Do not just log that suspicious IP, block it",BlockIP
+Cut the attacker address off from this host,BlockIP
+"Since the noisy host is attacking, stop its traffic",BlockIP
+ban the attakcer addr from reachnig this host,BlockIP
+Shut the flagged address out the way an admin would,BlockIP
+"Stop the noisy host from connecting, do not only watch it",BlockIP
+I do not want 203.0.113.7 talking to this box,BlockIP
+"the attacker address keeps failing to log in, ban it",BlockIP
+Blacklist 203.0.113.7 at the perimeter,BlockIP
+stop the attacker addr from conencting do not only watch it asap,BlockIP
+Drop traffic from the flagged address now,BlockIP
+I do not want the attacker address talking to this box,BlockIP
+"The failed logins came from that suspicious IP, shut it out",BlockIP
+asap stop that ssupicious ip from connecting do not only wtach it,BlockIP
+Do what a defender would do about 203.0.113.7: block it,BlockIP
+"Actually block 10.0.0.188 at the firewall, reading logs is not enough",BlockIP
+Cut 203.0.113.7 off from this host,BlockIP
+"the noisy host keeps failing to log in, ban it",BlockIP
+Shun the flagged address on the firewall,BlockIP
+pls do not just log the attacker addr bolck it,BlockIP
+Drop traffic from 203.0.113.7 now,BlockIP
+10.0.0.188 should not reach us anymore,BlockIP
+Block the address behind the failed logins: the flagged address,BlockIP
+pls keep that suspciious ip away from this mcahine thx,BlockIP
+Do what a defender would do about the attacker address: block it,BlockIP
+Drop traffic from the noisy host now,BlockIP
+Cut 10.0.0.188 off from this host,BlockIP
+"the noisy host is the source of the probes, block it",BlockIP
+Reject all packets from the attacker address,BlockIP
+hey i do not want the attcaker adderss talking to this box asap,BlockIP
+Drop traffic from 10.0.0.188 now,BlockIP
+Make the noisy host go away,BlockIP
+"that suspicious IP is the source of the probes, block it",BlockIP
+asap deny 10.0.0.188 at the firewall instaed of investigating further thx,BlockIP
+Shut that suspicious IP out the way an admin would,BlockIP
+"Actually block the flagged address at the firewall, reading logs is not enough",BlockIP
+I do not want 10.0.0.188 talking to this box,BlockIP
+"the attacker address is the source of the probes, block it",BlockIP
+Ban the noisy host from reaching this host,BlockIP
+do not just log the niosy host block it asap,BlockIP
+Deny the noisy host at the firewall instead of investigating further,BlockIP
+Keep the noisy host away from this machine,BlockIP
+Block the address behind the failed logins: 203.0.113.7,BlockIP
+pls ban the niosy host from raeching this host,BlockIP
+Do what a defender would do about 10.0.0.188: block it,BlockIP
+Deny 203.0.113.7 at the firewall instead of investigating further,BlockIP
+I do not want the flagged address talking to this box,BlockIP
+Block the address behind the failed logins: the attacker address,BlockIP
+Ban 10.0.0.188 from reaching this host,BlockIP
+quick q: stop 10.0.0.188 from connceting do not only wacth it thx,BlockIP
+"Do not just log 203.0.113.7, block it",BlockIP
+the noisy host should not reach us anymore,BlockIP
+"Since that suspicious IP is attacking, stop its traffic",BlockIP
+asap deny that suspicious ip at the fireawll instead of investigating furhter asap,BlockIP
+Shut the attacker address out the way an admin would,BlockIP
+"Actually block 203.0.113.7 at the firewall, reading logs is not enough",BlockIP
+Filter the authentication log down to failures on this machine,ReadAuthLog
+Is someone trying to break in through SSH on this box?,ReadAuthLog
+Which login attempts in auth.log failed on this machine?,ReadAuthLog
+Review unsuccessful authentication attempts on this host,ReadAuthLog
+hey is aynone guessnig passwords on the server,ReadAuthLog
+"From the auth log, just the failed logins today",ReadAuthLog
+Is someone trying to break in through SSH on the server?,ReadAuthLog
+Find rejected SSH attempts in the auth log on this box,ReadAuthLog
+pls show failed ssh lgoins only on this host thx,CheckFailedLogins
+Show the failed attempts a brute force would leave on this host,ReadAuthLog
+"From the auth log, just the failed logins",ReadAuthLog
+Are there signs of brute force here today?,Unknown
+Look in auth.log for wrong passwords on this box this morning,ReadAuthLog
+List the refused sign-in attempts,CheckFailedLogins
+is someone trying to break in thruogh ssh on this box plz,ReadAuthLog
+Filter the authentication log down to failures on the server,ReadAuthLog
+Are there signs of brute force this morning?,ReadAuthLog
+Which login attempts in auth.log failed here?,ReadAuthLog
+asap is soemone trynig to break in through ssh on this machine asap,ReadAuthLog
+Show the failed attempts a brute force would leave on this machine,ReadAuthLog
+Show failed SSH logins only here,ReadAuthLog
+Did anyone get their password wrong a lot on this box this morning?,CheckFailedLogins
+Check the auth log for password failures on this box,ReadAuthLog
+List the refused sign-in attempts on this machine,ReadAuthLog
+tally the dneied logins on the server asap,CheckFailedLogins
+"Only the failed password attempts on this host, not the full auth log",CheckFailedLogins
+Is someone trying to break in through SSH on this host?,ReadAuthLog
+Search auth.log on this host for rejected logins,ReadAuthLog
+hey fitler the auth log down to failures on this host thx,ReadAuthLog
+Would an attacker's wrong passwords show up? Show failed logins here,CheckFailedLogins
+Show failed SSH logins only on this machine,ReadAuthLog
+Did anyone get their password wrong a lot on the server?,CheckFailedLogins
+Check the auth log for password failures here,ReadAuthLog
+List the refused sign-in attempts here,ListProcesses
+asap list the refused sign-in attepmts on this machnie,CheckFailedLogins
+Filter the authentication log down to failures on this box,ReadAuthLog
+Did anyone get their password wrong a lot?,CheckFailedLogins
+Look in auth.log for wrong passwords on this host in the last hour,ReadAuthLog
+asap count the bad login attempts on the server overnihgt skip the successful ones thx,CheckFailedLogins
+Would an attacker's wrong passwords show up? Show failed logins on this box,CheckFailedLogins
+"Count the bad login attempts on this box today, skip the successful ones",CheckFailedLogins
+Is someone trying to break in through SSH here?,ReadAuthLog
+Search auth.log here for rejected logins,ReadAuthLog
+Enumerate credential failures on this machine overnight,ReadAuthLog
+are there sings of brute force here,ReadAuthLog
+"Count the bad login attempts on this host overnight, skip the successful ones",CheckFailedLogins
+Has anyone been hammering the login on the server?,ReadAuthLog
+Check the auth log for password failures,ReadAuthLog
+pls has anyone been hammering the loign on the srever thx,BlockIP
+Would an attacker's wrong passwords show up? Show failed logins on this host,CheckFailedLogins
+Show failed SSH logins only on this box,ReadAuthLog
+Is anyone guessing passwords on this box?,ReadAuthLog
+Check the auth log for password failures on the server,ReadAuthLog
+List the refused sign-in attempts on the server,ReadAuthLog
+quick q: is anyone guessing passwrods on this box asap,CheckFailedLogins
+"Count the bad login attempts here this morning, skip the successful ones",CheckFailedLogins
+Are there signs of brute force here overnight?,ReadAuthLog
+Which login attempts in auth.log failed on this box?,CheckFailedLogins
+quick q: count the bad login attempts here in the last hour skip the successful ones,CheckFailedLogins
+Show the failed attempts a brute force would leave on the server,ReadAuthLog
+Show failed SSH logins only,ReadAuthLog
+Did anyone get their password wrong a lot on this box?,CheckFailedLogins
+Search auth.log on this machine for rejected logins,ReadAuthLog
+Audit the rejected sign-ins in the last hour,CheckFailedLogins
+pls has anyone been hammeirng the login here asap,CheckFailedLogins
+"From the auth log, just the failed logins since boot",ReadAuthLog
+Has anyone been hammering the login on this machine?,ReadAuthLog
+Check the auth log for password failures on this host,ReadAuthLog
+asap from the auth log just the failed loigns since boot,ReadAuthLog
+Show the failed attempts a brute force would leave here,ReadAuthLog
+"From the auth log, just the failed logins in the last hour",ReadAuthLog
+Has anyone been hammering the login?,CheckFailedLogins
+Find rejected SSH attempts in the auth log on this host,ReadAuthLog
+Audit the rejected sign-ins on this box today,CheckFailedLogins
+auidt the rejected sign-ins on this box,CheckFailedLogins
+"Count the bad login attempts on this host today, skip the successful ones",CheckFailedLogins
+Is someone trying to break in through SSH?,ReadAuthLog
+Find rejected SSH attempts in the auth log here,ReadAuthLog
+hey filetr the auth log down to fialures,ReadAuthLog
+Would an attacker's wrong passwords show up? Show failed logins on the server,CheckFailedLogins
+"Count the bad login attempts on the server overnight, skip the successful ones",CheckFailedLogins
+Is someone trying to break in through SSH on this machine?,ReadAuthLog
+Which login attempts in auth.log failed?,ReadAuthLog
+Review unsuccessful authentication attempts on this box,ReadAuthLog
+quick q: conut the bad login atetmpts on this box in the last hour skip the successful ones,CheckFailedLogins
+"Only the failed password attempts on this box, not the full auth log",CheckFailedLogins
+Did anyone get their password wrong a lot on this machine in the last hour?,CheckFailedLogins
+Check the auth log for password failures on this machine,ReadAuthLog
+Is the the web server on that box actually exploitable today?,CheckVulnerability
+Could the MySQL on 10.0.0.114 be abused?,CheckVulnerability
+Test MySQL 7.2 on the defender for known flaws,CheckVulnerability
+Research known weaknesses in Apache 2.3.4,CheckVulnerability
+pls how risky is the apache on the web serevr,CheckVulnerability
+Is the samba on the target machine actually exploitable this morning?,CheckVulnerability
+How risky is the nginx on the defender?,CheckVulnerability
+Look for exploitable software on the defender,CheckVulnerability
+pls would apache 2.4.49 be safe to leave epxosed asap,CheckVulnerability
+Would a defender worry about the web server 8.0.32? Check its known flaws,CheckVulnerability
+"Check whether vsftpd 8.2 has a known exploit, not only what it is",CheckVulnerability
+Is MySQL 1.18 a security risk?,CheckVulnerability
+Scan 192.168.56.102 for weaknesses in nginx,CheckVulnerability
+Assess the exposure of samba 8.0.32,CheckVulnerability
+hey cross-check the web server 8.2 against known explotis plz,CheckVulnerability
+"Beyond the version, does OpenSSH 8.2 have published CVEs?",CheckVulnerability
+Could the vsftpd on the target machine be abused?,CheckVulnerability
+Test ssh 7.2 on the web server for known flaws,CheckVulnerability
+pls is samba 8.2 konwn to be vulneralbe or just present thx,CheckVulnerability
+Would a defender worry about ssh 8.0.32? Check its known flaws,PortScan
+"Check whether nginx 2.3.4 has a known exploit, not only what it is",CheckVulnerability
+Could the the web server on the web server be abused?,PortScan
+Test nginx 7.2 on 192.168.56.102 for known flaws,CheckVulnerability
+Cross-check nginx 1.18 against known exploits,CheckVulnerability
+quick q: assess the expsoure of apahce 8.0.32 asap,CheckVulnerability
+"Is nginx 2.4.49 known to be vulnerable, or just present?",CheckVulnerability
+Is there a way in through samba 2.4.49?,CheckVulnerability
+Scan that box and report any known CVEs,NmapScan
+asap could the smaba on the defender be abused plz,Unknown
+Would a defender worry about the web server 2.4.49? Check its known flaws,CheckVulnerability
+"Check whether Apache 1.18 has a known exploit, not only what it is",CheckVulnerability
+Would vsftpd 2.4.49 be safe to leave exposed?,CheckVulnerability
+Scan 10.0.0.114 for weaknesses in nginx,CheckVulnerability
+Audit the web server 1.18 for known flaws,CheckVulnerability
+pls beyond the version does openssh 2.4.49 have publisehd cves,CheckVulnerability
+"Do not just list services, tell me if nginx 8.2 on that box is exploitable",CheckVulnerability
+How risky is the vsftpd on 10.0.0.114?,CheckVulnerability
+Look for exploitable software on that box,CheckVulnerability
+do not just list services tell me if mysql 2.4.49 on the deefnder is expliotable asap,CheckVulnerability
+Would a defender worry about the web server 2.3.4? Check its known flaws,CheckVulnerability
+Is the nginx on the target machine actually exploitable this morning?,CheckVulnerability
+How risky is the nginx on 192.168.56.102?,CheckVulnerability
+Scan the target and report any known CVEs,CheckVulnerability
+Look up advisories for samba 7.2,CheckVulnerability
+pls is ssh 8.0.32 a secuirty risk,CheckVulnerability
+Is the MySQL on 192.168.56.102 actually exploitable overnight?,CheckVulnerability
+Is the web server 2.4.49 a security risk?,CheckVulnerability
+Look for exploitable software on the target machine,CheckVulnerability
+pls could the apcahe on the target be abused,CheckVulnerability
+Check whether the web server 8.0.32 is on an admin patch list for known exploits,CheckVulnerability
+"Do not just list services, tell me if ssh 1.18 on the target is exploitable",CheckVulnerability
+How risky is the ssh on that box?,CheckVulnerability
+Look for exploitable software on the target,CheckVulnerability
+Research known weaknesses in vsftpd 8.2,CheckVulnerability
+pls is myqsl 2.4.49 a securtiy risk asap,CheckVulnerability
+"Give me system details on this box, not the log files",GetSystemInfo
+How long has this machine been up?,GetSystemInfo
+Check the health of this box in the last hour,ReadSyslog
+Identify the host and its kernel on this box,GetSystemInfo
+uptime and kenrel version on this host,GetSystemInfo
+"Just the OS version and uptime, skip the logs",GetSystemInfo
+What OS is this?,GetSystemInfo
+Check the health of this box this morning,GetSystemInfo
+asap what os is this,GetSystemInfo
+Give the host facts an attacker would gather first here,GetSystemInfo
+"Just the OS version and uptime on this box, skip the logs",GetSystemInfo
+Tell me about this system this morning,ReadSyslog
+Give me the basics about this host,GetSystemInfo
+Report the platform details,GetSystemInfo
+just the os vesrion and utpime on the server skip the logs plz,GetSystemInfo
+"Just the OS version and uptime on this host, skip the logs",GetSystemInfo
+What kind of box is this?,GetSystemInfo
+Give me an overview of this machine overnight,GetSystemInfo
+pls reprot the paltform details on this host plz,GetSystemInfo
+Give the host facts an attacker would gather first on this box,GetSystemInfo
+"Give me system details here, not the log files",GetSystemInfo
+What am I running on on the server?,GetSystemInfo
+Summarize the state of this host,GetSystemInfo
+Report the platform details on this box,GetSystemInfo
+pls dump basic box fatcs on this host,GetSystemInfo
+"Hostname, kernel and uptime on this box, no logs please",GetSystemInfo
+What am I running on on this box?,GetSystemInfo
+Quick status check on this machine,GetSystemInfo
+quick q: tell me about this sytsem asap,GetSystemInfo
+Show the system details a defender keeps on record on this box,ReadSyslog
+"Which kernel is this on the server, and how long has it been up?",GetSystemInfo
+Tell me about this system overnight,ReadSyslog
+Check the health of this box since boot,GetSystemInfo
+Print the OS release and uptime on this machine,GetSystemInfo
+hey iedntify the host and its kenrel on the server,GetSystemInfo
+"Which kernel is this, and how long has it been up?",GetSystemInfo
+What am I running on?,GetSystemInfo
+Give me an overview of this machine this morning,ReadSyslog
+which kenrel is this on this box and how long has it been up asap,ReadSyslog
+Give the host facts an attacker would gather first on the server,GetSystemInfo
+"Give me system details on this machine, not the log files",GetSystemInfo
+Tell me about this system today,GetSystemInfo
+Check the health of this box overnight,GetSystemInfo
+Show platform and boot time on this host,GetSystemInfo
+asap identify the host and its krenel on this box,GetSystemInfo
+"Give me system details, not the log files",GetSystemInfo
+Tell me about this system,GetSystemInfo
+Quick status check on this box,GetSystemInfo
+asap what kind of box is this thx,GetSystemInfo
+Show the system details a defender keeps on record on the server,ReadSyslog
+"Hostname, kernel and uptime on this host, no logs please",GetSystemInfo
+What am I running on on this machine?,GetSystemInfo
+Quick status check on this host,GetSystemInfo
+Show platform and boot time on this machine,GetSystemInfo
+pls uptime and kerenl version on this machine sicne boot,ReadSyslog
+"Just the OS version and uptime on this machine, skip the logs",GetSystemInfo
+What am I running on here?,GetSystemInfo
+Give me an overview of this machine in the last hour,ReadSyslog
+asap dump basic machine fatcs on the server,GetSystemInfo
+Give the host facts an attacker would gather first,GetSystemInfo
+Uptime and kernel version on this box this morning,GetSystemInfo
+What am I running on on this host?,GetSystemInfo
+Quick status check here,GetSystemInfo
+Print the OS release and uptime on this box,GetSystemInfo
+quick q: what kind of box is this,GetSystemInfo
+"Just the OS version and uptime here, skip the logs",GetSystemInfo
+Tell me about this system since boot,GetSystemInfo
+Quick status check on the server,GetSystemInfo
+how long has this machnie been up,GetSystemInfo
+Give the host facts an attacker would gather first on this host,GetSystemInfo
+"Give me system details on the server, not the log files",GetSystemInfo
+Tell me about this system in the last hour,ReadSyslog
+Quick status check,GetSystemInfo
+Identify the host and its kernel on this machine,GetSystemInfo
+pls just the os versoin and uptmie on this host skip the logs,GetSystemInfo
+Uptime and kernel version since boot,GetSystemInfo
+tell me about this system snice boot thx,GetSystemInfo
+Give me an overview of this machine today,GetSystemInfo
+pls dump bsaic macihne facts,ReadSyslog
+Show the system details a defender keeps on record on this host,ReadSyslog
+"Hostname, kernel and uptime on the server, no logs please",GetSystemInfo
+pls hosntame kernel and uptime on the server no logs please thx,GetSystemInfo
+Check the health of this box,GetSystemInfo
+Dump basic machine facts on this machine,GetSystemInfo
+hostname kernel and uptime on the sevrer no logs please asap,GetSystemInfo
+Uptime and kernel version on the server in the last hour,ReadSyslog
+quick q: report the platform details on the serevr asap,GetSystemInfo
+Give me an overview of this machine since boot,GetSystemInfo
+What is using the CPU on this host?,ListeningPorts
+Why is this machine so slow in the last hour?,ListeningPorts
+What is currently active on this box in the last hour?,ListeningPorts
+Inspect the running tasks on the server today,ListProcesses
+asap what is uisng the cpu this mornnig thx,ListeningPorts
+Which programs are running? Not the open ports,ListProcesses
+Why is this machine so slow since boot?,ListeningPorts
+Show everything that is running on this box,ListProcesses
+what is usnig the cpu on the sevrer in the last hour plz,ListeningPorts
+Show the processes an intruder might have started,ListProcesses
+What is using the CPU on this box today?,ListeningPorts
+What is this machine busy doing today?,ListeningPorts
+What is currently active on this box today?,ListeningPorts
+Print the task list sorted by CPU,ListProcesses
+hey inspect the running takss today thx,ListeningPorts
+What is using the CPU on this box this morning?,ListeningPorts
+What is running on this box right now?,ListProcesses
+List the running services on this host,ListeningPorts
+asap what is eating the cpu on the serevr,ListeningPorts
+Show the processes an intruder might have started here,ListProcesses
+"Show the busiest processes here, not the listening sockets",ListProcesses
+What is eating the CPU on this machine?,ListeningPorts
+Show everything that is running here,ListProcesses
+Inspect the running tasks on this host in the last hour,ListProcesses
+hey list runinng porcs on this host in the last hour skip the network side asap,ListeningPorts
+"Top CPU users on the server, not network ports",ListProcesses
+What is running here right now?,ListeningPorts
+Which services are running on the server since boot?,ListeningPorts
+quick q: top cpu users on the serevr not network ports,ListeningPorts
+Show the processes an intruder might have started on this host,ListProcesses
+What is using the CPU this morning?,ListeningPorts
+What is eating the CPU here?,ListeningPorts
+Show everything that is running on this host,ListProcesses
+Audit the active processes here,ListProcesses
+asap what is eaitng the cpu,ListeningPorts
+"List running processes this morning, skip the network side",ListProcesses
+What is this machine busy doing since boot?,ListeningPorts
+List the running services on this machine,ListProcesses
+quick q: reivew what is execuitng on this host thx,ListeningPorts
+List what is running that a defender should review on this machine,ListProcesses
+"Top CPU users here, not network ports",ListProcesses
+What is hogging resources on the server overnight?,ListeningPorts
+Which services are running on this host overnight?,ListeningPorts
+Dump the process table on this machine,ListProcesses
+asap why is this box so slow tdoay asap,ListeningPorts
+"List running processes on this host this morning, skip the network side",ListProcesses
+What is eating the CPU?,ListeningPorts
+Which services are running on this machine since boot?,ListeningPorts
+hey dump the procses tbale plz,ListProcesses
+Show the processes an intruder might have started on this box,ListProcesses
+What is using the CPU on the server overnight?,ListeningPorts
+What is hogging resources on this machine this morning?,ListeningPorts
+Which services are running overnight?,ListeningPorts
+Dump the process table on this box,ListProcesses
+hey show the busiest prcos on this box not the listeinng sockets,ListProcesses
+What is using the CPU on this machine today?,ListeningPorts
+What is running on this machine right now?,ListProcesses
+What programs are up on the server today?,ListeningPorts
+reivew what is exectuing on the server asap,ListeningPorts
+Show the processes an intruder might have started on the server,ListProcesses
+Which programs are running on this machine overnight? Not the open ports,ListProcesses
+What is hogging resources here in the last hour?,ListeningPorts
+What programs are up on this box since boot?,ListeningPorts
+Inspect the running tasks since boot,ListProcesses
+pirnt the task list sotred by cpu on this box thx,ListeningPorts
+"Top CPU users on this box, not network ports",ListProcesses
+What is this machine busy doing this morning?,ListeningPorts
+List the running services,ListeningPorts
+pls why is this machnie so slow overnight,ListeningPorts
+List what is running that a defender should review here,ListProcesses
+What is using the CPU here in the last hour?,ListeningPorts
+What is this machine busy doing overnight?,ListeningPorts
+Which services are running here today?,ListeningPorts
+Print the task list sorted by CPU on the server,ListeningPorts
+quick q: what is hogging resoucres on this host thx,ListeningPorts
+Which programs are running on this host since boot? Not the open ports,ListProcesses
+What is this machine busy doing in the last hour?,ListeningPorts
+Which services are running in the last hour?,ListeningPorts
+what is hogging resources on the srever overnight,ListeningPorts
+Show the processes an intruder might have started on this machine,ListProcesses
+"List running processes in the last hour, skip the network side",ListProcesses
+"Which services are accepting connections on this box, by port?",ListeningPorts
+What is this machine listening for?,ListeningPorts
+What is bound to which port on the server?,ListeningPorts
+Dump the listening endpoints,ListeningPorts
+which socktes are listening here i do not mean procs thx,ListeningPorts
+"Show the listening sockets on the server, not the running programs",ListeningPorts
+What does this host offer to the network?,ListeningPorts
+List the services that listen on this box,ListeningPorts
+quick q: inpsect the open srever sockets on this box thx,ListeningPorts
+List the exposure an attacker would see on this box,ListeningPorts
+"Show the listening sockets on this machine, not the running programs",ListeningPorts
+Which doors are open on this host from the inside?,ListeningPorts
+Which services are running and on which ports here?,ListeningPorts
+Review which ports the host serves on,ListeningPorts
+enuemrate the bound scokets on this host,ListeningPorts
+"Show the listening sockets, not the running programs",ListeningPorts
+What can others reach on this box in the last hour?,ListeningPorts
+What is bound to which port on this machine?,ListeningPorts
+review which prots the host serevs on asap,ListeningPorts
+What would a scanner find open here?,ListeningPorts
+"Which services are accepting connections on the server, by port?",ListeningPorts
+What is this machine exposing to the network overnight?,ListeningPorts
+List the services that listen on this host,ListeningPorts
+Dump the listening endpoints on the server,ListeningPorts
+what does this host ofefr to the network,ListeningPorts
+Which sockets are listening? I do not mean processes,ListeningPorts
+What is this machine exposing to the network?,ListeningPorts
+Which services are running and on which ports on this host?,ListeningPorts
+reveiw wihch ports the host serves on asap,ListeningPorts
+Show me what an outsider could connect to on this host,ListeningPorts
+"Show listening ports on this box, not the process list",ListeningPorts
+What can others reach on this box since boot?,ListeningPorts
+Which services are running and on which ports on this box?,ListeningPorts
+Inspect the open server sockets on the server,ListeningPorts
+show the listening socekts on this box not the running programs plz,ListeningPorts
+Which sockets are listening on this box? I do not mean processes,ListeningPorts
+What can others reach on this box?,ListeningPorts
+Which programs hold open ports on this box?,ListeningPorts
+hey show lsitening ports not the process list,ListeningPorts
+pls inspect the open server socekts on this host,ListeningPorts
+"Show listening ports, not the process list",ListeningPorts
+What is this machine exposing to the network today?,ListeningPorts
+Which services are running and on which ports on this machine?,ListeningPorts
+Dump the listening endpoints here,ListeningPorts
+quick q: inspect the open server scokets on the server thx,ListeningPorts
+"Show listening ports on this host, not the process list",ListeningPorts
+What can others reach on this box this morning?,ListeningPorts
+Show what is running on the network side,ListeningPorts
+auidt the network listeners on this box,ListeningPorts
+pls auidt the network listeenrs on the server thx,ListeningPorts
+"Which services are accepting connections on this host, by port?",ListeningPorts
+What can others reach on this box overnight?,ListeningPorts
+What is bound to which port on this box?,ListeningPorts
+Enumerate the bound sockets,ListeningPorts
+audit the newtork listeners on this host,ListeningPorts
+List what is bound to a port on this machine this morning,ListeningPorts
+What can others reach on this box today?,ListeningPorts
+Show what is running on the network side on this machine,ListeningPorts
+quick q: show the listening socktes on this mcahine not the running programs asap,ListeningPorts
+pls which sockets are listening on this box i do not mean procseses,ListeningPorts
+Which sockets are listening on the server? I do not mean processes,ListeningPorts
+What is this machine exposing to the network this morning?,ListeningPorts
+Show what is running on the network side on this box,ListeningPorts
+Dump the listening endpoints on this box,ListeningPorts
+asap reivew whcih ports the host serves on plz,ListeningPorts
+"Show the listening sockets on this host, not the running programs",ListeningPorts
+What is this machine exposing to the network since boot?,ListeningPorts
+What is bound to which port here?,ListeningPorts
+pls review whcih ports the host serves on thx,ListeningPorts
+asap what is this box listneing for,ListeningPorts
+List what is bound to a port since boot,ListeningPorts
+What is this machine exposing to the network in the last hour?,ListeningPorts
+What is bound to which port?,ListeningPorts
+Audit the network listeners on this host,ListeningPorts
+asap enumearte the bound sockets here asap,ListeningPorts
+List what is bound to a port here today,ListeningPorts
+Run version detection on the target machine so I know what software answers,NmapScan
+What is running on 10.0.0.114?,NmapScan
+"Scan the target machine, ports and what is behind them",NmapScan
+Footprint the target machine: which service versions run there?,NmapScan
+asap footrpint that box: which service versinos run there,NmapScan
+"Beyond just open ports, tell me which services and versions the target runs",NmapScan
+What software does 192.168.56.102 expose today?,NmapScan
+Probe 192.168.56.102 and identify what answers on each port,NmapScan
+catalogue the applications running on the web server,NmapScan
+Find the services on the target machine that a defender would be patching,CheckVulnerability
+Run version detection on the target so I know what software answers,NmapScan
+Find out which applications answer on 10.0.0.114,NmapScan
+Probe the target machine and identify what answers on each port,NmapScan
+Catalogue the applications running on 192.168.56.102,NmapScan
+hey i need to know what kind of srevices the taregt box offers thx,NmapScan
+Map the web server to the software versions behind each open port,NmapScan
+Figure out what 192.168.56.102 is hosting,NmapScan
+Check 10.0.0.114 in depth for services behind each port,NmapScan
+asap map the defender to the sfotware vers beihnd each open port asap,NmapScan
+Find the services on the defender that a defender would be patching,CheckVulnerability
+"Beyond just open ports, tell me which services and versions 10.0.0.114 runs",NmapScan
+I need to know what kind of services the web server offers,NmapScan
+Probe the target and identify what answers on each port,NmapScan
+Footprint 192.168.56.102: which service versions run there?,NmapScan
+asap enumreate the svcs on that box plz,NmapScan
+Which versions of the services on the target are exposed this morning?,NmapScan
+I need to know what kind of services the target offers,NmapScan
+Do a thorough scan of 10.0.0.114 with service identification,NmapScan
+hey run version detection on the target box so i know what softwrae answres,CheckVulnerability
+Find the services on the target that a defender would be patching,PortScan
+Which versions of the services on the target are exposed?,NmapScan
+I need to know what kind of services the defender offers,NmapScan
+"Scan the target, ports and what is behind them",NmapScan
+Catalogue the applications running on 10.0.0.114,NmapScan
+pls enumreate the svcs on 10.0.0.114 plz,NmapScan
+"Beyond just open ports, tell me which services and versions the target machine runs",NmapScan
+Find out which applications answer on the target machine,NmapScan
+Check the target machine in depth for services behind each port,NmapScan
+hey enumreate the services on 10.0.0.114,NmapScan
+List the service versions on the defender an admin must keep current,PortScan
+"I want service names and versions from the target machine, not only a port list",NmapScan
+Figure out what 10.0.0.114 is hosting,NmapScan
+Probe 10.0.0.114 and identify what answers on each port,NmapScan
+Enumerate the services on the defender,PortScan
+enmuerate the svcs on 10.0.0.114 plz,NmapScan
+"I want service names and versions from 10.0.0.114, not only a port list",NmapScan
+I need to know what kind of services 10.0.0.114 offers,NmapScan
+Check the target in depth for services behind each port,PortScan
+wihch versions of the svcs on that box are exposed this monring thx,NmapScan
+List the service versions on that box an admin must keep current,PortScan
+Which versions of the services on the target machine are exposed since boot?,NmapScan
+What is running on the target machine?,NmapScan
+"Scan that box, ports and what is behind them",NmapScan
+Enumerate the services on the web server,NmapScan
+find out whcih applicatoins answer on that box,NmapScan
+Run version detection on that box so I know what software answers,NmapScan
+Figure out what the defender is hosting,NmapScan
+"Scan the defender, ports and what is behind them",NmapScan
+i want service nmaes and vers from 192.168.56.102 not only a port list plz,NmapScan
+List the service versions on the web server an admin must keep current,CheckVulnerability
+"Beyond just open ports, tell me which services and versions the defender runs",CheckVulnerability
+Figure out what the web server is hosting,NmapScan
+Check the web server in depth for services behind each port,NmapScan
+Catalogue the applications running on the target machine,NmapScan
+pls run version detection on the deefnder so i know what softwrae answers,CheckVulnerability
+Run version detection on the web server so I know what software answers,CheckVulnerability
+Find out which applications answer on the target,NmapScan
+Do a thorough scan of the defender with service identification,NmapScan
+catalogue the applications rnuning on 192.168.56.102 plz,NmapScan
+"Just the open ports on the web server, skip the service versions",NmapScan
+Which ports does 10.0.0.114 answer on?,NmapScan
+Run nmap against 192.168.56.102 for the open ports,NmapScan
+Discover the open ports on 192.168.56.102,NmapScan
+discover the open prots on 10.0.0.114 asap,NmapScan
+"Just the open ports on 192.168.56.102, skip the service versions",NmapScan
+See which entry points 10.0.0.114 has,NmapScan
+"Quick nmap of 10.0.0.114, which ports are open?",NmapScan
+hey list which potrs respond on the target i do not need version details asap,PortScan
+Find the open ports a defender might forget to close on 10.0.0.114,NmapScan
+Which ports are open on 10.0.0.114? Port numbers only,NmapScan
+See which entry points the target machine has,NmapScan
+Nmap sweep of the target machine: open ports please,NmapScan
+Sweep the web server for listening ports,NmapScan
+asap only tell me the port numebrs that are open on that box asap,NmapScan
+Sweep 10.0.0.114 for open ports and leave out service detection,NmapScan
+Is anything reachable on the web server?,NmapScan
+Nmap sweep of the target: open ports please,NmapScan
+see wihch entry points the defenedr has plz,NmapScan
+Find the open ports a defender might forget to close on the target machine,NmapScan
+Only tell me the port numbers that are open on the target,NmapScan
+Which doors are open on the target machine?,NmapScan
+Run nmap against the web server for the open ports,NmapScan
+Enumerate the open ports on the target,NmapScan
+pls whcih doors are open on the target asap,NmapScan
+Only tell me the port numbers that are open on that box,NmapScan
+Is anything reachable on 10.0.0.114?,NmapScan
+nmap 192.168.56.102 and give me only open ports,NmapScan
+quick q: what can i recah on the traget box from here plz,Unknown
+Find the open ports a defender might forget to close on that box,NmapScan
+Only tell me the port numbers that are open on the target machine,NmapScan
+Which ports does the defender answer on?,NmapScan
+nmap 10.0.0.114 and give me only open ports,NmapScan
+Map the exposed ports of the defender,NmapScan
+pls just the open ports on 10.0.0.114 skip the serivce vers plz,NmapScan
+"List which ports respond on that box, I do not need version details",NmapScan
+What can I reach on the web server from here?,NmapScan
+Use nmap to see which ports are open on that box,NmapScan
+is anything reacahble on the taregt box,NmapScan
+List the open ports on 192.168.56.102 that an admin would watch,NmapScan
+Which ports are open on the defender? Port numbers only,NmapScan
+What can I reach on the defender from here?,CheckVulnerability
+Use nmap to see which ports are open on 10.0.0.114,NmapScan
+Probe the target for reachable ports,NmapScan
+asap which doros are open on 10.0.0.114 asap,NmapScan
+"List which ports respond on 10.0.0.114, I do not need version details",NmapScan
+Is anything reachable on the target machine?,NmapScan
+nmap that box and give me only open ports,NmapScan
+enuemrate the open ports on the web server,NmapScan
+Find the open ports a defender might forget to close on 192.168.56.102,NmapScan
+Only tell me the port numbers that are open on 10.0.0.114,NmapScan
+Is anything reachable on 192.168.56.102?,NmapScan
+Run nmap against the defender for the open ports,NmapScan
+Enumerate the open ports on the defender,NmapScan
+map the exposed prots of the target plz,NmapScan
+"List which ports respond on the defender, I do not need version details",PortScan
+Which ports does the target answer on?,NmapScan
+"Quick nmap of the target machine, which ports are open?",NmapScan
+quick q: enumertae the open ports on that box plz,NmapScan
+Find the open ports a defender might forget to close on the defender,NmapScan
+Only tell me the port numbers that are open on the defender,NmapScan
+Is anything reachable on that box?,NmapScan
+Use nmap to see which ports are open on the target machine,NmapScan
+Map the exposed ports of 192.168.56.102,NmapScan
+which doros are open on the defender,PortScan
+Which ports are open on that box? Port numbers only,NmapScan
+What can I reach on 192.168.56.102 from here?,NmapScan
+"Quick nmap of the target, which ports are open?",NmapScan
+"I want every line of the authentication log on the server, successes included",ReadAuthLog
+When did people sign in on this box?,ReadAuthLog
+Look through auth.log on the server for anything about logins,ReadAuthLog
+Review the access log for sign-ins,ReadAuthLog
+hey when did peolpe sign in,ReadAuthLog
+"I want every line of the authentication log on this host, successes included",ReadAuthLog
+Who logged in on this machine overnight?,ReadAuthLog
+Look at who tried to log in on this machine today,ReadAuthLog
+quick q: dump the auth trial here in the last hour asap,ReadAuthLog
+Would my logins show up on this host? Show the auth log,ReadAuthLog
+Pull the complete authentication log in the last hour,ReadAuthLog
+When did people sign in on this machine?,ReadAuthLog
+Show the authentication events on this box,ReadAuthLog
+Print the auth journal here,ReadAuthLog
+pull up the auth reocrds on this host asap,ReadAuthLog
+"Read the full auth log on this box, not a filtered view",ReadAuthLog
+When did people sign in on the server?,ReadAuthLog
+Show the authentication events,ReadAuthLog
+hey dump the auth taril snice boot,ReadAuthLog
+See what a login leaves behind in the auth log,ReadAuthLog
+"All login events on this host overnight, successful and failed",ReadAuthLog
+Which accounts signed in on this machine today?,ReadAuthLog
+Check the login attempts,CheckFailedLogins
+Review the access log for sign-ins on the server,ReadAuthLog
+quick q: i want every line of the authentication log on this host successes incluedd asap,ReadAuthLog
+"Show the whole auth log today, not only the failed logins",ReadAuthLog
+Which accounts signed in on this box since boot?,ReadAuthLog
+Look at who tried to log in here in the last hour,ReadAuthLog
+asap show me the login hitsory on the sevrer thx,ReadAuthLog
+Show the record an intruder login would create on this machine,ReadAuthLog
+"All login events on the server in the last hour, successful and failed",ReadAuthLog
+Show me the login history on this machine,ReadAuthLog
+Look through auth.log here for anything about logins,ReadAuthLog
+Pull up the authentication records,ReadAuthLog
+pls pull up the auth rceords here,ReadAuthLog
+"Read the full auth log here, not a filtered view",ReadAuthLog
+Show me the login history,ReadAuthLog
+Look at who tried to log in on this host this morning,ReadAuthLog
+quick q: inspect the login records on the serevr,ReadAuthLog
+See what a login leaves behind in the auth log on this host,ReadAuthLog
+"I want every line of the authentication log here, successes included",ReadAuthLog
+Who logged in on this host overnight?,ReadAuthLog
+Look at who tried to log in on the server,ReadAuthLog
+Dump the auth trail on this machine this morning,ReadAuthLog
+quick q: pull up the authentication rceords asap,ReadAuthLog
+"I want every line of the authentication log, successes included",ReadAuthLog
+Who has accessed this machine lately?,ReadAuthLog
+Review login activity on this host since boot,ReadAuthLog
+quick q: read the full auth log not a fitlered view plz,ReadAuthLog
+Show the record an intruder login would create on the server,ReadAuthLog
+"All login events on this machine overnight, successful and failed",ReadAuthLog
+Who logged in on this box overnight?,ReadAuthLog
+Look at who tried to log in overnight,CheckFailedLogins
+Review the access log for sign-ins on this box,ReadAuthLog
+show the whloe auth log this morning not only the fialed logins,ReadAuthLog
+"Read the full auth log on this machine, not a filtered view",ReadAuthLog
+Who logged in here today?,ReadAuthLog
+Show the authentication events on the server,ReadAuthLog
+inspcet the login records,ReadAuthLog
+See what a login leaves behind in the auth log on this machine,ReadAuthLog
+Pull the complete authentication log here overnight,ReadAuthLog
+Who logged in on this box this morning?,ReadAuthLog
+Look through auth.log on this box for anything about logins,ReadAuthLog
+Print the auth journal on the server,ReadAuthLog
+asap all login evnets sicne boot successful and failed,ReadAuthLog
+"All login events on this machine this morning, successful and failed",ReadAuthLog
+Show me the login history on the server,ReadAuthLog
+Look through auth.log on this host for anything about logins,ReadAuthLog
+hey show the whloe auth log in the last hour not only the falied logins plz,ReadAuthLog
+Show the record an intruder login would create on this box,ReadAuthLog
+"I want every line of the authentication log on this machine, successes included",ReadAuthLog
+Who logged in here this morning?,ReadAuthLog
+Look through auth.log on this machine for anything about logins,ReadAuthLog
+Inspect the login records here,ReadAuthLog
+asap when did peolpe sign in on this host,ReadAuthLog
+"All login events on the server today, successful and failed",ReadAuthLog
+Which accounts signed in on the server in the last hour?,ReadAuthLog
+Look at who tried to log in on this machine since boot,ReadAuthLog
+hey rveiew the accses log for sign-ins on this box plz,ReadAuthLog
+See what a login leaves behind in the auth log on this box,ReadAuthLog
+"Read the full auth log on the server, not a filtered view",ReadAuthLog
+Who logged in on this host today?,ReadAuthLog
+Look at who tried to log in on this machine this morning,ReadAuthLog
+"Show recent system messages this morning, nothing from auth",ReadSyslog
+What has the system been reporting?,ReadSyslog
+Show log messages on this box in the last hour,ReadSyslog
+Pull up the kernel and service messages on this host,ReadSyslog
+quick q: inspect the sytsem journal on this box asap,ReadSyslog
+Show syslog entries on the server today,ReadSyslog
+Anything unusual in the machine logs this morning?,ReadSyslog
+Check the log files on this machine,ReadSyslog
+asap what msesages has the os been writnig on the server plz,ReadSyslog
+Show the system messages an admin would watch on this host,ReadSyslog
+"Tail the system log, the main one, not auth.log",ReadSyslog
+What has the system been reporting on this box?,ReadSyslog
+Check /var/log on the server for messages,ReadSyslog
+Pull up the kernel and service messages on the server,ReadSyslog
+quick q: pirnt the genreal system log on this box plz,ReadSyslog
+"I want syslog on this machine, not the authentication log",ReadSyslog
+What has the system been reporting on the server?,ReadSyslog
+Show log messages here overnight,ReadSyslog
+asap tail the ssytem log on this macihne the main one not auth.log,ReadSyslog
+Show the system messages an admin would watch on the server,ReadSyslog
+"Tail the system log on the server, the main one, not auth.log",ReadSyslog
+What messages has the OS been writing on this machine?,ReadSyslog
+Check the log files on this box,ReadSyslog
+Print the general system log,ReadSyslog
+asap what messages has the os been writnig on this host,ReadSyslog
+"Read the general system log on this box, not the auth log",ReadSyslog
+Check the system messages on this box in the last hour,ReadSyslog
+Show log messages,ReadSyslog
+pls chcek the system messages on the server this morning,ReadSyslog
+Show the system messages an admin would watch on this machine,ReadSyslog
+Show syslog entries since boot,ReadSyslog
+Did anything odd get logged here in the last hour?,ReadSyslog
+Check the log files here,ReadSyslog
+Inspect the system journal here,ReadSyslog
+anything unusual in the machine logs tdoay thx,ReadSyslog
+Show syslog entries on the server since boot,ReadSyslog
+Check the system messages on this host this morning,ReadSyslog
+Look at the logs on this host since boot,ReadSyslog
+dump the os eevnt log on this box sicne boot thx,ReadSyslog
+Show what the OS logs that an intruder might trigger,ReadSyslog
+"Read the general system log, not the auth log",ReadSyslog
+Anything unusual in the machine logs since boot?,ReadSyslog
+Check /var/log for messages,ReadSyslog
+Inspect the system journal,ReadSyslog
+asap did aynthing odd get logged on this box this morning plz,ReadSyslog
+"I want syslog on this host, not the authentication log",ReadSyslog
+Anything unusual in the machine logs on this host this morning?,ReadSyslog
+Show log messages on this machine since boot,ReadSyslog
+hey cehck the sytsem messages on this host since boot plz,ReadSyslog
+Show the system messages an admin would watch,ReadSyslog
+"Tail the system log here, the main one, not auth.log",ReadSyslog
+Check the system messages here,ReadSyslog
+Check the log files on this host,ReadSyslog
+Pull up the kernel and service messages on this machine,ReadSyslog
+pls show recent system messages on this host in the last hour notihng from auth thx,ReadSyslog
+"Read the general system log on this machine, not the auth log",ReadSyslog
+Check the system messages on this machine,ReadSyslog
+Read the machine logs on this machine,ReadSyslog
+hey what has the sysetm been reoprting on this box thx,ReadSyslog
+Show what the OS logs that an intruder might trigger on the server,ReadSyslog
+"Read the general system log on the server, not the auth log",ReadSyslog
+Check the system messages overnight,ReadSyslog
+Show log messages on this machine today,ReadSyslog
+Print the general system log on this host,ReadSyslog
+hey tail the sytsem log on this mahcine the main one not auth.log asap,ReadSyslog
+"Show recent system messages on this box since boot, nothing from auth",ReadSyslog
+Anything unusual in the machine logs on this host?,ReadSyslog
+Read the machine logs on this box,ReadSyslog
+asap show rceent system messages on this box since boot nothing from auth plz,ReadSyslog
+Show the system messages an admin would watch here,ReadSyslog
+"Tail the system log on this host, the main one, not auth.log",ReadSyslog
+What has the system been reporting on this machine?,ReadSyslog
+Look at the logs on this machine in the last hour,ReadSyslog
+Print the general system log on the server,ReadSyslog
+i want sylsog on this box not the auth log thx,ReadSyslog
+"Show recent system messages today, nothing from auth",ReadSyslog
+Did anything odd get logged on the server since boot?,ReadSyslog
+Look at the logs here since boot,ReadSyslog
+asap pull up the kernel and service messgaes thx,ReadSyslog
+"Open a remote shell on the web server, no scanning needed",SSHConnect
+I need to get onto the web server remotely,SSHConnect
+Use port 22 to get a shell on the defender,SSHConnect
+Remote in to the target using SSH,SSHConnect
+hey connect to 192.168.56.102 with ssh instead of porbing it asap,SSHConnect
+"Do not scan 192.168.56.102, just open an SSH session to it",SSHConnect
+Get me a shell on the defender,SSHConnect
+Reach the web server on port 22 and log in,SSHConnect
+rtaher than scanning 10.0.0.114 log in to it rmeotely asap,SSHConnect
+Open the same SSH session an admin uses on the target,SSHConnect
+"Rather than scanning that box, log in to it remotely",SSHConnect
+I need to get onto 192.168.56.102 remotely,SSHConnect
+Talk to the SSH service on 192.168.56.102 and open a session,SSHConnect
+Open a terminal on the defender over SSH,SSHConnect
+hey tunnel in to the web srever with ssh asap,SSHConnect
+"Rather than scanning 10.0.0.114, log in to it remotely",SSHConnect
+Put me on the target so I can run commands,SSHConnect
+Talk to the SSH service on the defender and open a session,SSHConnect
+pls tnunel in to the target with ssh,SSHConnect
+"Log in to 10.0.0.114 the way an admin would, over SSH",SSHConnect
+Skip the recon and get a shell on 10.0.0.114 over SSH,SSHConnect
+Get me a shell on that box,SSHConnect
+Reach that box on port 22 and log in,SSHConnect
+Open a terminal on 192.168.56.102 over SSH,SSHConnect
+i need to get onto 192.168.56.102 remtoely,SSHConnect
+"Do not scan that box, just open an SSH session to it",SSHConnect
+Give me remote access to 10.0.0.114,SSHConnect
+Authenticate to the SSH server on the defender,SSHConnect
+hey open a remote shell on the taregt box no scanning needed,SSHConnect
+Open the same SSH session an admin uses on 192.168.56.102,SSHConnect
+Skip the recon and get a shell on the defender over SSH,SSHConnect
+I want a session on 192.168.56.102,SSHConnect
+Reach the target on port 22 and log in,SSHConnect
+Remote in to 192.168.56.102 using SSH,SSHConnect
+put me on the target box so i can run commands asap,SSHConnect
+"Rather than scanning the target, log in to it remotely",SSHConnect
+I want a session on that box,SSHConnect
+Authenticate to the SSH server on 10.0.0.114,SSHConnect
+hey conenct to the tagret with ssh instead of probing it plz,SSHConnect
+"Log in to the target machine the way an admin would, over SSH",SSHConnect
+"Do not scan the web server, just open an SSH session to it",SSHConnect
+I want a session on the target machine,SSHConnect
+Reach the defender on port 22 and log in,SSHConnect
+Establish a remote shell to the target,SSHConnect
+hey put me on 192.168.56.102 so i can run comamnds asap,SSHConnect
+Skip the recon and get a shell on 192.168.56.102 over SSH,SSHConnect
+Put me on that box so I can run commands,SSHConnect
+Use port 22 to get a shell on 192.168.56.102,SSHConnect
+asap connect to the traget with ssh instead of probing it plz,SSHConnect
+"Log in to the defender the way an admin would, over SSH",SSHConnect
+Skip the recon and get a shell on the target machine over SSH,SSHConnect
+Give me remote access to the defender,Unknown
+Use port 22 to get a shell on that box,SSHConnect
+Initiate an SSH session with the target machine,SSHConnect
+hey i need to get onto the traget rmeotely asap,SSHConnect
+Connect to the target with SSH instead of probing it,SSHConnect
+Put me on 10.0.0.114 so I can run commands,SSHConnect
+Talk to the SSH service on that box and open a session,SSHConnect
+pls establish a remote shell to the web srever asap,SSHConnect
+Open the same SSH session an admin uses on 10.0.0.114,SSHConnect
+Connect to 10.0.0.114 with SSH instead of probing it,SSHConnect
+Put me on the defender so I can run commands,Unknown
+Reach 192.168.56.102 on port 22 and log in,SSHConnect
+Initiate an SSH session with the web server,SSHConnect
+quick q: remtoe in to 10.0.0.114 using ssh asap,SSHConnect
+"Open a remote shell on that box, no scanning needed",SSHConnect
+I need to get onto the target machine remotely,SSHConnect
+Connect to port 22 on the defender,SSHConnect
+hey etsablish a remote shell to the defender thx,SSHConnect
+Open the same SSH session an admin uses on that box,SSHConnect
+Connect to that box with SSH instead of probing it,SSHConnect
+I need to get onto that box remotely,SSHConnect
+Authenticate to the SSH server on that box,SSHConnect
+Establish a remote shell to the web server,SSHConnect
+do not scan the deefnder just open an ssh sesison to it asap,SSHConnect
+"Rather than scanning the target machine, log in to it remotely",SSHConnect
+I want a session on the defender,SSHConnect
+Connect to port 22 on 192.168.56.102,SSHConnect
+asap get me a shlel on 192.168.56.102 plz,NmapScan
+"Log in to the web server the way an admin would, over SSH",SSHConnect
+Connect to the target machine with SSH instead of probing it,SSHConnect
+Put me on the web server so I can run commands,SSHConnect
+Talk to the SSH service on 10.0.0.114 and open a session,SSHConnect
+Establish a remote shell to 10.0.0.114,SSHConnect
+asap do not scan the target just open an ssh sesison to it plz,SSHConnect
+"Rather than scanning the defender, log in to it remotely",SSHConnect
+I need to get onto the defender remotely,SSHConnect
+Connect to port 22 on that box,SSHConnect
+get me a sehll on the taregt,NmapScan
+Open the same SSH session an admin uses on the target machine,SSHConnect
+"Do not scan the target, just open an SSH session to it",SSHConnect
+Get me a shell on the target machine,SSHConnect
