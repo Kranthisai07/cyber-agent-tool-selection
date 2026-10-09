@@ -1,0 +1,496 @@
+prompt,label
+The scheduler assigned me a university cluster node with a temporary username. Please enter that node from my laptop.,SSHConnect
+The firewall change is complete. Use my connection profile to enter the new research node.,SSHConnect
+The edge device is headless. Its owner provided an account so I can access its terminal remotely.,SSHConnect
+It's my shift on the demo instance. Please connect with the fingerprint our lead provided.,SSHConnect
+Jupyter won't start on my reserved compute server. Please enter its terminal using the account from my reservation.,SSHConnect
+The branch appliance requires CLI maintenance. Use the provided custom management port and service account to sign in.,SSHConnect
+"I'm following a disaster-recovery drill. The restored server uses an address in the exercise sheet, and our security team has preauthorized access from my workstation. Open a session under my recovery account before I proceed with the checklist.",SSHConnect
+"There's a new analytics worker behind our corporate jump server. I can already sign in to the jump server, but the task requires a shell on the worker itself. Use the documented second hop to reach the worker.",SSHConnect
+One of our remote observatory instruments runs Linux and its graphical interface is frozen. The instrument team maintains a dedicated shell account for this situation. Please establish that remote session so I can consult its local status files.,SSHConnect
+We are relocating a virtual machine between hypervisors during a planned outage. Its IP was updated in the internal inventory and access rights were rechecked this morning. Enter the moved VM using my maintenance identity.,SSHConnect
+"I'm in the conference center on a restricted guest network, although my work tunnel is active. I have a machine alias that resolves only inside the tunnel and an authorized certificate-based account. Connect me to the remote terminal to continue the release.",SSHConnect
+"The classroom lab has 24 identical boards, and my assignment is board 17. A teaching assistant provisioned per-student credentials and a management address. Please sign me into my allocated board's shell; I need to compile my experiment there.",SSHConnect
+An engineer sent me an invitation to troubleshoot an application server in another region. The invitation contains a short-lived username and access route. I want the actual remote terminal session opened before we join the troubleshooting call.,SSHConnect
+A maintenance ticket lists `vault-drill-04` as the authorized machine and explains which account to use. I'm responsible for reviewing permissions during today's window. Establish access to that machine's command line using the approved route.,SSHConnect
+"Our training tenant uses a gateway followed by an isolated sandbox host. I'm already authorized for both, and the exercise won't begin until I get a prompt on the inner host. Please follow the specified connection route and enter the sandbox.",SSHConnect
+The data-science VM is waiting for me after a reboot. Can you bring up my remote terminal there?,SSHConnect
+Use the login details from my lab connection profile to enter compute-rack-c's assigned node.,SSHConnect
+I'm trying to reach a shell on the remote sensor hub from the control-room workstation.,SSHConnect
+My terminal multiplexer died on the other box. Get a fresh authenticated session onto it.,SSHConnect
+The scheduled patch is on finance-dev-9. Put me at that machine's command prompt.,SSHConnect
+The host is reachable through our zero-trust tunnel; I'd like to sign in as the on-call engineer.,SSHConnect
+Please establish my console-like text access over the network to the approved Linux host.,SSHConnect
+Our CI coordinator granted me a temporary worker account. Enter that worker for manual inspection.,SSHConnect
+Get into the remote workstation using the certificate assigned to my user account.,SSHConnect
+The branch gateway's maintenance interface expects a secure shell login. Open it for my operator identity.,SSHConnect
+How do I land in the terminal of the rented GPU instance I already have credentials for?,SSHConnect
+Can you open my interactive session to the restored file server in the DR lab?,SSHConnect
+My alias `fleet-canary` points at today's test target. Use it to connect under my own login.,SSHConnect
+Enter the network-connected controller with the approved technician account.,SSHConnect
+I need to switch from my desktop command prompt into the remote archive machine's shell.,SSHConnect
+The operations team put the staging replica back online. Sign me in there for the deployment handoff.,SSHConnect
+Can you start a session on the remote warehouse scanner's embedded Linux environment?,SSHConnect
+"Our simulation host is running, and I need an authenticated interactive login before starting it.",SSHConnect
+I was sent the management hostname for the offshore test rig. Help me log onto that host.,SSHConnect
+The old key was retired yesterday and my new certificate is installed. Use it to enter the approved service node.,SSHConnect
+Our security team's approved remote-access profile is named `audit-sandbox-west`. Start the connection with that profile.,SSHConnect
+The container dashboard doesn't provide a proper interactive host shell. I'd like a direct authenticated terminal on its underlying test VM.,SSHConnect
+My assigned build machine lives across two private network hops. Follow the access instructions and get me to that machine's prompt.,SSHConnect
+The research lab's telescope controller is headless. Please enter its remote operating-system session using my registered lab account.,SSHConnect
+"We have an upcoming live demo, and the secondary presentation server needs a manual font fix. I already have approval and the host address; connect me to its shell so I can make the change.",SSHConnect
+"The migration rehearsal left an orphaned staging node with no functioning web console. I'm the designated operator, and the incident note provides the correct identity file and destination. Can you establish a remote CLI session for that node?",SSHConnect
+I was moved from a shared login to a named account on the training cluster. The admins confirmed the account works and supplied a route through the campus gateway. Please enter my assigned cluster machine with the named identity.,SSHConnect
+"Our field team is testing a weather station in a remote enclosure. We can reach it through the site VPN, and I have a provisioned operator account. I'd like a live terminal on that station to finish the calibration steps.",SSHConnect
+We discovered that the console shortcut in the ticketing system goes to the wrong environment. The asset registry has the correct internal hostname and my access is already approved. Open an authenticated shell to the registry-listed machine.,SSHConnect
+A test runner at our satellite office needs someone to manually inspect a generated artifact. I was added to its remote-access allowlist for the evening and received the destination details. Connect me to the runner's operating-system prompt.,SSHConnect
+"During the university's robotics showcase, the arena scoreboard controller was swapped twice. The handover sheet just says it uses Ethernet. On the authorized demonstration VLAN, identify the protocols and server builds offered by scoreboard-2 so we can document the final setup.",NmapScan
+"Our observability vendor exported a list of reachable sockets for the greenhouse gateway, but called every endpoint 'unknown'. Determine the applications behind those connections and any release identifiers they expose.",NmapScan
+"At the disaster recovery rehearsal, the warm-standby billing node produced a different TLS greeting from the primary. Please investigate what network-facing software each exposed endpoint is running and capture version evidence for the runbook.",NmapScan
+The museum's digital signage player is responding to network queries after a factory reset. We don't have its administration password yet; use the permitted network assessment to establish which service products are visible and their apparent builds.,NmapScan
+"Is the endpoint on port 7447 a gRPC service, an ordinary HTTP server, or another protocol? I'd like a fingerprint from the development appliance.",NmapScan
+Find the product family and available release details for the remote management service at 10.34.8.19.,NmapScan
+The warehouse scanner dock announces several TCP services after its update. Which software implementations are they actually running?,NmapScan
+"I have an IP for the loaner conferencing unit but none of the deployment paperwork. Can you identify its exposed daemons, including version clues?",NmapScan
+"In the smart-building sandbox, the air-handler controller responds on an unexpected collection of ports. Facilities says it belongs to their monitoring stack, while IT believes a support agent was installed last week. Fingerprint the accessible protocols and versions to resolve the inventory dispute.",NmapScan
+Check what server technology the public-facing status page's alternate endpoint on 10443 reveals in its handshake.,NmapScan
+"For the emergency operations drill, I need a remote application inventory of the backup dispatch host. Connectivity was tested yesterday, but the licensing team needs names and versions of software services that respond from the test network.",NmapScan
+The telescope camera controller has a web UI and a second binary protocol. Probe the permitted address to identify the server software used by each accessible endpoint.,NmapScan
+"What protocol seems to speak on UDP 5683 on the campus sensor testbed, and is there enough response detail to identify an implementation?",NmapScan
+"Security's report lists 161/udp on a lab UPS. Determine what service implementation it indicates, with any detectable version information.",NmapScan
+"Our contractor describes the pallet robot as a 'simple HTTPS device.' During acceptance testing we saw another administrative listener, and the vendor won't provide a full software bill of materials. Identify the network services and versions observable from the assessment workstation.",NmapScan
+"For node staging-delta, I need to know what flavor of remote desktop service answers its management endpoint.",NmapScan
+A migrated print spooler is advertising something on 631. Which protocol/server implementation does it look like from outside the host?,NmapScan
+Can you get service fingerprints from the network side for the demo kiosk at 192.0.2.118?,NmapScan
+"The QA release notes say the broker changed from one implementation to another, but client tests pass with either. Use the authorized broker endpoint to identify its actual protocol and software revision instead of inferring from the application behavior.",NmapScan
+Please catalog application protocols and detectable release strings across the remote-facing endpoints on our container-host test VM.,NmapScan
+Is the lab backup server running an rsync daemon on its exposed file-transfer endpoint? Include implementation/version evidence if it is published.,NmapScan
+The monitoring team spotted a response resembling a SIP server from the phone-system training appliance. Verify which protocol and product it serves at that address.,NmapScan
+"I inherited an island of test devices from a campus energy study. The routers are accounted for, but the measurement aggregator has no owner or package list. Run permitted remote detection to identify the services and software versions it is presenting.",NmapScan
+Can we tell which web framework or reverse proxy is answering from the remote API edge without logging into the host?,NmapScan
+Our ERP mirror accepts connections on a port traditionally used for Oracle. Determine the protocol and server product actually answering there.,NmapScan
+The prototype electric-vehicle charger exposes a maintenance interface. I need a network-side identification of that interface's software for vendor support.,NmapScan
+"In the lab, the new telepresence bridge was cloned from an older image. The old unit shipped with an embedded HTTP daemon whose version was later recalled in a service bulletin. Identify the builds and protocols currently exposed by the clone before we compare advisories.",NmapScan
+"Please inspect the permitted IPv6 host and report service names and any discoverable versions, including those behind unconventional port choices.",NmapScan
+"Our certificate renewal completed, yet the client fingerprint seen at the partner's test endpoint is unexpected. Determine which TLS-speaking application and server revision appear to be handling connections, so the engineering team can decide which deployment owns the certificate.",NmapScan
+What's behind the remote terminal endpoint on TCP 23 of the isolated retro-computing exhibit? Identify the daemon if the banner allows it.,NmapScan
+The intercom controller's web page looks completely different after its reboot. Check the remote server fingerprint so we can see whether the firmware brought up a replacement service.,NmapScan
+We know the training NAS answers file-share requests. Which protocol variants and server implementation does its external interface disclose?,NmapScan
+"Our ocean buoy emulator is responding on an unfamiliar UDP endpoint. Scientists assumed it was telemetry and wrote a parser, but every packet gets rejected. Characterize the protocol using the authorized network test and provide any server product clues you can obtain.",NmapScan
+Could you identify the application and advertised release behind the admin dashboard at 10.73.6.41:5601?,NmapScan
+The staging web gateway exposes a QUIC endpoint along with its normal HTTPS listener. Identify the services detectable on both transports and note what server implementation each suggests.,NmapScan
+The makerspace's laser cutter now shows up in the network inventory as a general-purpose computer. We suspect a vendor firmware image enabled extra software components. Inventory the network-accessible services and discernible product versions on its isolated control interface.,NmapScan
+A host from our training range is labelled 'database' in DNS. Investigate what applications its exposed endpoints really provide.,NmapScan
+"I want a protocol-level identification of the endpoint at 198.51.100.71:2525, including its server banner if one is offered.",NmapScan
+The monitoring export calls port 5901 'VNC' because of the number. Can you verify what application responds and which implementation it is?,NmapScan
+"The university radio station's streaming encoder was replaced during a late-night outage. Audio is playing, but our network documentation still references the decommissioned appliance. Detect the server products and versions visible on the replacement's authorized management and streaming endpoints.",NmapScan
+The research data portal has an object-storage-compatible API. Identify the software service presented remotely; we need its apparent release for integration testing.,NmapScan
+What does the NTP-facing interface on the timekeeping simulator disclose about its server implementation?,NmapScan
+"The storage vendor asks for a listing of remotely detectable software components before opening a support ticket. The appliance's internal package manager is locked, and we are limited to its test-network address. Collect service names, products, and version details exposed through its network interfaces.",NmapScan
+"Is that alternative DNS responder at 5353 speaking mDNS, another discovery protocol, or a proprietary implementation? Please identify it from the wire.",NmapScan
+"The load-test farm has an endpoint that clients treat as a message broker, but our configuration inventory is gone. Determine the actual network service and version on that host before we rebuild the client matrix.",NmapScan
+"Our pilot weather station uses a cellular modem, and the carrier replaced its SIM profile on Wednesday. Telemetry still arrives intermittently, yet the maintenance endpoint is unreachable from our monitoring node. On sensor-gw-6.field.lab, find which inbound TCP ports answer from this network so we can separate connectivity issues from the data pipeline.",PortScan
+"For atlas-test.internal, check the reachable port numbers, not the applications attached to them.",PortScan
+Did the replacement PBX expose 5061 over TCP to the voice subnet?,PortScan
+"During the disaster-recovery rehearsal, staff restored a virtual firewall from an older image and then reapplied the documented rules by hand. The web console works from one segment but fails from the recovery VLAN. Probe 10.62.14.9 for TCP reachability on 443, 7443, and 10443, and show the status of each.",PortScan
+Any sign that TCP 873 is accessible on rsync-archive.lab from the build network?,PortScan
+"Determine whether the classroom NAS accepts connections on 2049; I need socket reachability, not an NFS release number.",PortScan
+"I’m responsible for the kiosk refresh at our museum. The old units forwarded traffic through a small edge router, and we removed that rule during installation of the new displays. From the outside test node, check if demo-kiosk-gw.example.net still lets connections through on port 5901; a stale port-forward would explain the risk finding.",PortScan
+Survey 10.77.6.23 between TCP 4000 and 4500 and return the numbers that respond.,PortScan
+"For the mock payment terminal, is 50051 accessible from the integration runner after the subnet move?",PortScan
+"I can reach our staging hostname over IPv4, but clients selecting its AAAA record get a timeout. The networking team insists the two ingress paths have matching policies. Test the TCP port exposure on the IPv6 address of staging-v6.lab, especially 443 and 8444, from this runner’s network.",PortScan
+Can you test port 9444 on the rehearsal gateway rather than query its operating-system details?,PortScan
+Find which ports in the 20000–20100 range will take TCP connections at 10.44.8.16.,PortScan
+"The warehouse handhelds talk to an on-prem gateway through a vendor-specific port. Overnight, a contractor added an ACL to isolate the loading-dock network, and the devices began queuing scans. For dock-hub.lab, try ports 17000, 17001, and 17002 from the handheld VLAN and report which destination sockets are accessible.",PortScan
+Is the remote syslog collector at 10.32.5.90 reachable on UDP 514 from our appliance subnet? Flag uncertain UDP results.,PortScan
+What TCP ports respond on the demo badge reader after its latest reset?,PortScan
+"An observability sidecar was removed from the preproduction cluster, but security says a node-level route may still expose its metrics endpoint. The pod dashboard only describes configuration inside Kubernetes, leaving the external exposure unclear. Check whether tcp/9100 on 10.23.11.7 actually accepts connections from the assessment segment.",PortScan
+"On the vendor sandbox endpoint, assess open versus closed ports, not the process list from its admin panel.",PortScan
+"Are any of 7001, 7002, or 7003 reachable on broker-dr.internal?",PortScan
+"We are replacing a legacy license manager used by an engineering classroom. Several CAD clients still attempt a connection to the old VM, and its firewall rules were supposed to be locked down before decommissioning. Check connectivity to TCP 27000 and 27010 on 192.168.72.24 to confirm whether either entry point survived.",PortScan
+Please probe the new ticketing appliance's TCP 8445 from the help-desk subnet.,PortScan
+"On 10.80.0.33, give me a list of reachable TCP ports rather than software banner details.",PortScan
+"Our temporary exhibit runs two separate control networks, one for lighting and one for audio. After the technicians changed the uplink, the console can ping the cue server but cannot send a cue. Check the approved destination at 10.61.20.8 for ports 3030, 4040, and 5050 from the lighting controller side.",PortScan
+Is TCP 10050 open to our poller at zbx-proxy-qa.lab?,PortScan
+Test the approved lab router's high ports above 60000 for anything that accepts a TCP handshake.,PortScan
+"A migration playbook says the old file-transfer gateway should have no inbound access once the storage cutover finishes. The VM was shut down and later restarted to retrieve a forgotten report, so its original firewall might be back. From our audit jump network, identify the reachable ports on transfer-old.lab because its previous configuration may be obsolete.",PortScan
+Does node-17.qa.lan expose TCP 10250 to the adjacent test subnet?,PortScan
+"Could you check whether 636 responds at ldap-mirror.demo, without looking up directory-server CVEs?",PortScan
+"A contractor configured a tunnel from a robotics lab into a vendor-managed control box. The tunnel is up according to the gateway status page, but the robot controller cannot establish a session to its destination. Scan the far-end test address 172.21.33.42 for the approved TCP ports 502, 20000, and 44818 as seen through the tunnel.",PortScan
+I just need to know if 3128 still accepts outside connections on cache-retired.lab.,PortScan
+Can our QA runner reach port 8448 on the private endpoint 10.70.15.5?,PortScan
+"A database failover test worked from the primary site and failed from the standby site. Both groups used the same hostname, and DNS resolution has already been checked. Assess whether TCP connections to port 1433 reach sql-relay.dr.local from the standby subnet, then indicate whether the port appears open or filtered.",PortScan
+Give TCP port status on rack-controller.demo; don't establish a login session to validate credentials.,PortScan
+"Which of 16100, 16101, and 16102 is available on the audio distribution gateway?",PortScan
+"The IT team moved our print management service behind a new load balancer and left a temporary debug listener enabled during testing. They claim the listener was removed before the public DNS change. From an external assessment point, see whether TCP 9191 still answers at print-front.test.example.org alongside the intended port 443.",PortScan
+"For 10.9.30.46, which destinations between TCP 8000 and 8050 will accept connections?",PortScan
+A teammate says 5222 is blocked at chat-edge.demo. Verify from the campus subnet.,PortScan
+"For a software-defined radio installation, the management UI is reachable on the bench LAN yet fails from the research VLAN. The electronics team has already swapped the cable and verified the IP address. Try a remote TCP reachability check of 8088, 8888, and 9999 at 192.168.84.6 before we request physical access again.",PortScan
+"List exposed port numbers on sandbox-bastion-2, not the identities of users who connected previously.",PortScan
+Is 5986 open on the Windows image-test host from the deployment agent subnet?,PortScan
+"The class demonstration network has a deliberately restrictive ACL between two groups of VMs. Students report that their peer-to-peer demo sometimes works, but only after connecting to a different wireless access point. From the instructor's test node, see which of TCP 41001, 41002, and 41003 will accept a connection at 10.12.45.19.",PortScan
+A quick check on the approved demo host: are 1884 and 1885 available over TCP?,PortScan
+Does our remote build cache have 11211 exposed to the integration segment?,PortScan
+"The facilities network manager has scheduled a camera replacement and needs evidence that the previous camera's inbound interfaces were disabled. Asset inventory still includes the retired camera's hostname, but the address now points to a staging device. Test the current destination at camera-spare.lab for reachable TCP 554, 8554, and 10554 before the change record is closed.",PortScan
+"For the server in our permitted test range, check the TCP handshake on 6514, not the contents of its log files.",PortScan
+What ports are reachable from the analytics subnet on event-collector.lab after the ingress policy update?,PortScan
+The hardware team retrieved an iLO firmware string from a retired HPE server. Which published security notices cover that revision?,CheckVulnerability
+One Oracle WebLogic node is on 12.2.1.4 while its peers received quarterly updates. Which security advisories still apply to that unpatched node?,CheckVulnerability
+Is libwebp 1.3.1 within the affected range for the image-decoding vulnerability reported in 2023?,CheckVulnerability
+"A printer service in our packaging plant reports CUPS 2.4.2, but the operating-system vendor says it backported several fixes. Trace the relevant vulnerability advisories and package revisions; I need evidence for the risk committee, not a test against the printer.",CheckVulnerability
+What did the security community disclose about WP File Manager releases around 6.0 on WordPress sites?,CheckVulnerability
+Our Zimbra Collaboration 8.8.15 installation missed several patches. Which public advisories list its particular patch level as vulnerable?,CheckVulnerability
+How does the advisory history look for F5 BIG-IP 16.1.2?,CheckVulnerability
+"A colleague called our Salt master 'old enough to be risky' after noticing version 3005.1 in a support bundle. Can you identify documented Salt security defects for that revision, with relevant advisories and fixed releases?",CheckVulnerability
+"The storage box speaks rsync through a daemon running 3.2.3. I want references for any known security bugs in that release, not another inventory sweep.",CheckVulnerability
+"Which public advisories cover sudo 1.9.5p2, particularly problems involving privilege boundaries?",CheckVulnerability
+Does our vendor-specific Bash 4.3 CGI package fall within the builds affected by Shellshock after accounting for backported fixes?,CheckVulnerability
+Could FreeRADIUS 3.0.21 be affected by a publicly reported authentication-related flaw?,CheckVulnerability
+"The document-conversion worker is built around Ghostscript 10.01.1. It operates on customer-supplied PDFs inside a locked-down queue, and the security review wants applicable CVEs plus the versions that corrected them before approving a higher throughput limit.",CheckVulnerability
+Look up known weaknesses for the Eclipse Mosquitto 2.0.11 broker used in our sensor gateway.,CheckVulnerability
+The office NAS runs QNAP QTS 5.0.0. Are any outstanding security advisories relevant to that exact firmware release?,CheckVulnerability
+"Someone sent me a PAN-OS 10.2.6 build number and a screenshot of a scary headline. Match the actual build to official affected-version statements, not the headline's broad product description.",CheckVulnerability
+Did Webmin 1.990 have any published authentication or command-execution vulnerabilities?,CheckVulnerability
+A Kubernetes worker remained on kubelet 1.25.4 after a failed upgrade. Which security advisories affect that version?,CheckVulnerability
+Can you find the advisory trail for libarchive 3.6.0?,CheckVulnerability
+"Our legal team receives compressed evidence bundles from third parties and extracts them using 7-Zip 22.01. Before approving that handling process, identify any publicly disclosed parsing weaknesses affecting this release; don't inspect or unpack the evidence files themselves.",CheckVulnerability
+Is WordPress core 6.1.1 listed as vulnerable in any maintained disclosure database?,CheckVulnerability
+"A migration spreadsheet lists Jira Software 9.4.1, while the vendor's bulletin mentions multiple 9.x branches. Compare the affected-build ranges with 9.4.1 and point us to the fixed version, not a scan of the Jira server.",CheckVulnerability
+"I'd like security notices for Squid proxy 5.7, including flaws triggered by unusual HTTP requests.",CheckVulnerability
+"The QA lab's Jetty service is pinned to 9.4.51 because a newer library broke compatibility. If there are published weaknesses for that specific Jetty build, give us the advisory references and prerequisites so the team can weigh temporary mitigations against upgrading.",CheckVulnerability
+Are there CVE records tied to Git 2.39.0 when it processes repositories from untrusted sources?,CheckVulnerability
+We kept an OpenVPN 2.5.7 container image after a conference demo. Check which vulnerabilities apply to its release.,CheckVulnerability
+Any security bulletins for OpenLDAP 2.4.59?,CheckVulnerability
+"Our self-hosted code forge is Gitea 1.17.0. Reverse proxy logs are noisy from unrelated bots, and the upgrade discussion has become confused. Which known security issues apply to this Gitea version based on published vulnerability records?",CheckVulnerability
+Can you check advisories for Nextcloud 25.0.2 before we restore a snapshot from last winter?,CheckVulnerability
+I have an xrdp 0.9.19 banner copied from a troubleshooting note. Identify disclosed flaws applicable to that version; please don't try to log in to the remote desktop service.,CheckVulnerability
+"The kiosk team can replace the Android WebView component only during monthly device refreshes. They supplied the exact WebView build identifier in their ticket. We need the published vulnerability coverage for that build, with affected ranges and any fixed release, to decide whether the schedule must change.",CheckVulnerability
+Does the installed version of the Grafana image-renderer plugin have any published security advisories separate from Grafana itself?,CheckVulnerability
+"A packet analyst uses Wireshark 4.0.1 to open captures sent by outside contractors. The analyst works from an offline workstation, but that doesn't answer whether crafted captures can trigger a known parser flaw. Research the applicable security disclosures for this version.",CheckVulnerability
+Check ImageMagick 7.1.0 for documented vulnerabilities involving image formats or delegates.,CheckVulnerability
+"The OpenStack environment is on the Zed release, with Keystone packages maintained by the cloud vendor. Before we request administrator access to inspect the controller, find whether any published identity-service weaknesses cover those Keystone package versions.",CheckVulnerability
+Has Zeek 5.0.3 been the subject of a public security advisory?,CheckVulnerability
+"Our container runtime report lists runc 1.1.4 and raises an alarm about container escapes. I need to determine which publicly documented issues affect that revision and what upgrades address them, rather than treating every container security story as applicable.",CheckVulnerability
+What security flaws have been disclosed for FFmpeg 4.4.2?,CheckVulnerability
+Ceph monitors still run Reef 18.2.0. Can you find published weaknesses tied to that exact revision before the maintenance meeting?,CheckVulnerability
+Is Apache Cassandra 4.0.6 covered by any advisories concerning unauthorized data access?,CheckVulnerability
+"The MinIO image was built from a release tagged in February 2023. Our object-store inventory identifies the complete release timestamp, yet the scanner only says 'outdated'. Determine which known vulnerabilities intersect the actual release window and which newer release contains a fix.",CheckVulnerability
+Could you locate the published security history for Mattermost 7.6.1?,CheckVulnerability
+The university's video-conferencing gateway still uses coturn 4.5.2. Its traffic volume looks normal and access is restricted to the campus network. Check for publicly reported software vulnerabilities affecting this TURN server release; I don't want conclusions drawn just from its port exposure.,CheckVulnerability
+"The monitoring dashboard embeds an old version of Chart.js from a private package mirror. We have the exact package hash and release number. What documented vulnerabilities concern that dependency version, not the web server hosting the dashboard?",CheckVulnerability
+A security finding cites the Erlang OTP runtime on our messaging host without naming a CVE. Please research disclosed issues in the installed OTP release and tell us which fixed branches the maintainers identify.,CheckVulnerability
+"After we changed keyboard layouts for a visiting researcher, the password field began behaving differently during sign-in. On this workstation, bring up the authentication records from the controlled tests so I can compare the OS messages with our screen recording. Preserve their timestamps and order.",ReadAuthLog
+Which local authentication entries appeared when I unlocked this laptop after its lid had been closed overnight?,ReadAuthLog
+Fetch the PAM conversation recorded on this computer when the fingerprint reader was tried at the console.,ReadAuthLog
+"We've changed the display manager on this Linux workstation. I can reproduce a brief black screen after entering my password, and the desktop then returns. Show this machine's authentication event messages from the attempt so we can identify the exact point in the sign-in sequence.",ReadAuthLog
+"Open the login event trail for this host, not the general kernel and application journal.",ReadAuthLog
+Need the records associated with switching from my ordinary account into the deployment identity on this box.,ReadAuthLog
+I was told the service user was disabled before noon. What does this server's authentication record actually say during that account-disable window?,ReadAuthLog
+"A maintenance script works interactively but behaves differently from a scheduled job. Before touching the script, show the authentication and session records this machine produced during the scheduled execution. I want to see which PAM path the scheduled environment took.",ReadAuthLog
+Show the OS-side entries from my last `su` attempt on this machine.,ReadAuthLog
+"Give me the actual log lines from the login subsystem here, not just a yes-or-no answer about whether someone got in.",ReadAuthLog
+Our CI runner is on this host and a release step started requesting a tty unexpectedly. I need the machine's recorded account authentication and session messages from that run to compare with the runner's own console output.,ReadAuthLog
+Was anything written by gdm to the local authentication record during the morning shift? Please show the entries from this workstation.,ReadAuthLog
+"The kiosk came back from repair with a different smart-card reader. Staff can reach the desktop but the sign-in notification appears twice. Please display the local log entries generated by that authentication flow on the kiosk, including whatever happened between the two prompts.",ReadAuthLog
+Can you retrieve this VM's authentication messages between 14:20 and 14:45?,ReadAuthLog
+"For the evidence export, give me this machine's source auth messages rather than a breakdown of suspect user names.",ReadAuthLog
+My shell history was wiped during the upgrade. Pull this host's authentication-side records for the previous session so I can rebuild the sequence of opening and closing the login.,ReadAuthLog
+"The student teaching assistant used a temporary account on the lab console, and we need to reconcile that session with checkout paperwork. Bring up the local authentication entries from the afternoon, preserving account identifiers and timestamps.",ReadAuthLog
+Show the authentication messages created on this server when I used a hardware security key.,ReadAuthLog
+Can I read the local sign-in traces this workstation wrote while the graphical greeter kept refreshing?,ReadAuthLog
+Display the original auth journal entries on this host; don't reduce them to failed attempts grouped by account.,ReadAuthLog
+"There's a gap between the time the monitoring agent started and the point the first desktop user appeared. The audit team wants this machine's own account-verification log covering that stretch, even if the entries look ordinary.",ReadAuthLog
+The desktop says the network account was cached. I want the authentication log from this laptop at the time of that cached login.,ReadAuthLog
+Bring back whatever the local authenticator on this workstation recorded at the end of the weekend training session.,ReadAuthLog
+I need to see the host-side event messages for a console login after the disk was unlocked at boot on this machine.,ReadAuthLog
+"We need the textual record of how sessions were established on this node, not an automated judgment about credential stuffing.",ReadAuthLog
+The help desk reopened a ticket when a user switched seats and their home directory mounted with the wrong owner. Could you read the OS authentication entries on this workstation during that login? We will compare the messages with the filesystem team later.,ReadAuthLog
+Get the access-related entries produced by `login` on this server during the manual recovery session.,ReadAuthLog
+Our terminal server is being decommissioned tonight. Could you capture its current local authentication history before the VM is destroyed? Include whatever messages the host logged about interactive sessions so the migration report has source evidence.,ReadAuthLog
+What appears in this machine's sign-in journal immediately after we enabled directory fallback?,ReadAuthLog
+"Show me the source login records for this endpoint, not an estimate of attack volume.",ReadAuthLog
+"At the start of the maintenance window, three engineers shared a physical console but used separate identities. I need a readable extract of the authentication events this box logged during their handoffs. Please retain the order so we can check which session came first.",ReadAuthLog
+See the local auth events for the rootless service's user-session startup on this computer this morning.,ReadAuthLog
+The server's clock jumped backward after an NTP correction. Bring up authentication messages from both sides of the clock change on this server; we need their original timestamps to reconcile the incident notebook.,ReadAuthLog
+Which account-validation messages did this machine write when the screensaver was dismissed?,ReadAuthLog
+"Please retrieve the recorded PAM session opens and closes on the current host, rather than listing the processes running under those users.",ReadAuthLog
+"The vendor switched our desktop image from password-only to badge-plus-PIN authentication. One tester says the unlock behaved as expected, while another saw an extra prompt. Fetch the authentication records on this machine from both tests so we can compare the raw event strings.",ReadAuthLog
+Need auth entries created locally on this server for the service-account password change at 07:30.,ReadAuthLog
+I'm on the affected machine now. Read the record lines for the user sessions created through its serial console.,ReadAuthLog
+An engineer recovered access using an out-of-band console when the remote gateway was down. I want the local host's authentication entries surrounding that recovery session so the operations note includes system evidence we can check against the written handoff.,ReadAuthLog
+"Look up what the authenticator wrote here on Tuesday night, not which hosts were reachable at that hour.",ReadAuthLog
+Give the original login-facility output on this box from the time the screen locked through the next unlock.,ReadAuthLog
+The VDI guest was resumed from a checkpoint and immediately forced a reauthentication. Our app team sees only a generic timeout in its logs. Please show the guest OS authentication records around resume so we can work out what the guest recorded.,ReadAuthLog
+"The graphical desktop froze, so I signed in through tty2 on this laptop. What authentication entries did that console session generate?",ReadAuthLog
+"The classroom image uses a custom PAM module for a lab exercise. After changing its order, the instructor requested direct evidence from the current machine of how authentication proceeded during a sample login. Fetch that log portion with context on either side.",ReadAuthLog
+"Return the current computer's authentication log messages, not a suspicious-login ranking.",ReadAuthLog
+The art department's shared render workstation showed six account lockouts during an unattended overnight job. Nobody should have been typing at its console. Review the rejected sign-in activity on that workstation and tell us which identities were attempted.,CheckFailedLogins
+"Yesterday the campus Wi-Fi controller was replaced, and staff on this Linux laptop started seeing authentication warnings. Determine whether the laptop actually received repeated invalid sign-in attempts during the changeover, including any attempts from unfamiliar network addresses.",CheckFailedLogins
+"A robotics test bench has been disconnected from the internet for a week, yet its operator reported password prompts appearing at odd hours. On the bench computer itself, investigate denied local or remote account access and look for a repeating pattern.",CheckFailedLogins
+Our course assistant insists a student merely mistyped a password on the department server. The access monitor shows attempts against several student identities within minutes. Inspect this server's unsuccessful authentication activity to establish whether the incident involved more than one account.,CheckFailedLogins
+"Since we rebuilt the CI runner, the deployment dashboard has remained green but the security channel keeps receiving lockout notices. Trace the rejected account access attempts on this runner, especially anything associated with the old automation identity.",CheckFailedLogins
+"We ended a supplier's access last month and retired their credentials, but the security lead thinks somebody is still testing the former supplier login. Examine this host for attempted entries using that disabled identity and whether the attempts occur in clusters.",CheckFailedLogins
+"The travel laptop spent two days on hotel Wi-Fi and returned with an unusual login-security notification. Before we wipe it, identify any unsuccessful account access attempts recorded on the laptop, including their timestamps and apparent origins.",CheckFailedLogins
+"There's an unexplained jump in authentication errors on our inventory kiosk. The support team wants to reinstall its client, but I need to determine first whether the kiosk itself has been receiving repeated attempts to enter an account.",CheckFailedLogins
+"After an engineer changed teams, their old workstation began recording periodic access denials late at night. Could you inspect attempts to sign in on that workstation and establish whether the old corporate identity is still being tried?",CheckFailedLogins
+"At the climate lab we power down this analysis node every evening, and yesterday it was running only briefly for a scheduled job. Even so, the security report claims dozens of rejected sign-ins. Check the node's actual unsuccessful access events and timing.",CheckFailedLogins
+"The admissions desk PC has a shared shift account. Staff blamed the new keyboard when it was locked this morning, but the notification mentions several accounts. Investigate denied attempts on that PC, distinguishing one person's typing errors from repeated targeting.",CheckFailedLogins
+"Somebody found a sticky note with an obsolete root password beside the machine-room console. We changed the password immediately. Look on that machine for unsuccessful attempts involving privileged identities since the note was discovered, including any unexpected repetition.",CheckFailedLogins
+"A field technician was servicing this edge gateway when the login screen abruptly began showing delays. CPU, connectivity, and storage looked normal. Review rejected account entries on the gateway and assess whether successive wrong credentials caused the slowdown.",CheckFailedLogins
+"Our research group has five people sharing a GPU box, and one member says they were locked out while everyone else was asleep. On that box, determine whether multiple accounts faced failed access attempts during the same overnight window.",CheckFailedLogins
+The storage server recently started sending account-denial notifications after its directory integration was updated. I want to know whether those came from a single misconfigured service or from suspicious attempts across different identities recorded by the server itself.,CheckFailedLogins
+Is anybody trying the retired trainee login on this desktop?,CheckFailedLogins
+The office printer PC displays three lockouts from before opening time. Look for the underlying rejected account entries here.,CheckFailedLogins
+Did an interactive console user repeatedly get the PIN wrong on this workstation yesterday?,CheckFailedLogins
+I saw a security banner after waking this notebook. Was there any unauthorized-looking effort to enter an account while it was asleep?,CheckFailedLogins
+A fake employee name showed up in an alert. Find the denied attempts involving that name on this host.,CheckFailedLogins
+"Please determine whether the failed access events on this node came in evenly timed intervals, not just give me their overall number.",CheckFailedLogins
+The bastion is responsive; what I need is evidence of any suspicious account-entry attempts reaching this bastion today.,CheckFailedLogins
+One contractor says their key stopped working here. Check the rejection events for that identity instead of testing whether the machine accepts connections.,CheckFailedLogins
+A classroom PC has lockouts every Friday at exactly noon. Is the timing of unsuccessful sign-ins consistent on this PC?,CheckFailedLogins
+Whoever used the old administrator name here last weekend should stand out. Find those denied access attempts.,CheckFailedLogins
+I need the sign-in rejections on my laptop that happened while I was giving a presentation.,CheckFailedLogins
+Are several accounts on this server getting one incorrect password each from the same origin?,CheckFailedLogins
+"A scheduled backup is healthy, yet its user account keeps being denied entry on this machine. Trace those attempts, not the backup files.",CheckFailedLogins
+"Before reimaging the kiosk, establish whether anyone tried entering the maintenance account after the store closed.",CheckFailedLogins
+"Look at the local machine's suspicious account activity, not a broad dump of normal successful sessions.",CheckFailedLogins
+"The developer VM shows an account being locked and unlocked in rapid succession. What rejected attempts drove that behavior, instead of listing current sessions?",CheckFailedLogins
+Was the overnight security warning on this Mac triggered by unusual account-entry attempts or an ordinary mistype?,CheckFailedLogins
+Our payroll terminal was unattended during the audit. Identify any refused sign-ins occurring during those hours on the terminal itself.,CheckFailedLogins
+"I care about repeated denials for the guest identity on this Linux machine, rather than its current network listeners.",CheckFailedLogins
+Two access warnings came seconds apart on this host. Were they part of a longer run of wrong credentials?,CheckFailedLogins
+Can you inspect the failed authentication pattern on this box without treating every user logout as an attempted intrusion?,CheckFailedLogins
+We restored this VM from a snapshot. Has the old service identity been used unsuccessfully since it booted?,CheckFailedLogins
+My supervisor wants to know whether somebody cycled through employee IDs to get into this workstation.,CheckFailedLogins
+"The camera control computer keeps refusing an account at sunrise. Investigate those denials on the computer, not the camera stream.",CheckFailedLogins
+Has the local test server seen an odd sequence of bad public-key authentications since we rotated the deploy keys?,CheckFailedLogins
+Our on-call report claims an intruder guessed credentials on this node. Find the unsuccessful access evidence before we label it an attack.,CheckFailedLogins
+A machine in the workshop was left signed out over the holiday. Were any accounts unsuccessfully tried on that exact machine?,CheckFailedLogins
+"During the security drill, nobody was instructed to modify firewall rules. Just assess suspicious sign-in attempts on this computer.",CheckFailedLogins
+Could a forgotten integration still be retrying the disabled account against this server? Identify the rejected tries and their intervals.,CheckFailedLogins
+"The network team saw a brief traffic spike near this application host. I want suspicious or rejected sign-ins identified on the host itself, rather than another sweep of exposed ports.",CheckFailedLogins
+"After switching our build runner to rootless Podman, the webhook receiver still launches but jobs never arrive. On this very host, I want to see the actual TCP bind addresses and ports before anyone rewrites the pipeline or blames the firewall.",ListeningPorts
+"Between VPN reconnects, did my desktop start accepting connections on 17500?",ListeningPorts
+Please map the server-facing sockets on this lab controller I am using to their owning applications; the vendor's inventory is three years old.,ListeningPorts
+"Our media transcoder is launched by a supervisor that reports success even when a socket cannot be claimed. The machine I'm logged into has several codecs running, and I need the receiving endpoints it currently owns to confirm its control channel appeared.",ListeningPorts
+"Inspect the waiting endpoints on this node, not the ports exposed by our NAT gateway.",ListeningPorts
+Is this computer currently holding UDP 5353 for service discovery?,ListeningPorts
+This staging laptop has multiple Python environments; which local port is the preview server occupying today?,ListeningPorts
+"I found a home-automation bridge on this mini PC alongside our backup software, and its mobile app stopped pairing overnight. Give me the machine's current inbound socket bindings so I can tell whether the bridge started on an unexpected interface after the router replacement.",ListeningPorts
+"Who has claimed 27100 on this workstation? I need the network endpoint owner, not a CPU ranking.",ListeningPorts
+Anything on this workstation accepting TCP traffic on 6006 at the moment?,ListeningPorts
+"During an image-processing demo, two test servers took turns crashing with an address-in-use error. Both have since been relaunched under different accounts on this workstation. Identify the ports currently held open for incoming requests and the related process IDs where possible.",ListeningPorts
+"Our Kubernetes development node is running an ingress sidecar alongside a host-level tunnel. Requests from the browser fail only after suspend and resume. Before changing DNS or cluster policies, identify the host's waiting sockets and the interfaces to which they are attached.",ListeningPorts
+See what inbound sockets the rootless applications have created on this machine.,ListeningPorts
+Check the local UDP bindings rather than sweeping another computer for reachable ports.,ListeningPorts
+"A machine-learning training box has a small callback receiver for checkpoint notifications. The job is still using the GPU, but the coordinator stopped sending updates after an OS patch. Inspect the ports waiting for connections on this training machine and their owning PIDs.",ListeningPorts
+Did the clock-sync daemon on this server retain a local UDP endpoint after the service reload?,ListeningPorts
+What's reserving TCP 24800 on my workstation?,ListeningPorts
+"We recently enabled systemd socket activation for the internal search service. The service process now exits between requests, which is expected, but clients sometimes receive connection refused. Examine whether this machine currently has active receiving sockets even while the worker process is idle.",ListeningPorts
+"I want this server's bound receiving addresses, not incoming traffic events from the gateway logs.",ListeningPorts
+The printer discovery utility complains that its usual UDP endpoint is occupied; show the holder on this desktop.,ListeningPorts
+"On our archive appliance, the control panel and the backup daemon were updated separately last night. Both are marked healthy in their respective dashboards. Capture this appliance's active listener table, including local address and transport, so we can reconcile which control channels really came up.",ListeningPorts
+Who owns TCP 5480's server socket on the computer I am using?,ListeningPorts
+"Give me this workstation's passive network sockets, not a list of open ports on the remote test server.",ListeningPorts
+"After renewing certificates, has the HTTPS admin endpoint on this machine actually opened a receiving socket?",ListeningPorts
+"I closed a Jupyter session, yet a new notebook says its preferred endpoint is occupied. There are several kernels and browser helpers still around on my desktop. Show me the local socket holders, with particular attention to server-side bindings around the notebook ports.",ListeningPorts
+Are any applications on this box waiting for UDP packets on the multicast interface?,ListeningPorts
+"Before I lend this laptop to a coworker, tell me which local network endpoints are able to receive fresh connections.",ListeningPorts
+"The edge gateway gained a cellular adapter and its configuration still references the old Ethernet address. Telemetry goes out normally, while the local maintenance page is inaccessible. Collect the gateway's bound receiving addresses and ports so I can spot an interface mismatch.",ListeningPorts
+"Find sockets on this machine ready for new inbound TCP connections, not the established SSH sessions.",ListeningPorts
+Does this host currently accept connections on the game server's TCP 25565 endpoint?,ListeningPorts
+We disabled the vendor diagnostics agent; I want to see if its control port is still claimed on the current host.,ListeningPorts
+"After the data-center team switched the network setup from a Linux bridge to macvlan, the collector kept reporting healthy but peer devices could no longer send it measurements. Verify which network addresses and transport ports this collector machine is actually waiting on before adjusting routes.",ListeningPorts
+"I need the bind state on this box, not what a sweep from the neighboring VLAN can see.",ListeningPorts
+Quickly inventory this VM's IPv6 wildcard TCP listeners after the tunnel software was removed.,ListeningPorts
+Two systemd .socket units on this server are supposed to hand different connection types to the same worker. The worker itself is often absent from the process table until traffic arrives. Please inspect which receiving sockets are active on this server and who owns them right now.,ListeningPorts
+"After stopping my IoT simulator, is my laptop still accepting MQTT connections on TCP 1883?",ListeningPorts
+Did Avahi reclaim its usual endpoint locally after yesterday's package update?,ListeningPorts
+"Identify programs holding incoming network endpoints here, not every process with high CPU utilization.",ListeningPorts
+"One of our analysts temporarily installed a file receiver for a dataset handoff on this research desktop. Nobody documented which address it uses, and we want to verify it was shut down after the transfer. Check the local ports and interfaces still waiting for requests.",ListeningPorts
+What local address is attached to the receiver on port 2222 of this server?,ListeningPorts
+"Following the pod restart, list receiving sockets in the host network namespace on this node.",ListeningPorts
+Our software-defined radio dashboard moved from the engineering LAN to a standalone workstation with both IPv4 and IPv6 enabled. The interface loads locally but users on the bench network cannot reach it. Show the workstation's actual receiving socket addresses to narrow down the mismatch.,ListeningPorts
+"Give me the actual bound sockets on this endpoint, not the planned values in the deployment manifest.",ListeningPorts
+"During acquisition, which UDP addresses on this instrument computer are registered to receive telemetry?",ListeningPorts
+"The last release creates a temporary callback server for browser-based authentication and is supposed to close it after the session. On this developer machine the browser exited hours ago, yet a new login reports the endpoint is busy. Inspect the live receiving sockets and their owners before we change the authentication flow.",ListeningPorts
+"The microscope capture software on this workstation froze halfway through saving a slide series, but its window has disappeared from the desktop. Before I reopen the application and risk overwriting images, can you see whether its acquisition executable is still alive and what share of CPU it has?",ListProcesses
+"On this computer, what is `syncthing` doing in the task list right now?",ListProcesses
+Which programs are running under the kiosk account on this machine?,ListProcesses
+"Since I connected a second monitor, this laptop gets hot even when the display appears idle. The graphics driver was updated last week and the journal has routine warnings, but I'd like to know whether the compositor or some other live task is occupying the processor at this moment.",ListProcesses
+"The web interface timed out, but I need the application processes on this box, not another connectivity check.",ListProcesses
+Is the local antivirus scanner still occupying a core after its progress window closed?,ListProcesses
+"Someone left a browser-based CAD session open on the design workstation, and the operating system now reports sustained load with nothing obvious on screen. Find the executable names currently active here, including hidden background helpers, and their individual CPU percentages so we can decide what to close.",ListProcesses
+Show me every process started under my login since I opened this terminal.,ListProcesses
+"Does this desktop have an active `pipewire` instance, and how much CPU is it taking?",ListProcesses
+"The customer demo just finished on this machine, and its video rendering helper should have exited. I'd like to see its PID and any surviving helper tasks instead of searching the application history; the machine is needed for another demonstration and I don't want to force a reboot.",ListProcesses
+Can you see whether the local OCR engine is consuming CPU while the document queue is empty?,ListProcesses
+Something is saturating a single core here; identify the executable responsible.,ListProcesses
+"The point-of-sale terminal has started stuttering whenever a receipt prints, even though transactions still reach the server. I suspect the print spooler has accumulated hung child jobs; inspect what's running on this terminal and the resources those tasks hold before we restart the checkout program.",ListProcesses
+List the commands executing under the `nobody` user on this host.,ListProcesses
+"The firewall report is unrelated to today's slowdown; show the CPU-heavy processes on the machine I'm using, not blocked connections.",ListProcesses
+"Our lab's thermal camera controller runs in the background on this PC and stopped updating its preview ten minutes ago. The USB device is still detected, so I want to establish whether the controller program exists in memory and whether its CPU activity has stalled or spiked.",ListProcesses
+Is `tracker-miner-fs` still active on my workstation?,ListProcesses
+I want the resident memory sizes of current local jobs launched by the R analysis session.,ListProcesses
+"This laptop was fine until I restored a large browser session from yesterday. The fans ramp up even with every tab visually idle, and I'm worried one extension spawned an expensive helper. Show the live browser-related tasks here, with their CPU use, so I can isolate the offender.",ListProcesses
+"Give me running task IDs and owners from this node, not entries from the security event log.",ListProcesses
+The handheld barcode scanner service should be present on this checkout computer; can you confirm its live executable?,ListProcesses
+"The training laptop feels sluggish only while its screen recorder is active, and the cursor briefly freezes whenever a clip is saved. Could you show the live tasks and their processor usage here while recording continues, so I can pinpoint the contention?",ListProcesses
+"A numerical simulation finished printing results hours ago, yet the cooling fans on this engineering workstation never quieted down. I'd like a current inventory of its compute tasks with CPU percentages and elapsed runtime, especially any solver instance that survived the shell that launched it.",ListProcesses
+"Is `cupsd` alive here at the moment, and is it using measurable CPU?",ListProcesses
+"We can reach the metrics endpoint, but I need to find who's burning compute locally, not verify which network sockets are open.",ListProcesses
+Did the accessibility screen reader leave a background worker running on this PC?,ListProcesses
+"For the maintenance ticket, capture the active executables, their PIDs and CPU load here before I apply the patch.",ListProcesses
+"Our classroom display machine slowed down right after students ran a graphics demonstration. The teaching application has been closed and the screen is back to the desktop, yet load remains high. Inspect the running programs and their CPU consumption to find leftover render workers.",ListProcesses
+Can you locate any local `rsync` jobs that are still executing under the backup account?,ListProcesses
+"Instead of reading yesterday's startup messages, check which programs are executing on this computer right now.",ListProcesses
+"The accounting program launches a background PDF generator when invoices are exported, and the export button has been greyed out since lunch. On this office workstation, show whether that generator is still active along with any associated worker processes and their resource use.",ListProcesses
+Which running process has accumulated the most CPU time on this box?,ListProcesses
+Is the credential manager helper running under my desktop session here?,ListProcesses
+"After switching virtual desktops during a presentation, the audio keeps crackling although the sound server claims to be healthy. I want to see the active audio-related executables on this laptop and how much processor time they consume while the distortion is happening.",ListProcesses
+"I'm looking for current process ownership on this machine, not a list of logins that succeeded earlier.",ListProcesses
+The local build seems to have hung during link-time optimization; what compiler or linker tasks are still alive?,ListProcesses
+"We restarted the touchscreen interface on an exhibition booth computer after it stopped responding to visitors. The kiosk reopened, but its old worker may still be running alongside the replacement. Can you inspect this machine's live executable instances and compare their CPU demand before anyone restarts it again?",ListProcesses
+Find out if a `locate` database update is active on this laptop.,ListProcesses
+"The update utility shows three helpers in its own interface; how many are actually running on this PC, and what CPU share does each have?",ListProcesses
+"The office printer is responding again, but this workstation's memory use keeps climbing after each scan. Please inspect the currently running scanner utilities, their IDs and memory footprint rather than pulling printer error messages; we need to see whether a helper is accumulating resources.",ListProcesses
+Show the CPU use of all programs currently owned by the local `postgres` account.,ListProcesses
+"After the browser tests on this box, are any `chromedriver` executables still alive?",ListProcesses
+"The photo ingest station occasionally pauses for several seconds when importing RAW files, and the transfer utility isn't reporting an error. I'd like to know what other executable is competing for CPU on this same machine while the import stalls, including the task names and process IDs.",ListProcesses
+What PID belongs to the active speech-to-text daemon on this device?,ListProcesses
+"I need a live snapshot of this laptop's tasks before removing the faulty plugin, not another summary of what the service journal recorded.",ListProcesses
+"A contractor's integration test is over, but the address 2001:db8:41::27 is still reaching our build coordinator. It appears in the packet captures every few minutes. Put a source restriction on this machine so those connections are refused while we untangle the old scheduled job.",BlockIP
+Please quarantine 10.61.4.9 from contacting this server; that appliance was removed from inventory.,BlockIP
+"We discovered an abandoned webhook sender during the cutover to the new ticketing system. Its address is 192.0.2.37, and it has started filling the receive queue on this host again. Security cleared a temporary IP-specific firewall ban until the migration owner can disable it upstream.",BlockIP
+"Could you block 203.0.113.31 at this host, rather than shut down the admin dashboard for everyone?",BlockIP
+The lab's guest laptop is at 10.20.5.77. Stop its network traffic from arriving on this workstation.,BlockIP
+"Yesterday's batch job finished, yet one external machine keeps opening connections to our payroll upload listener. We traced those sessions to 198.51.100.104 and confirmed they're no longer authorized. Add a local rule excluding that address while the accountants continue working normally.",BlockIP
+"ip ban 2001:db8:44::9 on this node pls, the requests keep coming back",BlockIP
+I'm keeping the customer API online. Can the firewall refuse 192.0.2.153 without disabling the API itself?,BlockIP
+"A sensor controller in the greenhouse was replaced last month, but its previous management address, 10.12.8.41, is still contacting the Linux collector. The network team has confirmed the device was retired. Stop that single sender at the collector's firewall during the transition.",BlockIP
+Make this VM disregard inbound packets originating from 203.0.113.208.,BlockIP
+Need 172.19.8.23 blocked on the local host before the next warehouse shift starts.,BlockIP
+"An internal CI runner began sending unexpected requests to the artifact registry after its token was revoked. We isolated the runner at 10.44.7.16, and the registry is shared by several other teams. Add a host-specific firewall deny for that source to preserve the shared service.",BlockIP
+"Please filter out 198.51.100.47 at the network layer, not merely hide its events from the monitoring dashboard.",BlockIP
+The unauthorized address in the change ticket is 2001:db8:7a::12. Make this box refuse it.,BlockIP
+"The maintenance tablet used for the elevator controller is missing, and the access inventory ties it to 10.9.4.118. The controller's management service is still needed by staff on site. Block traffic from the missing tablet's address on this machine while facilities searches for it.",BlockIP
+Source 192.0.2.221 is barred from this host effective now. Enforce that in the local packet filter.,BlockIP
+"Keep the audit logs flowing, but stop 203.0.113.41 from connecting here instead of just flagging its messages.",BlockIP
+"We have a short maintenance window on a shared development machine, and an old test orchestrator keeps opening sessions from 172.22.16.35. Nobody owns that orchestrator anymore, but several legitimate builds are in flight. Restrict its source address on this host for the rest of the cleanup.",BlockIP
+Someone please put 198.51.100.142 on this machine's network blacklist.,BlockIP
+The conference badge printer at 10.31.2.64 has been reassigned; prevent it from reaching this check-in server.,BlockIP
+Our firmware distribution host receives traffic from field devices all day. A staging relay at 192.0.2.109 was left running after validation and is consuming connection slots. The deployment lead requested that this machine reject that relay's IP until the staging environment is torn down.,BlockIP
+I'd prefer a one-address firewall cutoff for 2001:db8:9::4 instead of changing the rules for the entire IPv6 segment.,BlockIP
+"Drop inbound traffic sourced at 203.0.113.229 on this host, please.",BlockIP
+"The access review found that a former satellite-office gateway, 10.73.0.6, still communicates with this certificate-enrollment machine. Other offices use the same enrollment endpoint, so its availability matters. We've documented the obsolete gateway and need it denied locally during the cleanup.",BlockIP
+Can this server bar 198.51.100.82 from making any fresh connections?,BlockIP
+Our security exercise designated 2001:db8:be::3 as the simulated unwanted sender. Apply a host firewall block for that address.,BlockIP
+The monitoring screen showed retries from 192.0.2.173 long after the shipping-label service changed vendors. Operations checked the source and determined that it belongs to the old test bridge. Prevent this host from accepting further traffic from that bridge while the warehouse system stays operational.,BlockIP
+"I need 10.55.14.92 excluded by the machine's firewall, not a password reset for the account it used.",BlockIP
+Stop 203.0.113.137 at the firewall on this workstation; it's tied to the unauthorized remote client.,BlockIP
+"A research instrument occasionally pushes large image files to this analysis node. Since the last software update, an unregistered control computer at 172.30.5.12 has been connecting repeatedly and interrupting transfers. The lab admin asked for an IP-based block on this receiving machine during the investigation.",BlockIP
+Block network access to this box for 198.51.100.216.,BlockIP
+Can you put 2001:db8:1c::81 into the inbound reject set on this server?,BlockIP
+"This machine hosts an internal package mirror, and the mirror has a narrow upstream allowance for synchronization. A forgotten training VM at 10.80.6.43 is scraping it continuously. The team confirmed that VM no longer needs access; enforce the restriction locally before the next nightly sync.",BlockIP
+"Put a host firewall deny on 192.0.2.116, not on the whole developer subnet.",BlockIP
+"Hey, our kiosk sees chatter from 172.17.30.19 again. Firewall it out here.",BlockIP
+"The restore rehearsal is complete, but 203.0.113.246 continues contacting the backup receiver on this host. Those tests took place in an isolated environment, and the receiver now supports a live workload. Add a source-address ban here to stop the leftover test traffic.",BlockIP
+Reject 2001:db8:502::16 at this host's network boundary.,BlockIP
+Customer support traced the repeated session attempts to 198.51.100.67. Please make this machine refuse that source immediately.,BlockIP
+"We moved the experiment scheduler to a new subnet, and an out-of-date control node at 10.14.27.8 is still polling the old scheduler endpoint. That machine has already been retired from the cluster membership records. Deny its traffic at this server while the replacement runs normally.",BlockIP
+"Block just 192.0.2.12 on the affected host, rather than taking the shared VPN gateway offline.",BlockIP
+Is there a way to drop all incoming packets with source 203.0.113.183 on this VM? Do that.,BlockIP
+"A classroom network lab runs a shared remote desktop host, and one demonstration device at 10.33.11.71 keeps connecting after its access window expired. The instructor verified the device's address before reporting it. Shut out that source at the host firewall while other students keep their sessions.",BlockIP
+Remove 2001:db8:da::55 from the set of IPs this machine will accept traffic from.,BlockIP
+The on-call notes say 198.51.100.234 is the confirmed sender. Please prevent it from communicating with this host.,BlockIP
+Our scheduled intake picks up legitimate receipts from dozens of field agents. A misconfigured transfer node at 172.24.9.51 is the only known offender; its repeated reconnects are exhausting the receiver. Put a source-IP block in place here instead of stopping the intake daemon.,BlockIP
+"At the end of the robotics demonstration, our control computer froze and the volunteer recorded only the application version. For the incident handoff, I need this computer's actual operating-system release, kernel revision, and how long the machine has been running since boot.",GetSystemInfo
+"An email refers to this unit as 'web-04', but its chassis sticker says 'demo-2'. Give me the hostname configured in the OS, not either human-assigned label.",GetSystemInfo
+"Our CI runner came back from a disk snapshot, and the image manifest says it was built before the lab switched distributions. We're standing at its console now. Identify the operating system actually loaded and the kernel it started with so the build notes reflect this instance.",GetSystemInfo
+The conference room controller has no inventory entry. What version of Linux is on this box?,GetSystemInfo
+"The repair vendor wants this machine's release identifier and boot age, not an analysis of the failed sign-in alert. Can you retrieve those two facts?",GetSystemInfo
+How many days has the little digital-signage computer here remained up?,GetSystemInfo
+"During yesterday's UPS test, the lights went out in the machine room, yet several devices have no documented shutdown. On this particular Linux server, check time since boot and its host identity so facilities can reconcile the power-event checklist.",GetSystemInfo
+"A third-party kernel module must match the full release suffix, including any distribution-specific build tag. What kernel is executing on this workstation right now?",GetSystemInfo
+"The ports on our edge box were checked already; now I want its OS family and release, rather than another network probe.",GetSystemInfo
+"The backup appliance sat disconnected in a cabinet for most of the semester. Nobody knows if it was reimaged before storage, and the printed manual covers three Linux releases. From its local console, report the distribution and current kernel before we pick the recovery procedure.",GetSystemInfo
+Could you read the system's node name from this POS terminal? The checkout application prints its own nickname.,GetSystemInfo
+"A museum kiosk runs the same gallery slideshow as all the others, but one screen needs a different maintenance package. Its installer asks for the precise OS release and active kernel. I'm beside that kiosk now; fetch both values from the machine itself.",GetSystemInfo
+"I'm not asking which processes the monitoring agent has started. On the computer running this agent, which operating system version is installed?",GetSystemInfo
+"Our video-render farm images look identical from the desktop, including the wallpaper and user accounts. The driver team suspects one workstation booted a real-time kernel while the others use a stock kernel. Read the currently running kernel flavor and revision on this workstation.",GetSystemInfo
+How long ago did the workstation at this desk boot?,GetSystemInfo
+"The materials lab has a controller that nobody wants to reboot during testing. We suspect its last power cycle was before the semester began, but the touchscreen only shows application time. Retrieve this host's uptime and operating-system version for the lab notebook.",GetSystemInfo
+"The welcome banner says 'staging', which might be leftover text. What hostname is actually assigned to this computer?",GetSystemInfo
+We have plenty of general system logs for the recent outage; I need the basic OS and kernel identifiers for this node instead of another log excerpt.,GetSystemInfo
+"A storage firmware installer has separate instructions for Linux kernels 5.15 and 6.1, and the installer is running directly on this host. Before any update, tell me the full release of the kernel currently in control and which distribution build it belongs to.",GetSystemInfo
+The uptime badge on the wall display seems frozen. Check this machine's actual time since its last boot.,GetSystemInfo
+"After being powered down for summer break, this chemistry workstation was moved to a new bench and given a fresh user account. The research assistant needs to note what platform it is running now and whether it has been left on since the move; retrieve its OS release and uptime.",GetSystemInfo
+The recording app displays its own version. Which operating-system release is loaded on this conference recording PC?,GetSystemInfo
+"I need the name this machine assigns itself, not the DNS alias used by the reverse proxy.",GetSystemInfo
+"Our maritime sensor gateway is being prepared for a field trip. The software stack is old and the field technician cannot contact the central device manager at sea. Before departure, record the gateway's own Linux release, kernel build, and uptime from the console we're using.",GetSystemInfo
+"Give me the precise kernel release string from this terminal, including the architecture suffix if the system reports one.",GetSystemInfo
+The USB capture card vendor labels one driver build 'for Ubuntu 22.04 only'. Check the operating-system release actually installed on the laptop sitting here.,GetSystemInfo
+"After our observatory's network outage, did the local telescope control server reboot? Get its host uptime and OS identity for the repair log.",GetSystemInfo
+This shop-floor computer boots straight into the inventory app. Can you identify the operating system installed underneath that interface?,GetSystemInfo
+"I'd like the current host's configured name and boot duration, not a report of which addresses it is listening on.",GetSystemInfo
+"The school lending desk received a refurbished laptop without a legible asset tag. It has a specialized exam browser and the staff don't want to touch the installation until IT identifies the platform. On this laptop, determine the OS edition, current kernel, and hostname.",GetSystemInfo
+"On this local node, does the system identify as Fedora or RHEL?",GetSystemInfo
+"An internal wiki entry says the rehearsal server was installed with a long-term-support release, but the support matrix changed. What exact OS release does the machine here claim?",GetSystemInfo
+The lab engineer is about to compile an accelerator driver and got conflicting advice because the source folder contains several kernel headers. They only need the running kernel version for this workstation; the headers installed on disk might belong to previous boots.,GetSystemInfo
+Tell me the node name assigned to this workstation by its operating system.,GetSystemInfo
+A station at the transit depot shows a maintenance splash screen whenever the network drops. The contractor can access its local terminal but the equipment documentation is missing. Identify the station computer's OS distribution and release so they can choose the correct offline package.,GetSystemInfo
+Give me this machine's OS release instead of an enumeration of its background services.,GetSystemInfo
+What's the uptime reported by the current server? Please express it in a way I can compare to a maintenance window.,GetSystemInfo
+"One of the hospital simulation lab PCs was silently swapped with a spare while class was in progress. The patient simulator runs on either, so its screen doesn't identify the computer. On this unit, fetch the hostname and full platform release for the equipment log.",GetSystemInfo
+"For this box, read the distribution's version ID as reported by the operating system.",GetSystemInfo
+The installer complains about platform generation on this box. Which OS release should I put into its compatibility chart?,GetSystemInfo
+"On our greenhouse controller, a nightly timer reset after a thunderstorm even though the irrigation software never stopped responding. Determine how long the underlying host has been up and include the active kernel version; we'll compare it with the maintenance diary afterward.",GetSystemInfo
+"The ticket asks for a platform fingerprint, not the authentication log: hostname, distro release, and running kernel on this machine.",GetSystemInfo
+"What kernel variant is this embedded development board using at the moment—standard, low-latency, or real-time, as indicated in its release string?",GetSystemInfo
+Our library's self-checkout computer was replaced under warranty and the replacement came with an unfamiliar Linux flavor. What distribution and release are installed on this particular unit?,GetSystemInfo
+Our dashboard counts service availability as uptime. Check the host's actual time since boot so we can confirm whether this machine restarted.,GetSystemInfo
+"Ever since I connected the new Thunderbolt dock, the monitors occasionally blink and the Ethernet adapter reappears under a different name. The dock vendor asked for the operating system messages captured on this laptop during one of those disconnects. Could you pull that local event history?",ReadSyslog
+The Bluetooth radio on this laptop came back with a different device ID. What did the OS record when it reinitialized?,ReadSyslog
+Don't rerun the printer test; bring up system messages saved here when the queue began rejecting jobs.,ReadSyslog
+"My workstation went into hibernation while I was presenting, even though the battery meter still showed plenty of charge. There was no warning popup, and the desktop session is gone now. Please retrieve the machine's power-management event messages from around lunchtime.",ReadSyslog
+Show what this server logged when the PCIe bus started reporting corrected hardware errors.,ReadSyslog
+Any local journal entries explaining why the virtual bridge interface failed to appear after I launched a guest?,ReadSyslog
+"We enabled encrypted swap on this host during the maintenance window, and the next startup took several minutes longer than usual. The setup script finished without displaying an error. I'd like the general operating-system records from boot to see whether the swap activation stalled.",ReadSyslog
+What did udev write on this machine when the camera changed from video0 to video2?,ReadSyslog
+"I need the system-wide event trail for this box, not an inventory of processes, from 11:40 onward.",ReadSyslog
+"A zram device was added to the lab workstation for memory-pressure experiments. During one run the desktop briefly stopped responding, but the experiment's own output file has no failure. Collect the operating system messages here covering zram setup and the freeze.",ReadSyslog
+Was there anything in this desktop's general log when the firmware clock reset itself?,ReadSyslog
+Bring up the local OS notices from the VLAN interface being created and then removed.,ReadSyslog
+"The logging partition filled during our overnight test, and the dashboard stopped receiving host events a few minutes later. The team thinks collection resumed automatically, but we never checked the original machine. Please show system messages about the logging service losing and regaining the ability to write.",ReadSyslog
+Pull this host's journal warnings on cgroup pressure; no need to report who is using CPU right now.,ReadSyslog
+Where did this laptop record the ACPI battery-sensor exceptions from yesterday afternoon?,ReadSyslog
+"This VM was cloned from a base image and booted without the expected initialization metadata. The application installed correctly once we intervened, but I need to understand the earlier startup sequence. Retrieve the guest's general system messages from its first boot, especially what cloud-init wrote.",ReadSyslog
+The headphones disconnected twice on this computer. Can I see the system messages around the Bluetooth reset?,ReadSyslog
+Fetch the boot-time operating-system notices from this desktop's failed EFI fallback attempt.,ReadSyslog
+"An RCU stall warning scrolled past on the console of this compute node during a parallel job. The machine responds normally again, so its current uptime tells us little. Retrieve the recorded kernel and system events from the stall window, not a snapshot of its state now.",ReadSyslog
+Grab the local service and driver messages from the moment this workstation's microphone disappeared.,ReadSyslog
+Can we see what this host logged when its container runtime couldn't create a fresh namespace?,ReadSyslog
+"The firewall rules loaded after a scheduled change, but the service manager marked the reload job unsuccessful. Nobody wants to change rules again until we understand that status. Show this server's system journal around the reload, including unit messages and any kernel notices written at the same time.",ReadSyslog
+Are there firmware-loader complaints in this machine's system records from when the graphics acceleration fell back to software?,ReadSyslog
+"Please show the local system's boot diagnostics, not whether remote SSH works.",ReadSyslog
+"Our internal certificate renewal task exited successfully according to its own dashboard, yet several dependent services came up late on this host. The service owners have different theories about the delay. I'd like the operating-system event history for the renewal window to establish the actual sequence.",ReadSyslog
+Need kernel event lines from this PC during the interrupt storm after we installed the capture card.,ReadSyslog
+Which messages did this machine save when the watchdog service lost its connection to the hardware timer?,ReadSyslog
+"We changed the console locale on a headless test rig, and now startup shows garbled warnings before the login prompt appears. Rebooting again might erase useful clues. Could you pull the general host journal from the most recent boot so we can examine the original unit and device messages?",ReadSyslog
+"Want the event messages around the local disk hot-plug, rather than another list of mounted volumes.",ReadSyslog
+Check the system journal here for why Bluetooth service entered a restart loop this afternoon.,ReadSyslog
+"A scheduled suspension on this workstation sometimes ends with the lid opening to a black screen. The graphical session's debug output was cleared, but power-state transitions should still be recorded by the operating system. Bring up the local messages from the most recent suspend-and-resume cycle.",ReadSyslog
+Read what this workstation recorded as it switched between two audio-output drivers.,ReadSyslog
+A snapshot cleanup left orphaned loop devices on this node; show the machine's service and kernel log around the cleanup attempt.,ReadSyslog
+"A developer insists the staging guest is unreachable because of a blocked port, yet the virtual network was rebuilt shortly before the outage. I want the hypervisor's own general system messages during that rebuild, not a new scan of the guest's exposed ports.",ReadSyslog
+Any low-level warnings written on this laptop when the USB-C controller changed power roles?,ReadSyslog
+I saw red errors flash on this server's console while it shut down. Retrieve their saved OS event entries.,ReadSyslog
+"During a memory overcommit drill, the guest balloon driver began releasing pages much faster than expected. The hypervisor metrics show the change but can't tell us how the guest reacted. Show the general operating-system messages kept inside this VM during that period.",ReadSyslog
+Could you display the logind entries this desktop recorded while attempting to enter sleep mode?,ReadSyslog
+"Fetch this machine's general system messages, not the SSH sign-in history, from the display-server crash.",ReadSyslog
+"IPv6 duplicate-address detection briefly complained after we moved this workstation to a different switch port. Connectivity looks normal again and the switch logs are already archived. Can you retrieve the machine's system messages from the move, including the address-configuration notices in their original order?",ReadSyslog
+Read the local journal around the fan-control daemon's loss of contact with its temperature sensor.,ReadSyslog
+The VPN interface renamed itself on this laptop; what operating-system events accompanied that change?,ReadSyslog
+"After we rolled out a new eBPF-based observability policy, this build server started printing verifier warnings on the console. The policy team has the configuration diff but no copy of the diagnostic output. Pull the host's recorded system messages around the policy load so they can inspect the actual rejection.",ReadSyslog
+"Get the operating-system journal entries from this machine's failed resume, not its current uptime.",ReadSyslog
+"Around the SATA link reset on this desktop, what did the general host log actually capture?",ReadSyslog

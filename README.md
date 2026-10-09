@@ -87,48 +87,51 @@ jupyter notebook      # open a notebook, then Kernel > Restart & Run All
 
 Order for dataset B: `04`, then `05`, then `06`. Keep all files in the same folder.
 
-## Dataset C (1020 queries, written one at a time)
+## Dataset C (1500 queries, written one at a time)
 
 Datasets A and B are template-based, and a TF-IDF + SVM scores about 98% on them under random
 splits. Dataset C replaces templates with prompts written one at a time by ChatGPT, following the
 instructions from the project supervisor: realistic requests, varied wording and expertise, some
 overlap between tools, no templates, balanced classes, correct labels. A 30-prompt pilot was
-reviewed first, then two batches (550 and 440) were generated with feedback from the pilot. The
-labels were assigned by ChatGPT and spot-checked; they have not all been verified by hand.
+reviewed first, then three batches (550, 440 and 495) were generated with feedback from the pilot.
+Batch 3 asked for 45 prompts per tool; 15 were dropped at random (seed 42) so the final set has
+exactly 1500 rows, 136 or 137 per tool. The labels were assigned by ChatGPT and spot-checked; they
+have not all been verified by hand.
 
 A separate set of 405 prompts written by Claude (one row per distinct request, near-copies
 removed) is kept as a **cross-source test set** and never used for training.
 
 | File | What it is |
 |---|---|
-| `data_c/` | The raw parts: pilot 30, batch 550, batch 440, and the Claude 405 |
-| `07_build_dataset_c.ipynb` | Merges the parts, checks them, writes `cyber_dataset_C.csv` and `cyber_testset_claude405.csv` |
-| `08_llama_dataset_c.ipynb` | Llama 3.2 3B predictions; uses `llama_predictions_C.csv` unless `RERUN = True` |
+| `data_c/` | The raw parts: pilot 30, batches 550, 440 and 495, and the Claude 405 |
+| `07_build_dataset_c.ipynb` | Merges the parts, balances to 1500, checks them, writes `cyber_dataset_C.csv` and `cyber_testset_claude405.csv` |
+| `08_llama_dataset_c.ipynb` | Llama 3.2 3B predictions; reuses `llama_predictions_C.csv` and only calls the model for new prompts (`RERUN = True` redoes all) |
 | `09_classifiers_dataset_c.ipynb` | Classifiers, Llama comparison, cross-source test, learning curve, agreement table; adds `pred_svm` |
 
 Columns of `cyber_dataset_C.csv`: `prompt`, `tool_ground_truth` (annotated), `tool_predicted`
 (Llama 3.2 3B), `pred_svm` (SVM, out of fold, stratified 5-fold, seed 42), `source` (pilot,
-batch550, batch440), `row_id`.
+batch550, batch440, batch495), `row_id`.
 
 **Llama setup for C:** dataset C has no attacker/defender roles, so Llama is shown all 11 tools,
 each with a one-line description (the same choice the classifier makes). Temperature 0, seed 42.
 In A and B it was shown only the tool names for the query's role.
 
-Results (dataset C, 1020 rows):
+Results (dataset C, 1500 rows):
 
 | Method | Accuracy | Macro F1 |
 |---|---|---|
-| Llama 3.2 3B (all 11 tools, with descriptions) | 91.2% | 0.910 |
-| SVM, 5-fold | 91.0% | 0.910 |
-| SVM, 5-fold, similar prompts in the same fold | 90.9% | 0.909 |
-| LogReg / MLP / RandomForest, 5-fold | 90.2% / 87.2% / 80.3% | 0.901 / 0.871 / 0.798 |
+| Llama 3.2 3B (all 11 tools, with descriptions) | 88.9% | 0.888 |
+| SVM, 5-fold | 91.9% | 0.919 |
+| SVM, 5-fold, similar prompts in the same fold | 91.7% | 0.918 |
+| LogReg / MLP / RandomForest, 5-fold | 90.9% / 89.3% / 81.9% | 0.909 / 0.893 / 0.818 |
 
-- On the Claude test set, trained on C: SVM 95.8%, Llama 92.8%.
-- SVM and Llama pick the same tool on 84.2% of rows. Llama is wrong on 90 rows, the SVM on 92,
-  and both on 15.
-- Llama's weakest tool is ListeningPorts (46%): it often picks PortScan or NmapScan for
-  questions about this machine's own listening sockets.
-- The SVM learning curve is still rising at 816 training rows (83.6% at 408, 91.0% at 816).
+- On the Claude test set, trained on C: SVM 96.5%, Llama 92.8%.
+- Llama is wrong on 167 rows, the SVM on 122, and both on 20. They pick the same tool on 82.5%
+  of rows.
+- Batch 3 was harder for Llama (84.0%) than the earlier batches (about 91%).
+- Llama's weakest tools are ListeningPorts (44.9%), ListProcesses (77.2%) and PortScan (82.4%).
+- SVM learning curve: 80.5% at 300 training rows, 87.1% at 600, 91.9% at 1200.
+- At 1020 rows (before batch 3) the two were level: Llama 91.2%, SVM 91.0%.
 
 Order for dataset C: `07`, then `08`, then `09`.
 
