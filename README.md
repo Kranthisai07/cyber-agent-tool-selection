@@ -5,15 +5,43 @@ cybersecurity AI agents, with smart-tool training and Neural Input Optimization 
 explainability.
 
 Everything runs from the CSV files. No SSH, no live LLM and no network are required to reproduce
-the results (notebook 05 can call a local model, but it also ships its saved predictions).
+the results (notebooks 05 and 08 can call a local model, but they also ship saved predictions).
 
-## Two datasets
+## Start here: the final dataset is C
 
-- **Dataset A**: 640 queries (`cyber_logs.csv`).
+**Use `cyber_dataset_C.csv` (1500 prompts) for NIO and the paper.** It was written one prompt at a
+time instead of from templates, so the task is no longer trivially easy for a classifier.
+
+| Column | Meaning |
+|---|---|
+| `prompt` | The user request |
+| `tool_ground_truth` | The annotated tool |
+| `tool_predicted` | Llama 3.2 3B's choice (local, temperature 0, all 11 tools with short descriptions) |
+| `pred_svm` | TF-IDF + linear SVM's choice, out of fold (5-fold), so no row is predicted by a model that trained on it |
+| `source`, `row_id` | Which generation batch the prompt came from, and a stable id |
+
+| | Accuracy | Macro F1 |
+|---|---|---|
+| SVM | 91.9% | 0.919 |
+| Llama 3.2 3B | 88.9% | 0.888 |
+| SVM on 405 prompts written by a different model (never trained on) | 96.5% | |
+| Llama on the same 405 prompts | 92.8% | |
+
+Llama disagrees with the annotation on 167 prompts and the SVM on 122; only 20 are missed by both.
+Details and run order are in the [Dataset C](#dataset-c-1500-queries-written-one-at-a-time) section.
+
+## Three datasets
+
+- **Dataset A**: 640 template-based queries (`cyber_logs.csv`).
 - **Dataset B**: 1500 queries (`cyber_dataset_B.csv`) = the 640 queries of A, unchanged, plus 860
-  new queries that are intentionally harder.
+  new template-based queries that are intentionally harder. Under random splits the SVM still
+  scores about 98%, which is why dataset C was made.
+- **Dataset C**: 1500 queries written one at a time by ChatGPT (`cyber_dataset_C.csv`), plus a
+  405-prompt cross-source test set written by Claude (`cyber_testset_claude405.csv`). **Final.**
 
-## How the data was made
+The sections below up to "Dataset C" describe datasets A and B.
+
+## How the data was made (A and B)
 
 - **Annotated tool** (`tool_ground_truth`): the queries come from template families in a Python
   script written with the help of Claude Code. Each template is tied to one tool using the written
@@ -25,7 +53,7 @@ the results (notebook 05 can call a local model, but it also ships its saved pre
 - **Classifier predictions** (`pred_svm`, `pred_svm_random_cv`): TF-IDF + linear SVM, out of fold
   (each row is predicted by a model that never saw it). See "Two ways of splitting" below.
 
-## Files
+## Files (A and B)
 
 | File | What it is |
 |---|---|
@@ -137,6 +165,14 @@ Order for dataset C: `07`, then `08`, then `09`.
 
 ## Limitations
 
+Dataset C:
+- Prompts and labels were written by ChatGPT. Labels were spot-checked but not all verified by hand.
+- Llama was given all 11 tools with one-line descriptions; with role-restricted, names-only prompts
+  (as in A and B) it scores lower, so the Llama numbers depend on the prompt setup.
+- The cross-source test set (405) was written by Claude, so it tests transfer to one other model's
+  wording, not to real user traffic.
+
+Datasets A and B:
 - Labels follow written rules and have not been verified by hand.
 - Dataset A's "ambiguous" templates were adjusted after looking at Llama's accuracy on them.
 - Part of the NmapScan vs PortScan disagreement comes from a labeling convention ("run nmap -p ..."
