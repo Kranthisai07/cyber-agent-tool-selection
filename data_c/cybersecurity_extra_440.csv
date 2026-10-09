@@ -1,0 +1,441 @@
+prompt,label
+"At the new branch office the router responds to pings, but nobody can reach the print gateway. Before troubleshooting the application, tell me which ports on 10.42.6.18 are actually accessible from our side of the network. The site technician swapped a cable this morning and insists that the application itself was never changed, so network exposure is our first question.",PortScan
+"Could you check whether 22 is open on backup-vm-04? We only need reachability for the handoff document. My access is limited to the monitoring subnet, which means a successful result from inside the server would not answer this particular question.",PortScan
+"This firewall change was supposed to expose 8443 and nothing else on our test appliance. Verify the open port numbers from outside its subnet. We're checking compliance with a narrowly scoped change request, and the port-number evidence will be attached to the approval ticket before closure.",PortScan
+"I have a host address from the contractor, 172.20.9.71, but the connection keeps timing out. Which TCP ports accept traffic there? This address belongs to our training network, where the device was reset and moved to a different switch only a few hours ago.",PortScan
+"Find out whether the lab camera has 80, 443 or 554 reachable; don't worry about the camera firmware yet. The facilities team labels all of these units identically, and we have no reliable notes about which interface the camera uses.",PortScan
+"The new database VM came up from an image yesterday. I want to know which network entry points are accessible before the team begins the migration, not what database engine is installed. Yesterday's snapshot is stale because the machine has been restored twice since then, and the firewall configuration may have reverted.",PortScan
+Which ports can I connect to at 192.0.2.91 from here? The handoff is due this afternoon; I only need the externally observable network behavior for the specified port.,PortScan
+"A vendor insists that their agent can dial into our edge host. Probe 443 and 9443 on edge-preprod.example.org to see whether either is reachable. Their support engineer keeps sending screenshots taken from inside their own LAN, which may hide the problem we're seeing on our side.",PortScan
+"The dashboard says my game server is offline even though I can ping it. Can you check if the port it uses, 27015, is reachable? The hosted instance has been rebuilt since the alert appeared, and no one has verified the port mapping after the rebuild.",PortScan
+"We moved the staging API behind a security group. Are 3000 and 3001 still exposed on its public address? The deployment was marked successful, but the network change happened independently and the teams haven't compared their records yet.",PortScan
+"I don't need the application names. Give me the numbers for any open TCP listeners visible remotely on this retired test box, 10.11.3.47. Please keep the result suitable for a firewall review; identifying application software would be part of a separate inventory exercise.",PortScan
+"Trying to validate a newly approved vendor connection: is anything accepting connections at port 1521 on 198.51.100.86? The database administrator is on leave, so the only thing we can establish now is whether the destination accepts a connection.",PortScan
+"An ACL was updated during the overnight maintenance, and now our monitoring probe is complaining. Check externally accessible ports on the monitoring target so we can compare them with yesterday's ticket. Our previous test was performed before the maintenance reboot, and I don't want to rely on that outdated connectivity result.",PortScan
+"Can you test the first 1,024 TCP ports on the sandbox IP and say which ones answer? The assessor has written approval for this exact target, and the scope excludes any attempt to authenticate to services found there.",PortScan
+"After moving our lab gear to VLAN 30, I can't reach the switch management interface. Check whether ports 22 and 443 respond at 10.30.0.12.",PortScan
+"Our penetration test starts next week, but right now we only want a basic open-versus-closed port check for the authorized assessment host.",PortScan
+The host answers DNS but my socket calls to 5672 fail. Is that port exposed on mq-stage.internal?,PortScan
+Can you tell which UDP ports are reachable on the training server? The application team has not given me a protocol inventory.,PortScan
+"I can see that port 443 accepts a connection. Before reporting the rule as fixed, verify whether 80 and 8080 are also accessible on that same endpoint.",PortScan
+One of our pods is reachable through a node IP. Can you probe the node's externally exposed ports without attempting to identify the software behind them?,PortScan
+What is open on the disaster recovery appliance at 203.0.113.147? Just an accessible-port list will do.,PortScan
+The maintenance ticket specifies only 3389 should be exposed to the jump subnet. Check remote port reachability on the Windows test server.,PortScan
+"We suspect the vendor accidentally left an administration port exposed after installation. Test the usual management port numbers against their demo host, without pulling banners.",PortScan
+"Need an outside-in connectivity check for 25, 465, and 587 at mail-test.example.net before our deliverability dry run.",PortScan
+"Is port 9092 actually reachable from the Kafka client segment, or is the security group still denying it?",PortScan
+The service report lists active processes but doesn't prove traffic can reach the box. Probe its publicly reachable ports instead.,PortScan
+"Our team has four devices on a lab subnet and a spreadsheet full of expected firewall rules. For 10.55.2.19, enumerate which TCP ports answer so I can catch the discrepancies.",PortScan
+Can you see if the old HTTP endpoint was truly closed on our migration test address? It used to accept connections on 8080.,PortScan
+Someone claims Redis is exposed on the QA host. Check whether 6379 can be reached remotely; we can look at versions later if necessary.,PortScan
+"Only need to establish whether 5000, 5001 and 5002 are accepting sockets on the appliance, nothing more invasive.",PortScan
+The uplink came back but the service desk still can't connect to the remote access gateway. Which destination ports are open from our probe location?,PortScan
+Don't inspect the application or log in. Test if the specified target responds to TCP connection attempts on its approved port range.,PortScan
+Could the firewall be exposing 5432 by mistake on our demo database server? Please verify connectivity to that port.,PortScan
+I need the port numbers exposed on 10.8.17.64 for the change-review notes. The device owner already knows which services are installed.,PortScan
+We have a port-forward configured from our router to a dev container. Confirm whether outside clients can reach 8081 at dev-gw.example.org.,PortScan
+The internal wiki says the SNMP endpoint moved to UDP 1161. Test whether that destination is reachable from the monitoring VLAN.,PortScan
+"Can you run a quick port reachability check on the temporary host we spun up for the workshop? People keep saying the server is down, but the VM console shows it running.",PortScan
+"On the new load balancer address, is 443 the only TCP port accepting connections? That's the rule we intended.",PortScan
+"My laptop can open an SSH session to another box, so it's probably not the client. Check whether TCP 22 is accepting connections at the target address before we blame credentials.",PortScan
+"Our certificate is fine, but browsers still cannot establish a socket to the test portal. Check the network path by probing its HTTPS port first.",PortScan
+"We're taking over an old analytics machine and the CMDB only says 'Linux'. Identify the exposed network services and their versions so we know which owners to contact. Our endpoint inventory lists a retired operating system, but we can't tell whether the visible daemons were updated independently before the handover.",NmapScan
+"Port 22 is reachable on 10.6.4.12. Can you find out what SSH implementation and release it is running? The service desk knows the socket accepts connections, so simply repeating that observation wouldn't settle their question about the implementation.",NmapScan
+"The application team says the box hosts two web stacks. Discover the services it advertises and any version strings they reveal; I need more than just port numbers. Two teams claim ownership of the host, and identifying the software actually reachable from the network should help settle the dispute.",NmapScan
+What software is behind 8443 on payments-test.example.org? We have only the address and a change ticket; there is no reliable deployment manifest or application owner to ask anymore.,NmapScan
+"We have permission to inventory this subnet's training appliance. Determine whether its open endpoints belong to Apache, nginx, or something else and record the detected releases. The device has been reimaged since the last assessment, so inherited labels in the inventory are probably not trustworthy.",NmapScan
+"A bare list of 21, 22 and 80 won't help the migration review. Tell us the products speaking on those ports and the versions you can identify remotely. One engineer believes a proxy terminates the connection, while another says the original application server is still directly exposed.",NmapScan
+"The old ticket refers to PostgreSQL but the administrator thinks it was replaced. Examine the exposed service fingerprints on db-archive.internal. The migration spreadsheet requires the detected product and release where obtainable, rather than an assumption based on conventional port assignments.",NmapScan
+"Please identify the protocol and product responding on the high-numbered port 49160 of our demo host. The system was delivered without documentation, and the owner wants protocol evidence before assigning a team to maintain it.",NmapScan
+"Could you produce a service/version inventory of the new VM before we document its security baseline? We need this as a starting point for vulnerability research, but don't draw exploitation conclusions from a fingerprint alone.",NmapScan
+"I know 3389 is open on that Windows sandbox. Figure out what service is actually answering there and report any detectable version metadata. Two web applications share the same address, and the support team needs to determine whether they have identical front ends.",NmapScan
+"Our monitoring platform labels this as an FTP appliance, which doesn't sound right. Inspect the reachable network services to establish what the device offers. The device has survived several firmware upgrades, making the branding on the chassis a poor guide to its current services.",NmapScan
+What web server release answers requests on 203.0.113.35:8080? The deployment team lost its manifest. The customer insists the interface belongs to their old product line; confirm what it actually presents over the network.,NmapScan
+"The switch has a management interface but the sticker gives only a model number. Can you fingerprint the software exposed by its remotely accessible ports? A network engineer previously listed open ports only, which wasn't enough for the security team's software inventory.",NmapScan
+"We're planning a CVE review after inventory, so first gather the services and version identifiers seen on the approved staging host. This is a permitted lab exercise, and the report should distinguish strong service identification from uncertain version guesses.",NmapScan
+"Which services are exposed by 10.17.44.8, and do their banners indicate old or new builds?",NmapScan
+"The application is listening on 9443, yet no one knows whether it runs Caddy or Jetty. Identify the server technology, not merely that the socket works.",NmapScan
+Our audit asks what the target is actually serving. Enumerate protocols and versions for the allowed assessment address.,NmapScan
+Can you distinguish whether that open mail port speaks SMTP or some proprietary listener? Any product/version data would be useful.,NmapScan
+The vendor handed us an IP but no architecture diagram. Map the discoverable software services on the device for our asset inventory.,NmapScan
+I can reach the management panel. Determine what daemon and release exposes it so we can match the warranty notes.,NmapScan
+Do a service fingerprint of the edge test server; the open-port report is already complete.,NmapScan
+The security scanner gave an ambiguous result for 8009. Can you identify the protocol and product listening remotely before we research vulnerabilities?,NmapScan
+"The new NAS appears on several ports. Which network services does it present, and can you identify their server implementations?",NmapScan
+We inherited a fleet box that seems to have database and web endpoints. Discover the names and apparent versions of those exposed services.,NmapScan
+"The help desk sees 5985 responding. Is it WinRM or a different protocol, and does the endpoint expose a version?",NmapScan
+"We need enough details to update the service catalog: protocols, server names, release numbers if detectable, for our authorized demo target.",NmapScan
+"Ports 80 and 443 both answer, but I suspect different front ends. Identify what software is speaking on each.",NmapScan
+What's the remote service running on 1883 at sensor-hub.lab? The IoT team calls everything an MQTT broker whether it is or not.,NmapScan
+"Before we request patches, inspect 10.50.8.6 to see whether its exposed services still advertise obsolete versions.",NmapScan
+A contractor's inventory claims this host offers MySQL 5.x. Probe its network-facing services to confirm what server/version is actually visible.,NmapScan
+Our exercise environment has an unfamiliar endpoint at 9000. Please classify the service and get its banner or version where available.,NmapScan
+"Tell me what network services the standby controller actually exposes after the firmware swap, including software fingerprints.",NmapScan
+Are the two open HTTPS ports on this machine served by the same product? Identify each one.,NmapScan
+We already validated that the firewall lets traffic through. Now profile the services operating behind the exposed ports on the demo node.,NmapScan
+What's responding to TCP 445 on our isolated training machine? Record whatever product/version information the endpoint makes available.,NmapScan
+The asset register is missing a web server vendor for 198.51.100.49. Detect it remotely along with other discoverable services.,NmapScan
+I was told the development appliance runs an SSH server and a message queue. Inventory their protocol implementations and apparent release levels.,NmapScan
+Can you enumerate services with version detection on vpn-lab.example.org? This is our controlled environment and the results are for documentation.,NmapScan
+It's not enough to say 6379 accepts a socket; identify what protocol is speaking there and whether its advertised release can be determined.,NmapScan
+"The endpoint's hostname implies a printer, but the open ports look like those of a storage box. Fingerprint its exposed services to help us identify its actual role.",NmapScan
+"Pull the unfiltered sign-in event records from this Linux host for yesterday. I want to inspect the original entries in sequence. The security team will interpret the events afterward, and removing routine successful sessions now would damage their reconstructed timeline.",ReadAuthLog
+"Where did this machine record the last successful user sessions? Show me the authentication log itself. The employee's dashboard shows a different timezone from the server, so we need the original timestamps before comparing accounts.",ReadAuthLog
+"Compliance wants the source login journal from the node before we annotate it. Can you display the records as written? Our retention policy requires unmodified source messages, rather than an analyst's classification of suspicious activity or a summarized count.",ReadAuthLog
+"Open the local security sign-in history, including accepted and rejected attempts, from Tuesday afternoon. The login mechanism was changed last week, and both successful and unsuccessful records matter to the resulting audit trail.",ReadAuthLog
+"I need to read the sshd authentication messages around 13:40, not a summary of only the failures. We are trying to establish whether the expected maintenance session was recorded, regardless of whether the session itself was suspicious.",ReadAuthLog
+"Could you show what PAM logged when we switched the service account last week? There were several account changes during this interval, so context before and after the stated time could be important.",ReadAuthLog
+Our auditor is comparing access requests to the host logs. Display the raw authentication entries so they can trace session starts and ends. The auditor will reconcile the entries with an external access register and needs the system's exact original wording.,ReadAuthLog
+"Bring up the login-related log file on this box; I'll do the interpretation with the application owner. A previous report omitted successful sessions entirely, leaving the reviewer unable to verify the operator's claimed access.",ReadAuthLog
+"The UI claims a user signed in at 8:03. Show the underlying OS authentication record for that period. The user denies seeing the confirmation screen, but that doesn't tell us what the operating system recorded when authentication finished.",ReadAuthLog
+"Need the recorded sudo authentication events from the current server, preserving timestamps and original wording. This was a controlled change window with several administrators online, and we need their recorded actions preserved in sequence.",ReadAuthLog
+"We moved accounts to a different identity provider, and the operations team wants to inspect local sign-in records before blaming the directory service. Please show them as they appear on disk. The migration may have affected how service account sessions are recorded, and we don't want to assume it was an attack.",ReadAuthLog
+Can I see all auth facility messages from this host since boot? I'm preparing evidence for an internal exercise and want to inspect the complete local record before choosing a narrower filter.,ReadAuthLog
+"Our incident note includes a screenshot of a successful SSH session, but the timestamps might be wrong. Read the machine's sign-in event history around that window. The screenshot has been cropped and its clock is unreadable, so we need the actual host-side messages for verification.",ReadAuthLog
+"What did the local login journal record for account deploy on Sunday evening? I want the entries, not a risk judgment. It's important not to collapse multiple session-related records into a single result because the investigator needs the sequence.",ReadAuthLog
+Dump the host's recent authentication records in chronological order for a change-review meeting.,ReadAuthLog
+"I want the actual system entries showing account validation, session open, and session close around the overnight restart.",ReadAuthLog
+Display the original records for console and remote logins on this machine from the last two days.,ReadAuthLog
+The contractor says they connected using a key rather than a password. Fetch the relevant authentication messages; don't filter to failures.,ReadAuthLog
+We have a court-of-record evidence collection for a lab simulation. Show the local sign-in log without rewriting or classifying the contents.,ReadAuthLog
+Can you bring up the host's login history as logged by the authentication subsystem? We need raw context.,ReadAuthLog
+"Show auth-related system records including successful and unsuccessful attempts, with their native timestamps.",ReadAuthLog
+My manager wants to read exactly what the daemon wrote during the maintenance login. Please retrieve that part of the authentication log.,ReadAuthLog
+A successful login seems to disappear from the admin dashboard. Find the source authentication entries for the same time window.,ReadAuthLog
+Let's look at the unprocessed access events on this VM before drawing conclusions about suspicious activity.,ReadAuthLog
+The last audit exported only a failed-login count. This time I need the underlying sign-in journal with ordinary successful sessions retained.,ReadAuthLog
+Could you display authentication events tied to sudo elevation on the training box? Leave the messages intact.,ReadAuthLog
+We've been asked for local proof that the rotation account authenticated on Friday. Show the sign-in records from that day.,ReadAuthLog
+What do the machine's own auth messages say between 09:10 and 09:30 yesterday? Just fetch the relevant lines.,ReadAuthLog
+Read the login records on this host so I can match their timestamps against badge access data later.,ReadAuthLog
+"Our troubleshooting ticket needs the complete sign-in narrative for the VPN jump server, including session closure messages. Retrieve the source entries.",ReadAuthLog
+I'm not looking for a graph or an alert. I need the OS authentication record stream for a particular shift.,ReadAuthLog
+The automation account was renamed and now several services complain. Bring up recent local authentication entries so we can inspect what got written.,ReadAuthLog
+Show the authentication subsystem's event text from Monday morning on the current machine.,ReadAuthLog
+The analyst already has a suspicion about credential abuse. Please give them the raw sign-in records rather than selecting a pattern on their behalf.,ReadAuthLog
+Can you retrieve the actual auth journal after the node reboot? We need to preserve the order of events.,ReadAuthLog
+I have a timestamp from a support ticket at 22:14. Pull surrounding local user-authentication records for comparison.,ReadAuthLog
+Show what was logged for a root console login on this server; whether it was allowed isn't the only thing I want to see.,ReadAuthLog
+"During the access review we need the full local login log for the release window, including routine successes.",ReadAuthLog
+Read the system's authentication messages for the last hour and keep their original detail.,ReadAuthLog
+Please display the sign-in file contents from the affected host before we decide what to investigate next.,ReadAuthLog
+"Did the same account get hammered with bad passwords repeatedly after lunch? Find the attempts and their sources. The user says the account wasn't in use during that period, and we're trying to determine whether repeated guesses explain the lockout.",CheckFailedLogins
+"Something is locking out our service users. Check whether there is a burst of unsuccessful logins on this machine. We rolled out a new identity policy yesterday, so some rejections may be configuration mistakes rather than hostile attempts.",CheckFailedLogins
+Which remote addresses are responsible for the unusual sign-in failures since yesterday evening? The alert contains only an overall total; it doesn't identify whether one external system or many contributed to the spike.,CheckFailedLogins
+"Our monitoring graph shows a sudden increase in rejected credentials. Investigate who was targeted and how often it happened. That environment normally has a few failed attempts from automation, but yesterday's sudden jump appears well beyond its usual baseline.",CheckFailedLogins
+"Can you identify likely password-spraying behavior in the host's recent access attempts? The endpoint remains responsive, and this is specifically an investigation into credential rejection rather than network connectivity.",CheckFailedLogins
+"The help desk says only one developer forgot their password, but the lockouts span six accounts. Look for suspicious patterns in the failed sign-ins. Some of the affected accounts belong to scheduled jobs, which could make a legitimate misconfiguration resemble password spraying.",CheckFailedLogins
+Find login rejection spikes around the maintenance window and show whether one source kept retrying. We need the pattern over time because a single incorrect password is not enough to explain the security notification.,CheckFailedLogins
+"We received an account-guessing alert with no context. Confirm from this machine whether repeated failures actually occurred. The vendor's dashboard shows a generic access error, while the local machine may reveal whether automated retries are occurring.",CheckFailedLogins
+Are automated clients trying common usernames against this server overnight? The SOC wants a distinction between random mistypes and systematic attempts against usernames that shouldn't even exist.,CheckFailedLogins
+"A vendor claims our admin account was attacked. Inspect failed authentication attempts and see if the pattern supports that claim. Our staff was asleep during the reported burst, making the source and timing of the denied access attempts particularly relevant.",CheckFailedLogins
+The security team asked if password guessing increased after we exposed the bastion. Please examine unsuccessful logins rather than dumping every routine login message. We don't need to read every successful session; the immediate question is whether rejection behavior changed after the new rule.,CheckFailedLogins
+"Check whether multiple user accounts were tried from the same address in a short period. The alerts started just after a partner integration was activated, so a stuck client may be involved rather than an outside attacker.",CheckFailedLogins
+"Have there been suspicious sign-in attempts against root in the past twelve hours? An analyst suggested checking a single account, but the notifications mention several users with apparently coordinated failures.",CheckFailedLogins
+"One IP was blocked upstream, but the IDS still reports rejected credentials. Identify the failed-login sources reaching this host. The host's application stayed healthy, and the problem is a possible authentication attack rather than a broader system failure.",CheckFailedLogins
+Could you spot any unusual timing or frequency in rejected SSH access during the weekend?,CheckFailedLogins
+The on-call engineer got a barrage of account lockout emails. Find the underlying failed attempts and cluster them by user.,CheckFailedLogins
+Who tried to authenticate unsuccessfully most often today?,CheckFailedLogins
+Look for a sudden pattern of invalid usernames in the machine's login activity; I'm worried about automated guessing.,CheckFailedLogins
+"The employee says the password is correct. Before resetting it, check whether somebody else has been repeatedly attempting the account.",CheckFailedLogins
+Please review the rejected login activity for signs of a dictionary attack on our test server.,CheckFailedLogins
+Are failed connections coming from many source networks or just one? Base that on unsuccessful authentication records.,CheckFailedLogins
+Our compliance rule triggers after several bad credentials per minute. Determine if that threshold was crossed locally.,CheckFailedLogins
+"The login service is healthy, but the error count has surged. Show the suspicious rejected sign-in attempts and their concentration.",CheckFailedLogins
+An external source has hit the portal at regular intervals. Check whether those requests resulted in failed account authentication on this host.,CheckFailedLogins
+Find out if the same address alternated between several usernames while trying to sign in.,CheckFailedLogins
+Do the unsuccessful sessions around 3 a.m. look like a script or scattered human mistakes?,CheckFailedLogins
+Our IAM rollout caused a pile of errors. Distinguish a routine burst of bad passwords from suspicious repeated access attempts.,CheckFailedLogins
+"I need the users and source IPs involved in the most recent sign-in failures, especially clustered retries.",CheckFailedLogins
+"A backup job is failing and we suspect stale credentials, but security wants to rule out a broader wave of login attempts. Check the rejection pattern on the node.",CheckFailedLogins
+Have any accounts been repeatedly denied access after midnight?,CheckFailedLogins
+The dashboard reports 300 failed logins. Verify whether those failures are concentrated on one username or spread over many.,CheckFailedLogins
+"Identify failed attempts involving nonexistent local users, particularly if one origin keeps testing names.",CheckFailedLogins
+The SOC wants evidence of repeated authentication failures following the last firewall rule change. Check the machine's records for that pattern.,CheckFailedLogins
+Can you look for off-hours bursts of wrong-password events targeting privileged accounts?,CheckFailedLogins
+"If someone is brute-forcing the lab VM, which usernames and addresses show up in the unsuccessful attempts?",CheckFailedLogins
+The local sign-in history is huge. Extract the portion that indicates anomalous rejection behavior rather than giving me every session.,CheckFailedLogins
+My supervisor asked why this host has more failed sign-ins than others. Examine the attempts by time and origin to find the cause.,CheckFailedLogins
+Are those lockouts connected to the same client repeatedly presenting invalid credentials?,CheckFailedLogins
+The alarm fired for suspicious account activity at 04:12. Determine which rejected attempts led up to it.,CheckFailedLogins
+Check whether the unsuccessful admin logins form a repeated sequence and identify where the requests originated.,CheckFailedLogins
+"The app service is marked healthy, but I don't see any local sockets accepting traffic. Show what addresses and ports are actually bound on this machine. The upstream load balancer has already passed its connectivity tests, so we need evidence from the receiving operating system itself.",ListeningPorts
+"Which local TCP endpoints are in LISTEN state right now? A config file says the service should listen everywhere, but we don't know whether that setting was actually applied after restart.",ListeningPorts
+"Before we change the firewall, tell me whether this VM is even waiting for connections on 8086. The service manager reports healthy and the application logs show startup completed, which makes the missing local endpoint surprising.",ListeningPorts
+"Does the process bind to 127.0.0.1 or to all interfaces on port 5000? I need the host-side socket state. This workload recently moved between network namespaces, and the listener may be present somewhere other than the host's default view.",ListeningPorts
+"Our Kubernetes host had an update and the metrics agent disappeared from the dashboard. Check which ports the node is currently listening on, including UDP. An internal monitoring panel claims the port is open, but it may still be displaying a cached state from yesterday.",ListeningPorts
+"I need a snapshot of locally bound network sockets with their port numbers, not a probe from another machine. I need the bind address as well as the port because a loopback-only listener would explain the failed remote connections.",ListeningPorts
+"Is anything accepting inbound connections on this laptop's 3306 endpoint? A perimeter scan could report a blocked port even when the service is healthy, so it wouldn't answer this host-specific question.",ListeningPorts
+"The web frontend started fine, but the reverse proxy cannot reach its upstream. Check whether that upstream machine is listening on the expected port and address. The deployment scripts were copied from another machine, and they may still refer to an interface that no longer exists.",ListeningPorts
+"Our security review asks what ports are in use on the current OS. Show the listening endpoints and where they are bound. The hardware team replaced the NIC earlier, which may have altered the local interface names without changing the configuration file.",ListeningPorts
+"Can you determine if the SSH daemon is waiting on an IPv6 address, IPv4, or both, on this host? The port number is reserved in our documentation, but we're trying to determine what is actually awaiting connections right now.",ListeningPorts
+"After a reboot, did the local message broker bind to 5672 as configured? The service was installed by a contractor who has since left, and we cannot safely infer its current bindings from old notes.",ListeningPorts
+"List the TCP and UDP endpoints this server has opened for incoming traffic; we haven't authorized an external network scan. The release pipeline did not report an error, yet clients get connection refused immediately rather than a response from the service.",ListeningPorts
+"The service unit says active, yet localhost connections are refused. Is the application listening anywhere? The box also runs a proxy and a monitoring agent, so several listeners could legitimately share different interfaces.",ListeningPorts
+"Show the ports awaiting connections on the machine I'm logged into, with their local IPs. We want to compare actual socket state after the upgrade with the written design, without initiating traffic from another host.",ListeningPorts
+Could a stale container be holding 9000 open? Check the current host-side listeners before I restart the stack.,ListeningPorts
+The API works from localhost but not over the LAN. Find the interface address attached to its listening socket.,ListeningPorts
+"I only care about the receiving network endpoints the OS has bound, not resource usage of all processes.",ListeningPorts
+Is port 53 currently bound over UDP on the resolver node? The DNS team just changed its configuration.,ListeningPorts
+Our client can reach the box but times out on the job endpoint. Verify that the destination service has opened its local listener.,ListeningPorts
+Which processes own the sockets waiting for new connections on this Linux machine?,ListeningPorts
+"The audit requires a local list of active listening sockets after patching, including unexpected loopback-only bindings.",ListeningPorts
+Why does the new container claim the address is already in use? Show every local listener on 8080 and its owning PID.,ListeningPorts
+"I want the host's open server-side ports, not a remote connectivity report for the firewall team.",ListeningPorts
+Did the database switch its bind address when we replaced the config file? Check its active local listening address.,ListeningPorts
+Show whether anything is awaiting TCP connections on 8443 in the current network namespace.,ListeningPorts
+Our endpoint protection report says a strange listener appeared overnight. Inspect the machine's bound sockets so we can identify its port.,ListeningPorts
+Can you check if the service is bound only to localhost after the deployment? Users on the LAN can't reach it.,ListeningPorts
+List the currently listening ports on this VM alongside their protocol and local addresses.,ListeningPorts
+"The monitoring agent has a PID and low CPU use, but I can't see its telemetry endpoint. Does it have a socket open for inbound requests?",ListeningPorts
+"An engineer suggested testing the router, but first verify that our staging box itself is listening on 443.",ListeningPorts
+Which UDP services are bound locally on the backup appliance right now?,ListeningPorts
+The node exporter was meant to use 9100. Confirm the OS has an active listener at that port.,ListeningPorts
+My network diagram is out of date. Capture the server's actual inbound socket bindings for an updated baseline.,ListeningPorts
+A restart closed our application endpoint. Is any program now listening on 7070 on the same server?,ListeningPorts
+The developer says the debug UI is private. Check whether its listener is restricted to 127.0.0.1 rather than 0.0.0.0.,ListeningPorts
+Find the listening sockets on the local host that are associated with IPv6 only.,ListeningPorts
+"The router check passed, and the server process exists. I still need to establish whether it has opened the intended server port.",ListeningPorts
+"During the handover, our DBA changed PostgreSQL to a custom port. See which local socket it is bound to now.",ListeningPorts
+"Can I get a current list of network ports this machine is waiting on, with enough detail to distinguish loopback from public interfaces?",ListeningPorts
+"The package installer reported success, but its management endpoint doesn't answer. Verify whether any local program is awaiting incoming traffic on 9443.",ListeningPorts
+"The machine is crawling. Show which running tasks are using the most CPU before we reboot it. The slowdown started after a deployment, but the network team reports ordinary traffic and the storage array has no active alerts.",ListProcesses
+"Can you give me the active process IDs and memory consumption on this workstation? The machine hosts several unrelated jobs, so blaming the application without seeing CPU and memory consumption could interrupt healthy workloads.",ListProcesses
+"An overnight batch seems stuck, and the logs stopped updating. Check whether the worker processes are still alive and what resources they're consuming. A stale PID file claims the worker is running, but that file can survive a crash and doesn't prove the process exists.",ListProcesses
+"Which process is eating most of the server's RAM right now? The resource graph has a gap because the metrics exporter restarted, leaving us without a reliable current snapshot.",ListProcesses
+"The dashboard shows high load but zero network errors. Inspect the running programs to see what is keeping the CPUs busy. We can see the total CPU is high, but no per-program information is available from the dashboard the team usually uses.",ListProcesses
+"We deployed three worker replicas on this VM. Tell me whether their PIDs exist and how much CPU each is using. The deployment launched child workers dynamically, and a count from the orchestration configuration may not reflect the current machine.",ListProcesses
+"I need a live process list, including the command names and resource use, for this troubleshooting session. Our last inventory was collected before the overnight restart, so it won't show processes created by this morning's jobs.",ListProcesses
+"Our developer thinks a forgotten Python job is slowing the notebook server. Find any running Python tasks and their CPU usage. The notebook owner left for the day, and nobody knows whether an earlier script is still running under their account.",ListProcesses
+"The server's fan is suddenly loud, even while the application has no users. Which executables are active? It happens only when the overnight data transform begins, but the team hasn't checked the actual running tasks during that window.",ListProcesses
+"Show the top memory-consuming processes on this Linux box, not the open network connections. There are multiple containers involved, and we need to separate the resource-intensive process from the rest of the stack.",ListProcesses
+"Did the cleanup script finish, or is its process still running in the background? The cleanup command returned without an error message, yet the disk activity has stayed high for almost an hour.",ListProcesses
+"We have a suspicion that two copies of the scheduler were started. Inspect the process table for duplicate scheduler instances. The scheduler sometimes forks children whose names look identical, so their PIDs and states will help us tell them apart.",ListProcesses
+"The container's performance collapsed after a library update. List active processes and their CPU percentages so I can identify a runaway child task. The hardware monitoring is working, and the next useful observation is which executable is creating the demand.",ListProcesses
+"What programs are currently executing under the backup user account? The service is supposed to run as a dedicated user, and finding the active process owner may reveal a deployment mistake.",ListProcesses
+Can you locate the process occupying nearly all eight cores of this machine?,ListProcesses
+"The app is serving requests, but a separate job may be exhausting memory. Show the tasks sorted by resident memory.",ListProcesses
+I want to see the executable names and PIDs of everything currently running on the VM for an audit snapshot.,ListProcesses
+"The build agent has stopped responding to commands. Before opening its logs, check whether it remains in the process table.",ListProcesses
+Is there an orphaned Java process running after yesterday's service shutdown?,ListProcesses
+Our monitoring agent is showing 98% CPU from somewhere. Identify the busiest running programs and their IDs.,ListProcesses
+Can you check whether `celery` workers exist on this box and how many processes they occupy?,ListProcesses
+The user's notebook kernel may still be consuming resources after logout. Inspect its running processes.,ListProcesses
+Show the process tree for the application services and the resource consumption of each child.,ListProcesses
+Our release accidentally launched two web workers per core. I'd like the current process list so we can count the duplicates.,ListProcesses
+Is that package updater still active or has it exited? The progress interface vanished.,ListProcesses
+"The network ports appear normal, but the VM is swapping heavily. Identify active tasks using large amounts of memory.",ListProcesses
+Who owns the process that has been pegging the processor since 2 p.m.?,ListProcesses
+We suspect a zombie or hung background job after the backup. Check the processes currently present and their states.,ListProcesses
+Give me the PID and CPU load for the video encoder that's supposed to be running on this test workstation.,ListProcesses
+The operator wants to stop one application without restarting the entire host. Display its currently running processes first.,ListProcesses
+Which binaries are actively using resources on the small database server? I'm trying to explain the slowdown.,ListProcesses
+"The API responds, but the node itself is overloaded. List the running workloads and their CPU and memory footprints.",ListProcesses
+Can you determine whether the job supervisor and its child process are both still alive?,ListProcesses
+"After terminating the training script, I still see GPU utilization. Check which processes remain active from the run.",ListProcesses
+Show every current `node` process and its resource usage; I'm checking for a leftover development server.,ListProcesses
+"The service health check reports green, but we suspect the actual worker exited. Inspect running tasks for that worker's executable.",ListProcesses
+Can you find a runaway shell loop occupying a core on the lab VM?,ListProcesses
+"We need a point-in-time inventory of executing programs for the change record, with PID and usage information.",ListProcesses
+Our database connections look ordinary. Instead check whether a background compaction task is consuming the server's CPU.,ListProcesses
+"The process monitor has been offline, so give me the current list of active tasks sorted by their CPU demand.",ListProcesses
+"I have the host address and my approved credentials; please open a remote shell on our staging Linux server so I can finish the deployment. The system is in a restricted company environment, and I have an approved account with access through the usual corporate path.",SSHConnect
+"Can you connect me to dev-bastion.internal as the maintenance user? I need an interactive terminal. I already know the host responds on its management port, so I don't need a scan or inventory report before entering it.",SSHConnect
+"Our console access is broken, but the jump-box route is still approved. Establish a secure shell session to 10.24.7.15. The incident coordinator granted this maintenance window, and the next step is to get an interactive prompt on the remote machine.",SSHConnect
+"Get me logged into the sandbox VM over the encrypted command-line channel; I'll inspect the files myself. The web interface doesn't expose the configuration files I need, which is why an ordinary remote terminal is necessary.",SSHConnect
+The technician sent a new key pair for our authorized build host. Use the configured identity to establish a terminal session with that machine. I have confirmed the fingerprint with our administrator so we can establish the connection without accepting an unfamiliar identity blindly.,SSHConnect
+"I need to work directly on qa-node-6, not just see what services it exposes. Open a remote login for my account. The old console session expired during the release, and I want a fresh interactive connection using my provisioned user credentials.",SSHConnect
+Can you initiate a shell connection to the database test box through the corporate VPN? Access has already been granted. The database team will supply the migration commands afterward; for now the requested action is simply establishing access.,SSHConnect
+"Take me into the remote machine as the deploy user so I can run the release checklist. Our network engineer already tested connectivity, and I have the correct remote host alias in the approved SSH configuration.",SSHConnect
+"We migrated the server and its old browser console no longer works. Please establish terminal access to its new IP using my SSH profile. The cloud dashboard works intermittently, but the operations playbook directs us to use a secure command-line login for maintenance.",SSHConnect
+Could you start an authenticated remote session to 192.0.2.43? We aren't troubleshooting the ports now. I don't want the automation to run any commands yet; just provide an authenticated session on the authorized destination.,SSHConnect
+"I want a prompt on our backup Linux host. Connect to it with the normal administrative account. This is a sandbox I administer personally, and the shell is needed to inspect files that the management interface does not expose.",SSHConnect
+"Open an SSH terminal to build-agent-02; my task is to examine its local filesystem once I'm there. The team has scheduled a rollback exercise, and everyone is using the same managed jump environment to access their assigned hosts.",SSHConnect
+I have permission to maintain the router lab VM. Please sign in remotely using the secure command-line connection. The network inventory is accurate; the missing step is entering the specific host under the right user identity.,SSHConnect
+"The application crashed overnight and the dashboard only shows a generic error. Get me into the authorized server's shell so I can investigate interactively. Our internal authentication is already configured, but the current workstation has not opened the remote terminal connection yet.",SSHConnect
+Use my saved connection configuration to access the test gateway as operator.,SSHConnect
+"Can you log in to the remote Ubuntu instance at 10.9.2.38? I have an account, and I need a terminal rather than a health check.",SSHConnect
+Our release manager asked me to update a configuration file on the distant server. Establish the remote shell session first.,SSHConnect
+I need to reach the team's isolated development box from this workstation using the approved encrypted login.,SSHConnect
+Please connect to the lab server on its configured SSH port and leave me at a shell prompt.,SSHConnect
+The jump host is reachable and authentication was provisioned yesterday. Start the remote terminal connection under my username.,SSHConnect
+We no longer use direct cloud-console access for this service. Open a secure shell to the assigned operations VM instead.,SSHConnect
+My task is to run a manual migration on test-db-02. Get an authenticated terminal session going on that host.,SSHConnect
+Can you initiate an interactive login to the remote machine whose alias is `reports-stage` in my SSH config?,SSHConnect
+The team has already tested port 22. I now need actual access as the permitted developer account to inspect the failing service.,SSHConnect
+Please establish a command-line session to the remote host; I'll decide which diagnostics to run once connected.,SSHConnect
+The contractor handed over credentials to our internal jump box. Connect there as the designated support user.,SSHConnect
+I need to edit deployment settings on the spare VM. Use the secure remote terminal connection we normally use for Linux administration.,SSHConnect
+Launch an authenticated shell on 10.60.0.18 as the training account for our sandbox exercise.,SSHConnect
+Can you get me onto our GPU server via SSH? I'm authorized to run experiments there and need an interactive terminal.,SSHConnect
+"The remote host's website is down, but I have direct administrative access. Open the command-line connection rather than inspecting the website.",SSHConnect
+Connect to the QA appliance over its management shell using my assigned user identity.,SSHConnect
+Could you start a remote login session through bastion-a to the final development instance? The networking team already approved the hop.,SSHConnect
+"I want access to the server prompt, not a report on the operating system. Please connect using the credentials I've configured.",SSHConnect
+"Our Linux VM was reprovisioned, and we verified the host key out of band. Establish a fresh encrypted terminal session to it.",SSHConnect
+Can you open the remote shell for the app-maintenance account on api-worker-3?,SSHConnect
+"Before I rerun the failing backup script, I need to enter the remote machine interactively. Make the authorized shell connection.",SSHConnect
+We have an approved administrative window for the private test environment. Please connect to the target host and leave the session ready.,SSHConnect
+My cloud dashboard is locked in a loading screen. Get me onto the instance through its command-line login instead.,SSHConnect
+The old host alias points nowhere now; use the replacement server's address to establish my remote terminal session.,SSHConnect
+Help me enter the staging box as the audit account so I can examine configuration permissions myself.,SSHConnect
+"What hostname does this computer report, and which kernel is it booted into? The CMDB was copied from an older virtual machine, and I want information reported by this running system rather than inherited metadata.",GetSystemInfo
+I need the operating system release and uptime of the machine I'm using for the maintenance ticket. The hardware vendor requires a precise operating-system and kernel combination before diagnosing the driver compatibility warning.,GetSystemInfo
+"The image was cloned last night. Identify this host's name, OS distribution and current kernel so we can update inventory. The deployment automation uses a generic hostname in its logs, so we need to verify the machine's real local identity.",GetSystemInfo
+How long has this server been running since its most recent boot? The service team doesn't need activity logs or a performance investigation; they're only checking the baseline host details.,GetSystemInfo
+"Can you read the local system identity details? Our asset register has a placeholder value for this VM. We applied a patch last night, and the operations report should reflect what the machine is actually running today.",GetSystemInfo
+The driver team wants the precise kernel release on this Linux box before they approve the module. The support agent cannot trust the inventory portal because it was last refreshed before the operating system upgrade.,GetSystemInfo
+"Which OS version is installed here, and what is the machine called on the network? This machine might be one of several clones, and its hostname and uptime can help us distinguish it from the others.",GetSystemInfo
+"We're not looking at workloads yet. Report the basic host facts including its platform and uptime. An application restart does not prove the computer itself restarted, so the time since boot is the useful measurement here.",GetSystemInfo
+"This ticket was assigned to the wrong device. Get the local hostname and operating system details so we can correct it. Our install script checks the platform family, and the release number in the repository may be outdated after image replacement.",GetSystemInfo
+"Our monitoring dashboard says Ubuntu but the operator remembers Debian. Check the actual distribution on this server. The box was repurposed last quarter without updating its asset record, which is why the operating system's own details matter.",GetSystemInfo
+"I only need the machine's identifying system information, not its open ports or performance profile. I have opened a ticket about a driver module, and support explicitly requested the running kernel rather than package installation history.",GetSystemInfo
+Is this the server that rebooted earlier? Show the uptime and OS identity from the current node. There are no symptoms to troubleshoot yet; this is routine identification of the currently running environment for a handoff.,GetSystemInfo
+"Tell me the exact running kernel string on the computer I'm connected to. The cluster management tool assigned the machine a friendly label, but our engineer needs the real kernel and host identifier.",GetSystemInfo
+"The help desk asks for hostname, Linux release, and time since boot. Can you collect those from this machine? The console banner was customized by an earlier administrator and may not accurately represent the installed distribution release.",GetSystemInfo
+We built our lab VMs from two different base images. Identify which OS and kernel this particular instance is currently running.,GetSystemInfo
+Can you provide a concise profile of the host itself for the service desk inventory?,GetSystemInfo
+"What's the machine name returned by the OS, not the display name in the cloud console?",GetSystemInfo
+Our troubleshooting guide differs between kernel branches. Find which kernel is active on this system.,GetSystemInfo
+The server was apparently restarted during maintenance. How many hours has it been up since then?,GetSystemInfo
+"Please retrieve the OS family, release number and hostname for the node in front of me.",GetSystemInfo
+Before I install any drivers I need to know the current Linux build and running kernel; report those details.,GetSystemInfo
+"What basic platform details does this VM expose locally, including how long it's been online?",GetSystemInfo
+The deployment manifest says the host is Rocky Linux 9. Does its actual OS identity match that claim?,GetSystemInfo
+I have three terminal tabs open and don't know which machine this one belongs to. Show its hostname and OS version.,GetSystemInfo
+Can you check the uptime on the current host without inspecting the applications running on it?,GetSystemInfo
+"Our asset audit needs kernel version, distribution release and machine hostname from the actual system.",GetSystemInfo
+A machine migrated between clusters may have been assigned the wrong label. Identify the local operating system and host name.,GetSystemInfo
+"What OS build is this test appliance using, and when was it last booted?",GetSystemInfo
+Please show the system's own identity and boot-duration details so I can paste them into the operations report.,GetSystemInfo
+The service runs in several identical-looking VMs. Which operating system release is installed on the one we're examining?,GetSystemInfo
+I need to confirm whether the kernel upgrade took effect after restart. Read the kernel version currently in use.,GetSystemInfo
+Tell me the host name and how long it has been online; we don't need to inspect sign-in attempts.,GetSystemInfo
+"Can you identify this node's distribution, version and uptime for the infrastructure spreadsheet?",GetSystemInfo
+"Support requested basic details about this laptop: OS, kernel and system hostname. Gather them locally.",GetSystemInfo
+"Did this machine reboot overnight? Its uptime should tell us, so check that plus its current kernel.",GetSystemInfo
+Give me the host-level identity information for this server before we decide which patch playbook applies.,GetSystemInfo
+The older inventory entry has a kernel value that might belong to another instance. Retrieve the actual running version.,GetSystemInfo
+What operating system is on this server? The management portal hides the release number.,GetSystemInfo
+We're troubleshooting a compatibility warning and need only the computer's platform version and hostname at this stage.,GetSystemInfo
+Read the current uptime along with the operating system and kernel identifiers for our support case.,GetSystemInfo
+"Our appliance inventory lists OpenSSL 3.0.7. Are there published security advisories that apply to that exact release? The scanner's alert is based on a version string, and the patch team needs independent advisory information before scheduling downtime.",CheckVulnerability
+"Find out whether the firmware version on the lab firewall is affected by any documented remote-code-execution flaws. This device is in an isolated lab, but the risk register still requires checking whether the exact firmware release is affected.",CheckVulnerability
+"I have an advisory number from a vendor newsletter, but I can't tell which versions of their controller are exposed. Check the affected-version ranges. Different branches of the vendor's product receive separate updates, and a general product-level warning would not be enough.",CheckVulnerability
+"Does the old version of Apache Tomcat in our staging environment have known CVEs we should prioritize? The change request covers only the current application version, so we need evidence that published issues genuinely apply to it.",CheckVulnerability
+"The patch team wants a list of publicly reported vulnerabilities associated with nginx 1.18.0 before deciding whether an upgrade is urgent. The dependency was introduced through an older base image, and its security status has not been reviewed since the last build.",CheckVulnerability
+"Someone filed a security ticket against our installed database release. Determine whether that release is actually covered by the cited vulnerability. A previous assessment assumed every version was affected, but the vendor advisory appears to specify a much narrower release range.",CheckVulnerability
+Is the vulnerability our scanner flagged for libxml2 a real match for the package version we have? Our team is not asking anyone to attempt exploitation; the request is limited to documented vulnerability information and remediation references.,CheckVulnerability
+"We discovered a legacy Jenkins server in the asset list. Look up known security issues for its reported build. We have a maintenance window available next week, but its priority depends on whether this build is actually in scope.",CheckVulnerability
+"Before we call this exposed service dangerous, can you check published exploits and advisories for the exact software version it advertises? The asset was disconnected for several months, making it likely that software versions and published advisories have drifted apart.",CheckVulnerability
+"The vendor says the issue was fixed in 2.4.9, but our device runs 2.4.8. What documented security flaws affect our build? We need to compare the disclosed conditions with the real deployment rather than relying on a risk score alone.",CheckVulnerability
+"I need the severity and affected versions for the recently disclosed flaw in our SSH server implementation. The incident board flagged an advisory in the news, but nobody has checked the applicable product revisions or prerequisites.",CheckVulnerability
+"Does this router firmware have a published authentication-bypass advisory, or is that rumor unsupported? The installed package may contain a distribution backport, so the upstream version number by itself can be misleading.",CheckVulnerability
+Search vulnerability records for PostgreSQL 13.3 and distinguish issues that apply to that version from later releases. The report must cite the documented affected ranges because the compliance reviewer will independently verify the claim.,CheckVulnerability
+"Our internal scan mentions a critical CVE for a logging library. Verify whether the package revision on the server falls within its affected range. A service discovery report is already available, and the next question is whether its identified releases have known weaknesses.",CheckVulnerability
+Which known security defects have been reported for the specific Samba release installed on our test NAS?,CheckVulnerability
+The maintenance board needs references to vendor advisories and CVE entries for the software found during inventory.,CheckVulnerability
+Is the service identified as ProFTPD 1.3.5 vulnerable to any publicly documented exploits?,CheckVulnerability
+The team suspects a vulnerable Java runtime is embedded in the appliance. Check the published notices for that release.,CheckVulnerability
+We have an old version of Redis and need to understand its known security exposure before approving access to the lab.,CheckVulnerability
+Can you look up the severity and remediation guidance associated with CVE-2021-44228?,CheckVulnerability
+"Our scanner claims an outdated OpenSSH build is exploitable. Validate that claim against known affected versions, not just the product name.",CheckVulnerability
+Find published vulnerabilities for the exact PHP release listed in the web application's support bundle.,CheckVulnerability
+The contractor wrote 'security issue fixed' with no reference. Check whether the current firmware has outstanding documented advisories.,CheckVulnerability
+Does a publicly known flaw let an unauthenticated user bypass access checks in this version of the VPN gateway?,CheckVulnerability
+Review vulnerability disclosures relevant to the installed version of the message broker before we plan its maintenance window.,CheckVulnerability
+We need to distinguish an advisory for the upstream source release from our vendor's patched package. What affected-build information is published?,CheckVulnerability
+Is curl 7.74.0 associated with any security flaws we should investigate in the baseline image?,CheckVulnerability
+The database administrator wants to know if the current MySQL release is listed in vulnerability databases.,CheckVulnerability
+Our support contract expires soon. Identify known security advisories for this controller software so we can prioritize updates.,CheckVulnerability
+What are the publicly documented exploitation conditions for the flaw assigned CVE-2023-34362?,CheckVulnerability
+The team found an outdated Spring Framework dependency. Check which disclosed weaknesses affect that precise branch.,CheckVulnerability
+A scanner shows a high-severity issue but only supplies a product version and advisory identifier. Verify the mapping to that software.,CheckVulnerability
+Are there security bulletins about privilege escalation in the kernel version running on our laboratory Linux image?,CheckVulnerability
+Can you research whether the version of Exchange Server on the test domain has published vulnerabilities?,CheckVulnerability
+We don't need to enumerate ports again. Determine what publicly known CVEs apply to the software release already identified on the host.,CheckVulnerability
+I heard a critical issue was announced for our backup application. Find the affected builds and vendor fix information.,CheckVulnerability
+"Before escalating the ticket, check whether the exploit described for this web server revision is publicly documented and applicable.",CheckVulnerability
+The library was updated to a patched minor version. Does the security advisory still list that revision as affected?,CheckVulnerability
+Please identify the published vulnerabilities and severity ratings for the installed version of the remote management agent.,CheckVulnerability
+Our auditor wants evidence that the software's known security flaws were reviewed. Look up disclosures for the product and release in the inventory.,CheckVulnerability
+"The VM rebooted unexpectedly after midnight. Show the local system event messages leading up to the restart. The service owner says there were no application exceptions, but the host may have recorded storage or hardware failures independently.",ReadSyslog
+"Can you retrieve the general system log for the period when the storage device disappeared? The monitoring dashboard has a gap during this period, so the original messages on the machine are our best available evidence.",ReadSyslog
+"Our backup service failed just after a network flap. I need the operating system's recorded events around that time. The alert was raised after the reboot, and we need the preceding operating-system messages rather than just the current status.",ReadSyslog
+Open the host's syslog stream from the last hour so we can inspect the raw messages. We are collecting evidence for the incident timeline and want the raw entries with their timestamps preserved.,ReadSyslog
+"What did the system journal record when the disk started reporting I/O errors? The network team checked the switch already, but the host's own messages might explain why its interface disappeared temporarily.",ReadSyslog
+"Display the machine's general log entries around 06:30, including daemon and kernel notices. Our incident response policy separates general system events from authentication investigations, and this ticket concerns the former.",ReadSyslog
+"The application team blames authentication, but I first want the general host event history for the crash window. The issue began after a package update, which means service-manager and kernel notices could be relevant even if the app is silent.",ReadSyslog
+"The monitoring agent was briefly offline. Pull the operating system messages from the affected interval for review. The VM remained reachable for a while after the first alert, so we want to understand what the OS recorded during deterioration.",ReadSyslog
+"We have a recurring warning about DNS resolution on this node. Show the recent system log rather than testing network ports. This was a scheduled maintenance window involving several daemons, and their restart messages may be scattered throughout the system log.",ReadSyslog
+"Can you fetch the server's syslog lines since the last boot? The storage team suspects a controller timeout, but they need the local operating-system messages before opening a vendor case.",ReadSyslog
+"Our training VM froze after a package upgrade. Read the local system events around the upgrade for clues. The logs were never forwarded because the collector was down, so we need the records retained on the machine itself.",ReadSyslog
+"I'd like the raw daemon and kernel messages written on the host this morning, not a condensed alert count. The problem may involve a driver rather than the user account system, which is why a general host event trail is appropriate.",ReadSyslog
+"Why did the scheduled service stop? Start by retrieving the general system event log from when it happened. The dashboard's status changes every few minutes, but it doesn't display the diagnostic messages behind those changes.",ReadSyslog
+"The fan and temperature alarms fired together. Show system messages from the machine at that time. We want original event text for the time window, not a guess about the cause of the incident based on one symptom.",ReadSyslog
+Read the host's recent system log so I can examine unusual device-driver warnings.,ReadSyslog
+The overnight deployment completed but the file system was remounted read-only. Pull the relevant OS log entries.,ReadSyslog
+"Can you display logged system events for Tuesday evening, preserving their original order and timestamps?",ReadSyslog
+The server lost its default route briefly. Retrieve the machine's system messages for the outage window.,ReadSyslog
+"I need to review what the OS logged during the unattended update, including service restart notices.",ReadSyslog
+"Show recent syslog content for this box; the issue seems tied to disk mounts, not user sign-ins.",ReadSyslog
+Our diagnostics script timed out before collecting the journal. Can you retrieve the system records directly?,ReadSyslog
+"The database keeps restarting, but we don't yet know whether the kernel or service manager is involved. Read the host-level event history surrounding the restarts.",ReadSyslog
+What warnings did the general system log contain immediately before the machine shut down?,ReadSyslog
+A USB device vanished from the workstation. Show the OS messages that might describe its disconnect.,ReadSyslog
+"Can you pull the system journal for the last thirty minutes, with timestamps intact?",ReadSyslog
+The local clock jumped during an NTP adjustment. Retrieve the system log entries from that interval.,ReadSyslog
+Open the event trail written by the host's system services after the last reboot.,ReadSyslog
+"We had an intermittent interface reset on the lab server. I want to see the corresponding OS event records, not run another connectivity test.",ReadSyslog
+The support engineer needs the raw syslog excerpt for the outage ticket. Please fetch it.,ReadSyslog
+Show the operating system's recorded messages from the time the RAID array reported degradation.,ReadSyslog
+The scheduler began missing jobs at 02:10. Retrieve general system log activity near that time to help identify a host-side failure.,ReadSyslog
+"I want the machine's service-manager messages around the failed startup, along with other system events that were logged.",ReadSyslog
+A driver update may have destabilized our test laptop. Read the system journal around the installation and reboot.,ReadSyslog
+Could you display the current host's general log entries without limiting the result to authentication events?,ReadSyslog
+The server experiences occasional network drops with no application error. Pull the system event messages from the last drop.,ReadSyslog
+"Need to inspect the original OS warnings after the power outage, including mount and hardware messages.",ReadSyslog
+"The nightly job disappeared from the dashboard. Before examining its process list, show what the system log recorded at that time.",ReadSyslog
+Can you retrieve kernel and background-daemon events for the incident window on this machine?,ReadSyslog
+Our observability platform lost yesterday's host logs. Read the local system event history directly so we can reconstruct the timeline.,ReadSyslog
+The machine reported a filesystem corruption warning and then recovered. Show the surrounding entries in its general log.,ReadSyslog
+We confirmed 198.51.100.61 is sending abusive traffic to our test API. Add a host firewall rule denying that source address. The threat response lead approved this containment step after verifying the traffic source against packet captures from our own environment.,BlockIP
+"Please stop packets from 203.0.113.28 reaching this VM; the address was retired from our approved vendor allowlist. The service owner confirmed that the address belongs to a terminated partner, and the exception that allowed it should no longer remain active.",BlockIP
+"The SOC approved containment of the sender at 192.0.2.114. Block its inbound traffic on the server firewall now. This is a controlled exercise on our own lab host, and the firewall change is part of the approved test procedure.",BlockIP
+"Can you deny connections originating from 198.51.100.203 on this machine? The owner signed off on the emergency change. The incident ticket includes a rollback plan, so we are ready to apply the machine-level restriction instead of merely recording evidence.",BlockIP
+"That scanner keeps hitting our sandbox after its contract ended. Put 203.0.113.19 on the local network deny list. Our SOC has already completed attribution for this simulated incident, and an additional log review would delay the required containment.",BlockIP
+"We've completed the investigation and want to cut off 192.0.2.58 from accessing the lab host. Apply the firewall restriction. The application-side restriction can be bypassed by other listeners, which is why the deny action belongs at the server firewall.",BlockIP
+The same source continues flooding our login endpoint despite an application ban. Drop its traffic at the host network filter: 198.51.100.73. The team knows the source address and wants no further connectivity tests before enforcing the approved security decision.,BlockIP
+"Please create an inbound reject rule for 203.0.113.88 while we rotate credentials. The affected host also offers non-web services, so filtering in the reverse proxy alone would not provide the intended isolation.",BlockIP
+We've determined the requests from 192.0.2.179 are unauthorized. Prevent that IP from communicating with this server. We are acting under a temporary incident response authorization that permits this local network-level block for the specified source.,BlockIP
+"The containment ticket authorizes a local firewall ban for 198.51.100.44. Can you implement it? The endpoint was previously on an allowlist for a time-limited test, but the scheduled access period ended yesterday.",BlockIP
+Don't just report the suspicious sender again; stop 203.0.113.102 at the VM's firewall. We don't want to change the whole subnet policy; the request concerns only the explicitly identified remote address.,BlockIP
+"The contractor should no longer be able to connect from 192.0.2.33. Deny that address at this host. An existing application rule is logging rejections but still consuming processing resources, prompting the shift to a host-side drop.",BlockIP
+Traffic from 198.51.100.118 is exhausting the application and the upstream rule hasn't propagated. Block it locally. The security engineer has confirmed the traffic is unwanted and requested a narrowly scoped source-IP deny at this machine.,BlockIP
+"We need an immediate host-side deny rule for 203.0.113.211, which our incident responder identified as the abusive source. The firewall team is documenting every emergency rule, so the block must be attributable to this approved containment request.",BlockIP
+Can you make sure packets with source IP 192.0.2.140 are discarded before they reach the service?,BlockIP
+"The lab owner withdrew access for a specific external address, 198.51.100.96. Add it to the firewall block list.",BlockIP
+Put a temporary network-level ban on 203.0.113.57 for this server; the change request is already approved.,BlockIP
+The IDS says 192.0.2.84 is repeatedly probing the administration page. Block that IP rather than running another scan.,BlockIP
+We have a verified incident and permission to isolate the originating address. Deny inbound traffic from 198.51.100.162.,BlockIP
+"Stop the unwanted traffic from 203.0.113.6 at this machine's firewall, not in the web application.",BlockIP
+Can you apply the requested drop rule against 192.0.2.205 on our staging node?,BlockIP
+"Our support team removed a partner's access, but they can still connect from 198.51.100.31. Enforce a host firewall ban for that address.",BlockIP
+The incident ticket specifically calls for cutting off 203.0.113.129 from the affected VM. Implement the block.,BlockIP
+We want no incoming connections from 192.0.2.219 until the security review is complete. Deny the source at the OS firewall.,BlockIP
+The abuse desk confirmed the origin is 198.51.100.177. Prevent that source from reaching any listening service here.,BlockIP
+Please reject network traffic from 203.0.113.164 on the current Linux server; we are not looking for attribution or logs.,BlockIP
+This address was mistakenly left with access after the trial ended: 192.0.2.17. Add a firewall rule to bar it from the host.,BlockIP
+We've validated the alert and approved the emergency response. Drop requests from 198.51.100.225 at the host boundary.,BlockIP
+Can you remove 203.0.113.43's ability to communicate with this server through a local deny rule?,BlockIP
+"Our network team can't update the perimeter ACL until tomorrow. For now, block 192.0.2.132 directly on the affected VM.",BlockIP
+The on-call responder wants source 198.51.100.14 denied across all inbound ports on this node. Apply that firewall action.,BlockIP
+A retired monitoring provider is still connecting from 203.0.113.200. Deny that origin at the server firewall.,BlockIP
+The operations lead authorized a ban on 192.0.2.76 after repeated unwanted connections. Enforce it locally.,BlockIP
+Please keep 198.51.100.151 from reaching the development gateway by adding the appropriate host firewall restriction.,BlockIP
+Our honeypot exercise identified 203.0.113.75 as the source to contain. Drop its packets at this test machine.,BlockIP
+The API's rate limiter is overloaded. Block the confirmed abusive IP 192.0.2.196 at the network layer on the host.,BlockIP
+The security playbook says to isolate 198.51.100.239 following verification. Add that address to the machine's deny rules.,BlockIP
+Could you implement the approved firewall block for 203.0.113.116 so the sender cannot establish new sessions?,BlockIP
+"We've asked the provider to investigate 192.0.2.49, but meanwhile the server must refuse incoming traffic from it. Apply a deny rule.",BlockIP
+The incident commander signed off on host containment. Stop network connections sourced from 198.51.100.187 to this node.,BlockIP

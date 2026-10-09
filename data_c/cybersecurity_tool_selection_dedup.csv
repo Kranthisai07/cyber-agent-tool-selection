@@ -1,0 +1,406 @@
+prompt,label,style
+Show raw user authentication events from the host.,ReadAuthLog,student
+See which running job is slowing the machine.,ListProcesses,polite request
+What is the running kernel build?,GetSystemInfo,typo casual
+Check if the lab machine exposes MySQL or MariaDB.,NmapScan,student
+Give me a basic identity summary for this server.,GetSystemInfo,polite request
+Need the node's operating system and uptime.,GetSystemInfo,typo casual
+Retrieve the local syslog contents for review.,ReadSyslog,question
+Show the server's listening sockets without remote probes.,ListeningPorts,audit note
+Print a snapshot of the process table.,ListProcesses,sysadmin
+Open a terminal session on the edge gateway.,SSHConnect,chat casual
+Read the raw sign-in log for this Linux box.,ReadAuthLog,command
+Get into the remote sensor collector via terminal.,SSHConnect,chat casual
+What distro and kernel are installed here?,GetSystemInfo,chat casual
+Could we identify high-CPU background services.,ListProcesses,ticket note
+Is a background task hogging CPU on this server?,ListProcesses,sysadmin
+Add firewall protection against 198.51.100.5 specifically.,BlockIP,chat casual
+Open the machine's raw authentication trail.,ReadAuthLog,student
+What operating system is this host running?,GetSystemInfo,sysadmin
+Enumerate the port numbers exposed by the appliance.,PortScan,student
+Any chance you can prevent further inbound connections from 203.0.113.209 via firewall?,BlockIP,fragment
+Figure out what software answers on the target's TCP ports.,NmapScan,student
+"Show teh running processes and CPU use, for the security review.",ListProcesses,typo casual
+"Print teh most recent general system log entries, thanks.",ReadSyslog,typo casual
+Scan the training box for reachable ports.,PortScan,urgent
+What does this node call itself?,GetSystemInfo,polite request
+Verify reachability of ports 80 443 and 8443 on the remote host.,PortScan,urgent
+Check the remote backup node for accessible ports.,PortScan,student
+Identify this machine and how long it has been online.,GetSystemInfo,question
+See what is bound on 127.0.0.1.,ListeningPorts,student
+Find known attack vectors for a legacy WordPress plugin version.,CheckVulnerability,manager
+Any chance you can open the machine's main syslog file.,ReadSyslog,technical
+Confirm whether 8080 is accepting remote connections.,PortScan,student
+Enter the host at 10.0.8.21 for manual commands.,SSHConnect,polite request
+Could we find usernames with many bad login attempts.,CheckFailedLogins,polite request
+See if PostgreSQL 12 has public vulnerability entries.,CheckVulnerability,manager
+Find any resource-heavy running processes.,ListProcesses,polite request
+Could we enumerate reachable ports at the lab IP.,PortScan,chat casual
+Print open listening endpoints from the local OS.,ListeningPorts,command
+Retrieve system service messages from this computer.,ReadSyslog,typo casual
+Read the auth log even if the logins succeeded.,ReadAuthLog,urgent
+Any chance you can highlight anomalous failed access attempts.,CheckFailedLogins,sysadmin
+Check which TCP ports respond on the staging host.,PortScan,urgent
+Open the auth logfile on this box.,ReadAuthLog,urgent
+View successful and failed authentication events in the original log.,ReadAuthLog,command
+Print generic OS messages recorded today.,ReadSyslog,typo casual
+We should provide hostname and elapsed time since boot.,GetSystemInfo,technical
+Check for unusual spikes in failed logins.,CheckFailedLogins,command
+Connect to node-07 as the ops user.,SSHConnect,typo casual
+Look up security advisories for Java 8 update 202.,CheckVulnerability,fragment
+Who repeatedly tried to authenticate and failed?,CheckFailedLogins,student
+Check the OS version on the local server.,GetSystemInfo,polite request
+What does our local authentication log actually say?,ReadAuthLog,command
+Detect odd login failure activity since midnight.,CheckFailedLogins,urgent
+Just look up security advisories for Java 8 update 202.,CheckVulnerability,audit note
+Prevent 192.0.2.90 from reaching this server.,BlockIP,typo casual
+Check which database engine is reachable on the remote appliance.,NmapScan,student
+Investigate repeated unsuccessful account access.,CheckFailedLogins,student
+"Verify whether port 3306 is reachable from here, before teh handoff.",PortScan,typo casual
+Identify the service that answers at 8443 on the demo host.,NmapScan,command
+"View successful and failed authentication events in teh original log, for my notes.",ReadAuthLog,typo casual
+"Retrieve all PAM login events including success, for teh report.",ReadAuthLog,typo casual
+Show kernel version for the machine.,GetSystemInfo,question
+Investigate whether login failures cluster around one account.,CheckFailedLogins,audit note
+Check if the partner sandbox has any unexpected ports open.,PortScan,audit note
+Find CVEs related to the exact version of Grafana we identified.,CheckVulnerability,junior analyst
+Stop all requests from IP 192.0.2.74 at network filtering.,BlockIP,typo casual
+Just identify possible password spraying on local accounts.,CheckFailedLogins,chat casual
+Look for failed admin logins on the box.,CheckFailedLogins,command
+Access the remote Linux box using port 22.,SSHConnect,chat casual
+Map exposed port numbers without identifying services.,PortScan,command
+Tell me if the staging IP exposes any unexpected port numbers.,PortScan,command
+Inspect the machine's general operating system log.,ReadSyslog,typo casual
+"Enter teh host at 10.0.8.21 for manual commands, right now.",SSHConnect,typo casual
+Could we find out whether the target exposes Apache or nginx and their versions.,NmapScan,chat casual
+Bar inbound packets from 198.51.100.40.,BlockIP,sysadmin
+Blackhole 192.0.2.29 with a firewall rule.,BlockIP,question
+Print the most recent general system log entries.,ReadSyslog,chat casual
+Shut off access for the single IP 203.0.113.11.,BlockIP,polite request
+Deny inbound traffic from 198.51.100.22.,BlockIP,typo casual
+Add 192.0.2.18 to the firewall blocklist.,BlockIP,question
+"Check teh OS version on the local server, before I close the ticket.",GetSystemInfo,typo casual
+What ports are accepting inbound connections on this box?,ListeningPorts,student
+"Find teh kernel and OS info from the host, on this one.",GetSystemInfo,typo casual
+Retrieve the local auth.log contents.,ReadAuthLog,shorthand
+Check exploit databases for Samba 4.11.,CheckVulnerability,ticket note
+Show me system version details on this instance.,GetSystemInfo,chat casual
+Display host details including OS and kernel.,GetSystemInfo,sysadmin
+Start a terminal login on the database jump host.,SSHConnect,sysadmin
+Open the host's authentication event file.,ReadAuthLog,student
+See which port numbers respond on the bastion IP.,PortScan,student
+Enforce a firewall ban on 192.0.2.37.,BlockIP,sysadmin
+Enumerate versions of remotely exposed network services.,NmapScan,audit note
+"Identify open TCP ports on teh customer-approved target, right now.",PortScan,typo casual
+Check active server-side listeners on my laptop.,ListeningPorts,urgent
+Identify disclosed issues affecting Exim 4.92.,CheckVulnerability,technical
+Show hostname OS kernel and uptime of this machine.,GetSystemInfo,question
+Filter out source address 192.0.2.222 at the firewall.,BlockIP,chat casual
+Check failed login counts over the past hour.,CheckFailedLogins,shorthand
+Show the file where sshd authentication messages are stored.,ReadAuthLog,shorthand
+"Show hostname OS kernel and uptime of this machine, for teh security review.",GetSystemInfo,typo casual
+Identify the operating system of the current box.,GetSystemInfo,typo casual
+What executables are running and how busy are they?,ListProcesses,question
+Establish an interactive shell on the lab machine.,SSHConnect,typo casual
+Create a deny rule for client address 203.0.113.88.,BlockIP,question
+Map the service names and revisions on the DMZ host.,NmapScan,urgent
+Pull the host's baseline system event log.,ReadSyslog,sysadmin
+Check whether SQLite 3.31 has disclosed issues.,CheckVulnerability,junior analyst
+"Check which TCP ports respond on teh staging host, thanks.",PortScan,typo casual
+Any chance you can show locally opened listening ports.,ListeningPorts,typo casual
+Get a command prompt on the analytics server.,SSHConnect,polite request
+We should what did the system log record around 3am.,ReadSyslog,fragment
+Initiate a secure shell connection to db-replica-2.,SSHConnect,typo casual
+Bring up a secure remote shell on the monitoring VM.,SSHConnect,typo casual
+Pull up local user auth events unabridged.,ReadAuthLog,student
+Open /var/log/syslog for this host.,ReadSyslog,sysadmin
+"Ban 198.51.100.9 at teh host firewall, for the report.",BlockIP,typo casual
+"Read teh raw system logging feed, before the handoff.",ReadSyslog,typo casual
+View the machine's sign-in event stream as logged.,ReadAuthLog,shorthand
+Show routine host events in syslog.,ReadSyslog,question
+Just pull up local user auth events unabridged.,ReadAuthLog,polite request
+Apply an IP-based inbound deny for 203.0.113.120.,BlockIP,sysadmin
+Put 198.51.100.200 on the reject list.,BlockIP,question
+Keep 198.51.100.111 out by blocking it at the firewall.,BlockIP,polite request
+Show all currently listening ports from the host OS.,ListeningPorts,student
+Show denied authentication attempts by time and origin.,CheckFailedLogins,urgent
+Enter the QA host with my private key.,SSHConnect,question
+Find open ports on the remote gateway.,PortScan,audit note
+See which ports pass through the edge gateway.,PortScan,command
+Inspect running PIDs and their utilization.,ListProcesses,typo casual
+Just which tasks are consuming processor time.,ListProcesses,fragment
+Display all live tasks and their processor demand.,ListProcesses,question
+Any chance you can see if PostgreSQL 12 has public vulnerability entries.,CheckVulnerability,urgent
+Read the local login authentication journal.,ReadAuthLog,student
+Could we open the unfiltered auth log for audit review.,ReadAuthLog,typo casual
+Does the remote IP answer on 3389?,PortScan,shorthand
+We should dump the authentication log without filtering failures.,ReadAuthLog,question
+Pull up recent daemon and kernel log messages.,ReadSyslog,polite request
+Print host name and kernel information.,GetSystemInfo,polite request
+Cut off the remote address 198.51.100.57 at the perimeter.,BlockIP,typo casual
+Find the actual daemon behind port 8080 on the remote VM.,NmapScan,shorthand
+Find the kernel and OS info from the host.,GetSystemInfo,typo casual
+Retrieve vendor bulletins for FortiOS 6.4.,CheckVulnerability,technical
+Flag suspicious sign-in patterns on the host.,CheckFailedLogins,command
+Find the application consuming cycles on this VM.,ListProcesses,chat casual
+Look for unusual authentication rejection patterns.,CheckFailedLogins,shorthand
+Any chance you can retrieve the local auth.log contents.,ReadAuthLog,chat casual
+Which program is pegging one core?,ListProcesses,sysadmin
+Spot suspicious failed SSH attempts in recent events.,CheckFailedLogins,audit note
+Reach the bastion host with my SSH key.,SSHConnect,polite request
+Find usernames with many bad login attempts.,CheckFailedLogins,student
+Profile the remote host's exposed services and release numbers.,NmapScan,urgent
+Could we show routine host events in syslog.,ReadSyslog,manager
+Filter out source address 192.0.2.222 at teh firewall — need this checked.,BlockIP,typo casual
+Check for a runaway process.,ListProcesses,sysadmin
+Any active TCP listeners after service restart?,ListeningPorts,urgent
+Attach my shell to the remote firewall appliance.,SSHConnect,typo casual
+Any account lockout patterns from failed access?,CheckFailedLogins,audit note
+Highlight anomalous failed access attempts.,CheckFailedLogins,audit note
+See if anything local listens on 8080.,ListeningPorts,shorthand
+Display network listeners including loopback.,ListeningPorts,audit note
+Open the generic Linux system log.,ReadSyslog,question
+Could we sign into the production host from my terminal.,SSHConnect,manager
+Open an interactive login to the worker host.,SSHConnect,chat casual
+Open the machine's main syslog file.,ReadSyslog,polite request
+Show process activity on the local instance.,ListProcesses,typo casual
+Search for known flaws in the specified Docker Engine version.,CheckVulnerability,technical
+Run a service detection sweep against the lab IP.,NmapScan,command
+Display general daemon notices and warnings from the log.,ReadSyslog,polite request
+"Look up published CVEs for OpenSSH 8.2p1, for teh lab.",CheckVulnerability,typo casual
+Read syslog around the last reboot.,ReadSyslog,chat casual
+Identify open TCP ports on the customer-approved target.,PortScan,audit note
+Check if firewall changes exposed 5432 externally.,PortScan,command
+See whether 22 and 443 are open on the test server.,PortScan,student
+Run a port-only probe of the test router.,PortScan,audit note
+Identify high-CPU background services.,ListProcesses,chat casual
+Which TCP endpoints are bound on this host?,ListeningPorts,command
+Deny packets sourced at 203.0.113.67.,BlockIP,chat casual
+Find out whether the target exposes Apache or nginx and their versions.,NmapScan,shorthand
+Check whether localhost has a listener on 6379.,ListeningPorts,shorthand
+Probe the demo host for open TCP endpoints.,PortScan,urgent
+See whether the target presents OpenSSH 8 or 9.,NmapScan,shorthand
+Find advisories related to Kubernetes 1.23.,CheckVulnerability,junior analyst
+"Show process activity on teh local instance, on this one.",ListProcesses,typo casual
+Summarize invalid credentials used against this machine.,CheckFailedLogins,urgent
+Show current task list with CPU percentages.,ListProcesses,question
+Log in remotely to the Ubuntu VM using my SSH account.,SSHConnect,sysadmin
+"Check teh public CVE record for curl 7.68, and send the result.",CheckVulnerability,typo casual
+Identify possible password spraying on local accounts.,CheckFailedLogins,shorthand
+Set up an SSH login to the maintenance instance.,SSHConnect,polite request
+Create a host firewall rule denying 203.0.113.144.,BlockIP,question
+Show CPU consumers among the current processes.,ListProcesses,question
+Determine whether the staging server runs an outdated HTTP daemon.,NmapScan,audit note
+Block 203.0.113.45 at the firewall.,BlockIP,polite request
+Collect software fingerprints from a remote IP.,NmapScan,command
+Add a firewall deny entry for 192.0.2.54.,BlockIP,question
+Determine what software is bound to exposed ports on target.,NmapScan,shorthand
+Inspect system-level log lines from the last hour.,ReadSyslog,typo casual
+Enumerate active listeners on the current instance.,ListeningPorts,command
+Are there publicly known bugs in ProFTPD 1.3.5?,CheckVulnerability,manager
+"Get me into teh cloud VM terminal, before the handoff.",SSHConnect,typo casual
+Find the remote appliance's accessible services and build numbers.,NmapScan,command
+Verify the app is listening locally on 9000.,ListeningPorts,audit note
+Read unfiltered general logs from this box.,ReadSyslog,polite request
+Could we does this version of HAProxy have a documented security flaw.,CheckVulnerability,shorthand
+Discover what protocol services the remote host offers.,NmapScan,command
+Quarantine the abusive source IP 203.0.113.91 in firewall policy.,BlockIP,polite request
+We should identify disclosed issues affecting Exim 4.92?,CheckVulnerability,student
+Summarize this host's platform details.,GetSystemInfo,sysadmin
+What is bound to port 3000 on this workstation?,ListeningPorts,student
+Inspect authentication messages recorded on this host.,ReadAuthLog,student
+Show the remote machine's open services with product versions.,NmapScan,shorthand
+Pull up a top-like overview of active tasks.,ListProcesses,typo casual
+Check which local endpoints have LISTEN status.,ListeningPorts,command
+Blacklist the IP 198.51.100.136 on this machine.,BlockIP,chat casual
+Identify the FTP server software and version on the test box.,NmapScan,shorthand
+Fetch miscellaneous host log messages.,ReadSyslog,typo casual
+Make a shell connection to the office gateway.,SSHConnect,sysadmin
+Lookup vulnerabilities tied to the identified OpenSSL release.,CheckVulnerability,junior analyst
+Display unfiltered system event records.,ReadSyslog,chat casual
+What is using the CPU on my laptop?,ListProcesses,typo casual
+Just retrieve system service messages from this computer.,ReadSyslog,junior analyst
+Review host-wide events from the original syslog.,ReadSyslog,polite request
+Look at all recent system events without an auth-only filter.,ReadSyslog,sysadmin
+Check the public CVE record for curl 7.68.,CheckVulnerability,fragment
+Read the local general-purpose system log.,ReadSyslog,polite request
+Check whether the public test endpoint has port 25 open.,PortScan,urgent
+Research whether RabbitMQ 3.8 has recorded exploits.,CheckVulnerability,ticket note
+Just is 5432 listening on this machine.,ListeningPorts,question
+Could we display network listeners including loopback.,ListeningPorts,sysadmin
+Show which ports this machine is listening on.,ListeningPorts,shorthand
+"Find any resource-heavy running processes, before I close teh ticket.",ListProcesses,typo casual
+Which TCP entry points are open on the partner host?,PortScan,shorthand
+"Surface possible brute force attempts against teh machine, before I close the ticket.",CheckFailedLogins,typo casual
+Retrieve the current uptime with OS details.,GetSystemInfo,chat casual
+Find the PID responsible for 95 percent CPU.,ListProcesses,polite request
+Connect as deploy to the web node.,SSHConnect,chat casual
+Show ordinary system warnings and service messages.,ReadSyslog,chat casual
+Open the unfiltered auth log for audit review.,ReadAuthLog,command
+Retrieve advisories for Log4j 2.14.1.,CheckVulnerability,fragment
+Reject all incoming traffic from 192.0.2.111.,BlockIP,chat casual
+"Show teh authentication log on this machine, before I close the ticket.",ReadAuthLog,typo casual
+Research exploit history for SMBv1.,CheckVulnerability,manager
+Display today's unfiltered sign-in entries.,ReadAuthLog,command
+Any chance you can fingerprint the web stack on the training instance.,NmapScan,question
+List active processes on this machine.,ListProcesses,chat casual
+Enumerate network-facing daemons with version details.,NmapScan,student
+Create an SSH session to the test instance.,SSHConnect,sysadmin
+We should survey the versioned listeners on the partner test endpoint.,NmapScan,polite request
+Assess known flaws in an old vsftpd release.,CheckVulnerability,junior analyst
+Connect to the staging jump box over SSH.,SSHConnect,typo casual
+Show known security issues for Jenkins 2.263.,CheckVulnerability,ticket note
+Surface possible brute force attempts against the machine.,CheckFailedLogins,shorthand
+Just deny packets sourced at 203.0.113.67.,BlockIP,ticket note
+"Find teh sockets waiting for connections here, if possible.",ListeningPorts,typo casual
+Authenticate to the development box over SSH.,SSHConnect,chat casual
+Show the general system log on this machine.,ReadSyslog,typo casual
+Show the system log from this instance.,ReadSyslog,chat casual
+Report OS release hostname and uptime.,GetSystemInfo,sysadmin
+Show me the full auth history log from this server.,ReadAuthLog,audit note
+Read the local log containing miscellaneous system messages.,ReadSyslog,sysadmin
+Does this version of HAProxy have a documented security flaw?,CheckVulnerability,ticket note
+Inspect current host network bindings.,ListeningPorts,student
+Fetch login validation entries from the auth file.,ReadAuthLog,urgent
+"Connect to teh staging jump box over SSH, as part of triage.",SSHConnect,typo casual
+Could we make the firewall refuse 192.0.2.201.,BlockIP,technical
+Sign into the production host from my terminal.,SSHConnect,question
+We should enumerate the port numbers exposed by the appliance.,PortScan,polite request
+Fingerprint applications running on the remote server.,NmapScan,audit note
+Identify repeated authentication failures by source IP.,CheckFailedLogins,audit note
+Show the running processes and CPU use.,ListProcesses,question
+Detect the SSH implementation on the gateway along with other services.,NmapScan,command
+We should deny inbound traffic from 198.51.100.22.,BlockIP,junior analyst
+Display local socket listeners for an audit.,ListeningPorts,audit note
+Get me into the cloud VM terminal.,SSHConnect,question
+Just what operating system is this host running.,GetSystemInfo,fragment
+"Show which ports this machine is listening on, and send teh result.",ListeningPorts,typo casual
+Display the local system inventory basics.,GetSystemInfo,polite request
+Look up published CVEs for OpenSSH 8.2p1.,CheckVulnerability,manager
+Fingerprint the web stack on the training instance.,NmapScan,urgent
+Just initiate a secure shell connection to db-replica-2.,SSHConnect,junior analyst
+Show users with repeated denied logons.,CheckFailedLogins,audit note
+Survey the versioned listeners on the partner test endpoint.,NmapScan,student
+Identify the process using the most CPU.,ListProcesses,polite request
+Show locally opened listening ports.,ListeningPorts,command
+We should start a terminal login on the database jump host.,SSHConnect,fragment
+Establish remote command-line access to the NAS.,SSHConnect,question
+"Figure out what software answers on teh target's TCP ports, before the handoff.",NmapScan,typo casual
+Grab the recent authentication records from the local server.,ReadAuthLog,audit note
+Read login and sudo auth events from the system log file.,ReadAuthLog,audit note
+Drop traffic from 198.51.100.178 immediately.,BlockIP,typo casual
+Check whether root has been hit with incorrect passwords.,CheckFailedLogins,shorthand
+Enumerate local processes with PID and CPU load.,ListProcesses,chat casual
+Tell me how long this Linux instance has been up.,GetSystemInfo,question
+Inventory service banners on the vendor sandbox.,NmapScan,audit note
+List the machine's server sockets by local port.,ListeningPorts,shorthand
+Prevent further inbound connections from 203.0.113.209 via firewall.,BlockIP,sysadmin
+Find the sockets waiting for connections here.,ListeningPorts,urgent
+Show listeners on the current Linux VM.,ListeningPorts,shorthand
+Check whether nginx 1.18 has known vulnerabilities.,CheckVulnerability,fragment
+Detect repeated invalid-user attempts.,CheckFailedLogins,command
+Display processes' locally bound network ports.,ListeningPorts,audit note
+See whether the service is listening on 0.0.0.0 locally.,ListeningPorts,shorthand
+Give me the server's basic platform fingerprint.,GetSystemInfo,sysadmin
+Drop packets from the specified hostile IP.,BlockIP,chat casual
+View current running commands and CPU stats.,ListProcesses,chat casual
+Show the current machine name and platform.,GetSystemInfo,typo casual
+Show process names and processor usage.,ListProcesses,question
+Report the kernel release and current uptime.,GetSystemInfo,chat casual
+Print recent PAM authentication entries.,ReadAuthLog,urgent
+Inspect machine identity and last boot duration.,GetSystemInfo,question
+We should see which running job is slowing the machine.,ListProcesses,technical
+Profile the remote target's RPC and mail service versions.,NmapScan,urgent
+Print system authentication records as they were logged.,ReadAuthLog,command
+Block network access from 203.0.113.31.,BlockIP,typo casual
+Could we retrieve the current uptime with OS details.,GetSystemInfo,ticket note
+Open my usual SSH terminal into the lab server.,SSHConnect,question
+Look for CVEs associated with an old BIND release.,CheckVulnerability,fragment
+Read the latest syslog messages locally.,ReadSyslog,question
+Research security advisories for Redis 6.0.,CheckVulnerability,technical
+"Access teh remote Linux box using port 22, thanks.",SSHConnect,typo casual
+Show original SSH authentication messages on this server.,ReadAuthLog,audit note
+Identify TCP ports served by this computer.,ListeningPorts,urgent
+Show the chronological system event trail.,ReadSyslog,sysadmin
+Find CVE references for a specific Tomcat build.,CheckVulnerability,fragment
+Survey accessible ports on the external VM.,PortScan,shorthand
+Retrieve all PAM login events including success.,ReadAuthLog,urgent
+List processes after the deployment.,ListProcesses,polite request
+Check what is executing on the host right now.,ListProcesses,typo casual
+List exposed sockets on the remote address by port number.,PortScan,shorthand
+Enumerate reachable ports at the lab IP.,PortScan,shorthand
+Identify suspicious source IPs attempting bad passwords.,CheckFailedLogins,urgent
+Which ports have waiting sockets right now?,ListeningPorts,urgent
+Any chance you can show kernel version for the machine.,GetSystemInfo,manager
+Is 5432 listening on this machine?,ListeningPorts,urgent
+Count rejected SSH passwords from last night.,CheckFailedLogins,urgent
+Show vulnerability disclosures concerning RDP on Windows Server 2012.,CheckVulnerability,technical
+What is this node's hostname?,GetSystemInfo,chat casual
+Quickly check open ports at 192.0.2.44.,PortScan,audit note
+Is anyone guessing SSH passwords here?,CheckFailedLogins,urgent
+Any chance you can show process names and processor usage.,ListProcesses,manager
+What did the system log record around 3am?,ReadSyslog,sysadmin
+We should show which ports this machine is listening on?,ListeningPorts,chat casual
+List local sockets in LISTEN state.,ListeningPorts,student
+"Show teh general system log on this machine, as part of triage.",ReadSyslog,typo casual
+"Find failed sudo authentication attempts on this host, for teh security review.",CheckFailedLogins,typo casual
+Verify whether port 3306 is reachable from here.,PortScan,student
+Stop connections originating from 203.0.113.7 using a firewall rule.,BlockIP,sysadmin
+Print basic system facts for our VM.,GetSystemInfo,question
+Launch a remote terminal to the build runner.,SSHConnect,sysadmin
+Start an encrypted shell on the backup server.,SSHConnect,question
+Evaluate published vulnerabilities for Oracle WebLogic 12c.,CheckVulnerability,manager
+Ban 198.51.100.9 at the host firewall.,BlockIP,sysadmin
+Find remotely accessible ports on the QA server.,PortScan,audit note
+Any chance you can use SSH to reach the old Debian server.,SSHConnect,technical
+Read the raw system logging feed.,ReadSyslog,question
+Display local sshd login records from auth.log.,ReadAuthLog,shorthand
+Inspect local listening TCP and UDP sockets.,ListeningPorts,command
+Find failed sudo authentication attempts on this host.,CheckFailedLogins,command
+See if someone has been brute-forcing local accounts.,CheckFailedLogins,shorthand
+"Verify teh app is listening locally on 9000, thanks.",ListeningPorts,typo casual
+Find documented exploits affecting Apache httpd 2.4.49.,CheckVulnerability,ticket note
+See what vulnerabilities affect PHP 7.4.,CheckVulnerability,ticket note
+Show every process with its CPU footprint.,ListProcesses,typo casual
+Use SSH to reach the old Debian server.,SSHConnect,polite request
+Retrieve system identity and boot age.,GetSystemInfo,typo casual
+Inspect /var/log/auth.log on this computer.,ReadAuthLog,shorthand
+Which remote addresses kept failing authentication?,CheckFailedLogins,student
+Firewall off source 198.51.100.64.,BlockIP,polite request
+Inspect active jobs before restarting anything.,ListProcesses,polite request
+Display the process table sorted by CPU.,ListProcesses,chat casual
+Find failed login attempts on this machine.,CheckFailedLogins,student
+Find which network services are running on the external endpoint.,NmapScan,urgent
+List bound listening addresses and ports on the machine.,ListeningPorts,audit note
+Any chance you can scan the training box for reachable ports.,PortScan,question
+Discover HTTP server type and SSH version in one remote survey.,NmapScan,audit note
+Look for accidentally exposed high-numbered ports on the demo node.,PortScan,shorthand
+Find the host's externally open port range.,PortScan,command
+Which tasks are consuming processor time?,ListProcesses,sysadmin
+Just inventory service banners on the vendor sandbox.,NmapScan,sysadmin
+Provide hostname and elapsed time since boot.,GetSystemInfo,polite request
+Find reported RCE vulnerabilities in a named web server version.,CheckVulnerability,junior analyst
+Inventory names and versions of services on the test gateway.,NmapScan,student
+Display authentication system messages in chronological order.,ReadAuthLog,audit note
+Test a remote node for listening TCP ports.,PortScan,urgent
+Just check if the partner sandbox has any unexpected ports open.,PortScan,sysadmin
+Read the authentication evidence directly from the log.,ReadAuthLog,shorthand
+We should look for failed admin logins on the box.,CheckFailedLogins,typo casual
+Display messages from the general syslog source.,ReadSyslog,question
+Probe 1 through 1024 on the lab server for open ports.,PortScan,command
+Dump the authentication log without filtering failures.,ReadAuthLog,urgent
+See whether this server runs Debian or Ubuntu.,GetSystemInfo,sysadmin
+"Block 203.0.113.45 at teh firewall, on this one.",BlockIP,typo casual
+Find unsuccessful SSH sign-ins during the maintenance window.,CheckFailedLogins,student
+Log into the sandbox server with key authentication.,SSHConnect,polite request
+Look for bursts of rejected sign-ins on the server.,CheckFailedLogins,command
+Inspect worker processes and their CPU usage.,ListProcesses,sysadmin
+Show the authentication log on this machine.,ReadAuthLog,audit note
+Identify the services and versions advertised by the public test host.,NmapScan,urgent
+View normal system activity records in the log.,ReadSyslog,chat casual
+Make the firewall refuse 192.0.2.201.,BlockIP,polite request
+Access the dedicated host as root via secure shell.,SSHConnect,sysadmin
+How old is this boot session.,GetSystemInfo,chat casual
+Check whether Elasticsearch 7.10 is associated with CVEs.,CheckVulnerability,technical
+Inspect the remote host's service banners.,NmapScan,audit note
+"Identify teh services and versions advertised by the public test host, thanks.",NmapScan,typo casual

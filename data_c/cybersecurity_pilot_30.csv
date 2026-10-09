@@ -1,0 +1,31 @@
+prompt,label
+The vendor gave us a jump-box address and temporary credentials. I need to get onto that machine before the maintenance call starts; don't inspect anything yet.,SSHConnect
+"Can you establish a terminal session to the Ubuntu host at 10.20.4.18? I have the account already, I just can't get into it from my laptop.",SSHConnect
+"We moved the inventory appliance to a new subnet. From my workstation, find out what network-facing applications it exposes and identify their versions if possible; the firewall ticket mentions 8443, but there may be others.",NmapScan
+"Does 172.16.9.25 still advertise that old SSH daemon, and what else is serving traffic on it? We need a service fingerprint for the upgrade plan.",NmapScan
+The change request says the database node should only accept connections on two ports. Check which TCP ports are actually reachable at 192.0.2.41; service identification isn't needed.,PortScan
+"Someone says 443 is open on the printer, someone else says it isn't. Sweep its reachable ports from outside the VLAN so we can settle what is exposed.",PortScan
+"Before we troubleshoot the failed integration, I need a simple open-versus-closed port picture for the staging gateway. Skip guessing what software is behind each one.",PortScan
+"Our audit lists OpenSSH 8.2p1 on one host. Is that build associated with published security issues we should care about, and which advisories describe them?",CheckVulnerability
+"The scanner found an HTTP server version, but the patch team wants to know whether it maps to a known CVE rather than another network probe.",CheckVulnerability
+Could you check if the specific Redis release in our change sheet has publicly documented exploits? I don't need you to run anything against production.,CheckVulnerability
+"I'm reviewing the local server's sign-in history for an audit. Pull the underlying authentication records so I can read the actual entries, including successful sessions.",ReadAuthLog
+Where are the raw authentication events from this Linux box? Please show me the log contents rather than a summary of failures.,ReadAuthLog
+The account lockout report has already been written. I want the original login and sudo-related log lines on this machine to cross-check the timeline.,ReadAuthLog
+Our help desk thinks somebody kept mistyping a service account password overnight. Identify the rejected sign-in attempts on this host and where they came from.,CheckFailedLogins
+"There are a lot of SSH messages, and I only care whether a source was repeatedly denied access between midnight and morning. Can you pull out the unsuccessful attempts?",CheckFailedLogins
+Security asked whether the unusual login noise was password spraying or a single bad script. Find the failed authentications and summarize their frequency by source if the records allow it.,CheckFailedLogins
+"A developer says the API is bound to localhost, but the firewall team sees traffic hitting the VM. On this machine, show me which sockets are in LISTEN state and their local addresses.",ListeningPorts
+"Without testing from another host, what network ports are services currently waiting on here? I'm checking the binding after a container restart.",ListeningPorts
+"The host has 3000 and 5432 in its documentation. Check which endpoints it is actually listening on right now, not merely what the edge firewall permits.",ListeningPorts
+The fan is screaming on our build server and jobs are crawling. Show the active programs and how much CPU each is consuming before I restart the runner.,ListProcesses
+"Can we see what is executing on this box? I suspect a stray worker, but I'd like a process list with resource usage rather than an event log.",ListProcesses
+"After the backup finished, the machine stayed busy. Which processes are still alive and eating processor time?",ListProcesses
+"We've confirmed that 203.0.113.77 is an unwanted source. Add a firewall rule on this server to deny traffic from that address, but leave existing allow rules alone.",BlockIP
+The web logs show repeated requests from one IP and the response team has approved containment. Stop 198.51.100.64 from reaching this host at the firewall.,BlockIP
+This isn't a request to investigate the login failures anymore: the offending source address is 192.0.2.86 and I need it denied by the host firewall now.,BlockIP
+"Before the agent installer runs, tell me this box's hostname, Linux distribution, kernel release, and how long it has been up.",GetSystemInfo
+Which OS build am I on and when was this server last rebooted? The cloud console name doesn't match what the shell shows.,GetSystemInfo
+A storage warning appeared after yesterday's reboot. Show the general system messages from this machine around that time; I'm not focusing on login events.,ReadSyslog
+"The monitoring dashboard started throwing disk I/O alarms just after the scheduled snapshot. I already checked the SSH access report and nobody unusual logged in, so please examine the machine’s general system events for storage or kernel errors.",ReadSyslog
+I need the broader operating-system log from this server to reconstruct why its network interface dropped yesterday. Authentication history and current processes won’t answer the question.,ReadSyslog

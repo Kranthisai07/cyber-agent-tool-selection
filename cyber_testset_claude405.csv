@@ -1,0 +1,406 @@
+prompt,tool_ground_truth,source,row_id,tool_predicted
+Show raw user authentication events from the host.,ReadAuthLog,claude,T0000,ReadAuthLog
+See which running job is slowing the machine.,ListProcesses,claude,T0001,ListProcesses
+What is the running kernel build?,GetSystemInfo,claude,T0002,GetSystemInfo
+Check if the lab machine exposes MySQL or MariaDB.,NmapScan,claude,T0003,NmapScan
+Give me a basic identity summary for this server.,GetSystemInfo,claude,T0004,GetSystemInfo
+Need the node's operating system and uptime.,GetSystemInfo,claude,T0005,GetSystemInfo
+Retrieve the local syslog contents for review.,ReadSyslog,claude,T0006,ReadSyslog
+Show the server's listening sockets without remote probes.,ListeningPorts,claude,T0007,ListeningPorts
+Print a snapshot of the process table.,ListProcesses,claude,T0008,ListProcesses
+Open a terminal session on the edge gateway.,SSHConnect,claude,T0009,SSHConnect
+Read the raw sign-in log for this Linux box.,ReadAuthLog,claude,T0010,ReadAuthLog
+Get into the remote sensor collector via terminal.,SSHConnect,claude,T0011,SSHConnect
+What distro and kernel are installed here?,GetSystemInfo,claude,T0012,GetSystemInfo
+Could we identify high-CPU background services.,ListProcesses,claude,T0013,ListProcesses
+Is a background task hogging CPU on this server?,ListProcesses,claude,T0014,ListProcesses
+Add firewall protection against 198.51.100.5 specifically.,BlockIP,claude,T0015,BlockIP
+Open the machine's raw authentication trail.,ReadAuthLog,claude,T0016,ReadAuthLog
+What operating system is this host running?,GetSystemInfo,claude,T0017,GetSystemInfo
+Enumerate the port numbers exposed by the appliance.,PortScan,claude,T0018,PortScan
+Any chance you can prevent further inbound connections from 203.0.113.209 via firewall?,BlockIP,claude,T0019,BlockIP
+Figure out what software answers on the target's TCP ports.,NmapScan,claude,T0020,PortScan
+"Show teh running processes and CPU use, for the security review.",ListProcesses,claude,T0021,ListProcesses
+"Print teh most recent general system log entries, thanks.",ReadSyslog,claude,T0022,ReadSyslog
+Scan the training box for reachable ports.,PortScan,claude,T0023,PortScan
+What does this node call itself?,GetSystemInfo,claude,T0024,GetSystemInfo
+Verify reachability of ports 80 443 and 8443 on the remote host.,PortScan,claude,T0025,PortScan
+Check the remote backup node for accessible ports.,PortScan,claude,T0026,PortScan
+Identify this machine and how long it has been online.,GetSystemInfo,claude,T0027,GetSystemInfo
+See what is bound on 127.0.0.1.,ListeningPorts,claude,T0028,ListeningPorts
+Find known attack vectors for a legacy WordPress plugin version.,CheckVulnerability,claude,T0029,CheckVulnerability
+Any chance you can open the machine's main syslog file.,ReadSyslog,claude,T0030,ReadSyslog
+Confirm whether 8080 is accepting remote connections.,PortScan,claude,T0031,PortScan
+Enter the host at 10.0.8.21 for manual commands.,SSHConnect,claude,T0032,SSHConnect
+Could we find usernames with many bad login attempts.,CheckFailedLogins,claude,T0033,CheckFailedLogins
+See if PostgreSQL 12 has public vulnerability entries.,CheckVulnerability,claude,T0034,CheckVulnerability
+Find any resource-heavy running processes.,ListProcesses,claude,T0035,ListProcesses
+Could we enumerate reachable ports at the lab IP.,PortScan,claude,T0036,PortScan
+Print open listening endpoints from the local OS.,ListeningPorts,claude,T0037,ListeningPorts
+Retrieve system service messages from this computer.,ReadSyslog,claude,T0038,ReadSyslog
+Read the auth log even if the logins succeeded.,ReadAuthLog,claude,T0039,ReadAuthLog
+Any chance you can highlight anomalous failed access attempts.,CheckFailedLogins,claude,T0040,CheckFailedLogins
+Check which TCP ports respond on the staging host.,PortScan,claude,T0041,PortScan
+Open the auth logfile on this box.,ReadAuthLog,claude,T0042,ReadAuthLog
+View successful and failed authentication events in the original log.,ReadAuthLog,claude,T0043,ReadAuthLog
+Print generic OS messages recorded today.,ReadSyslog,claude,T0044,ReadSyslog
+We should provide hostname and elapsed time since boot.,GetSystemInfo,claude,T0045,GetSystemInfo
+Check for unusual spikes in failed logins.,CheckFailedLogins,claude,T0046,CheckFailedLogins
+Connect to node-07 as the ops user.,SSHConnect,claude,T0047,SSHConnect
+Look up security advisories for Java 8 update 202.,CheckVulnerability,claude,T0048,CheckVulnerability
+Who repeatedly tried to authenticate and failed?,CheckFailedLogins,claude,T0049,CheckFailedLogins
+Check the OS version on the local server.,GetSystemInfo,claude,T0050,GetSystemInfo
+What does our local authentication log actually say?,ReadAuthLog,claude,T0051,ReadAuthLog
+Detect odd login failure activity since midnight.,CheckFailedLogins,claude,T0052,CheckFailedLogins
+Just look up security advisories for Java 8 update 202.,CheckVulnerability,claude,T0053,CheckVulnerability
+Prevent 192.0.2.90 from reaching this server.,BlockIP,claude,T0054,BlockIP
+Check which database engine is reachable on the remote appliance.,NmapScan,claude,T0055,NmapScan
+Investigate repeated unsuccessful account access.,CheckFailedLogins,claude,T0056,CheckFailedLogins
+"Verify whether port 3306 is reachable from here, before teh handoff.",PortScan,claude,T0057,PortScan
+Identify the service that answers at 8443 on the demo host.,NmapScan,claude,T0058,NmapScan
+"View successful and failed authentication events in teh original log, for my notes.",ReadAuthLog,claude,T0059,ReadAuthLog
+"Retrieve all PAM login events including success, for teh report.",ReadAuthLog,claude,T0060,Unknown
+Show kernel version for the machine.,GetSystemInfo,claude,T0061,GetSystemInfo
+Investigate whether login failures cluster around one account.,CheckFailedLogins,claude,T0062,CheckFailedLogins
+Check if the partner sandbox has any unexpected ports open.,PortScan,claude,T0063,PortScan
+Find CVEs related to the exact version of Grafana we identified.,CheckVulnerability,claude,T0064,CheckVulnerability
+Stop all requests from IP 192.0.2.74 at network filtering.,BlockIP,claude,T0065,BlockIP
+Just identify possible password spraying on local accounts.,CheckFailedLogins,claude,T0066,CheckFailedLogins
+Look for failed admin logins on the box.,CheckFailedLogins,claude,T0067,CheckFailedLogins
+Access the remote Linux box using port 22.,SSHConnect,claude,T0068,SSHConnect
+Map exposed port numbers without identifying services.,PortScan,claude,T0069,PortScan
+Tell me if the staging IP exposes any unexpected port numbers.,PortScan,claude,T0070,PortScan
+Inspect the machine's general operating system log.,ReadSyslog,claude,T0071,ReadSyslog
+"Enter teh host at 10.0.8.21 for manual commands, right now.",SSHConnect,claude,T0072,SSHConnect
+Could we find out whether the target exposes Apache or nginx and their versions.,NmapScan,claude,T0073,NmapScan
+Bar inbound packets from 198.51.100.40.,BlockIP,claude,T0074,BlockIP
+Blackhole 192.0.2.29 with a firewall rule.,BlockIP,claude,T0075,BlockIP
+Print the most recent general system log entries.,ReadSyslog,claude,T0076,ReadSyslog
+Shut off access for the single IP 203.0.113.11.,BlockIP,claude,T0077,BlockIP
+Deny inbound traffic from 198.51.100.22.,BlockIP,claude,T0078,BlockIP
+Add 192.0.2.18 to the firewall blocklist.,BlockIP,claude,T0079,BlockIP
+"Check teh OS version on the local server, before I close the ticket.",GetSystemInfo,claude,T0080,GetSystemInfo
+What ports are accepting inbound connections on this box?,ListeningPorts,claude,T0081,PortScan
+"Find teh kernel and OS info from the host, on this one.",GetSystemInfo,claude,T0082,GetSystemInfo
+Retrieve the local auth.log contents.,ReadAuthLog,claude,T0083,ReadAuthLog
+Check exploit databases for Samba 4.11.,CheckVulnerability,claude,T0084,CheckVulnerability
+Show me system version details on this instance.,GetSystemInfo,claude,T0085,GetSystemInfo
+Display host details including OS and kernel.,GetSystemInfo,claude,T0086,GetSystemInfo
+Start a terminal login on the database jump host.,SSHConnect,claude,T0087,SSHConnect
+Open the host's authentication event file.,ReadAuthLog,claude,T0088,ReadAuthLog
+See which port numbers respond on the bastion IP.,PortScan,claude,T0089,PortScan
+Enforce a firewall ban on 192.0.2.37.,BlockIP,claude,T0090,BlockIP
+Enumerate versions of remotely exposed network services.,NmapScan,claude,T0091,NmapScan
+"Identify open TCP ports on teh customer-approved target, right now.",PortScan,claude,T0092,PortScan
+Check active server-side listeners on my laptop.,ListeningPorts,claude,T0093,ListeningPorts
+Identify disclosed issues affecting Exim 4.92.,CheckVulnerability,claude,T0094,CheckVulnerability
+Show hostname OS kernel and uptime of this machine.,GetSystemInfo,claude,T0095,GetSystemInfo
+Filter out source address 192.0.2.222 at the firewall.,BlockIP,claude,T0096,BlockIP
+Check failed login counts over the past hour.,CheckFailedLogins,claude,T0097,CheckFailedLogins
+Show the file where sshd authentication messages are stored.,ReadAuthLog,claude,T0098,ReadAuthLog
+"Show hostname OS kernel and uptime of this machine, for teh security review.",GetSystemInfo,claude,T0099,GetSystemInfo
+Identify the operating system of the current box.,GetSystemInfo,claude,T0100,GetSystemInfo
+What executables are running and how busy are they?,ListProcesses,claude,T0101,ListProcesses
+Establish an interactive shell on the lab machine.,SSHConnect,claude,T0102,SSHConnect
+Create a deny rule for client address 203.0.113.88.,BlockIP,claude,T0103,BlockIP
+Map the service names and revisions on the DMZ host.,NmapScan,claude,T0104,NmapScan
+Pull the host's baseline system event log.,ReadSyslog,claude,T0105,ReadSyslog
+Check whether SQLite 3.31 has disclosed issues.,CheckVulnerability,claude,T0106,CheckVulnerability
+"Check which TCP ports respond on teh staging host, thanks.",PortScan,claude,T0107,PortScan
+Any chance you can show locally opened listening ports.,ListeningPorts,claude,T0108,ListeningPorts
+Get a command prompt on the analytics server.,SSHConnect,claude,T0109,SSHConnect
+We should what did the system log record around 3am.,ReadSyslog,claude,T0110,ReadSyslog
+Initiate a secure shell connection to db-replica-2.,SSHConnect,claude,T0111,SSHConnect
+Bring up a secure remote shell on the monitoring VM.,SSHConnect,claude,T0112,SSHConnect
+Pull up local user auth events unabridged.,ReadAuthLog,claude,T0113,ReadAuthLog
+Open /var/log/syslog for this host.,ReadSyslog,claude,T0114,ReadSyslog
+"Ban 198.51.100.9 at teh host firewall, for the report.",BlockIP,claude,T0115,BlockIP
+"Read teh raw system logging feed, before the handoff.",ReadSyslog,claude,T0116,ReadSyslog
+View the machine's sign-in event stream as logged.,ReadAuthLog,claude,T0117,ReadAuthLog
+Show routine host events in syslog.,ReadSyslog,claude,T0118,ReadSyslog
+Just pull up local user auth events unabridged.,ReadAuthLog,claude,T0119,ReadAuthLog
+Apply an IP-based inbound deny for 203.0.113.120.,BlockIP,claude,T0120,BlockIP
+Put 198.51.100.200 on the reject list.,BlockIP,claude,T0121,BlockIP
+Keep 198.51.100.111 out by blocking it at the firewall.,BlockIP,claude,T0122,BlockIP
+Show all currently listening ports from the host OS.,ListeningPorts,claude,T0123,ListeningPorts
+Show denied authentication attempts by time and origin.,CheckFailedLogins,claude,T0124,CheckFailedLogins
+Enter the QA host with my private key.,SSHConnect,claude,T0125,SSHConnect
+Find open ports on the remote gateway.,PortScan,claude,T0126,PortScan
+See which ports pass through the edge gateway.,PortScan,claude,T0127,PortScan
+Inspect running PIDs and their utilization.,ListProcesses,claude,T0128,ListProcesses
+Just which tasks are consuming processor time.,ListProcesses,claude,T0129,PortScan
+Display all live tasks and their processor demand.,ListProcesses,claude,T0130,ListProcesses
+Any chance you can see if PostgreSQL 12 has public vulnerability entries.,CheckVulnerability,claude,T0131,CheckVulnerability
+Read the local login authentication journal.,ReadAuthLog,claude,T0132,ReadAuthLog
+Could we open the unfiltered auth log for audit review.,ReadAuthLog,claude,T0133,ReadAuthLog
+Does the remote IP answer on 3389?,PortScan,claude,T0134,PortScan
+We should dump the authentication log without filtering failures.,ReadAuthLog,claude,T0135,ReadAuthLog
+Pull up recent daemon and kernel log messages.,ReadSyslog,claude,T0136,ReadSyslog
+Print host name and kernel information.,GetSystemInfo,claude,T0137,GetSystemInfo
+Cut off the remote address 198.51.100.57 at the perimeter.,BlockIP,claude,T0138,BlockIP
+Find the actual daemon behind port 8080 on the remote VM.,NmapScan,claude,T0139,PortScan
+Find the kernel and OS info from the host.,GetSystemInfo,claude,T0140,GetSystemInfo
+Retrieve vendor bulletins for FortiOS 6.4.,CheckVulnerability,claude,T0141,CheckVulnerability
+Flag suspicious sign-in patterns on the host.,CheckFailedLogins,claude,T0142,CheckFailedLogins
+Find the application consuming cycles on this VM.,ListProcesses,claude,T0143,ListProcesses
+Look for unusual authentication rejection patterns.,CheckFailedLogins,claude,T0144,CheckFailedLogins
+Any chance you can retrieve the local auth.log contents.,ReadAuthLog,claude,T0145,ReadAuthLog
+Which program is pegging one core?,ListProcesses,claude,T0146,ListProcesses
+Spot suspicious failed SSH attempts in recent events.,CheckFailedLogins,claude,T0147,CheckFailedLogins
+Reach the bastion host with my SSH key.,SSHConnect,claude,T0148,SSHConnect
+Find usernames with many bad login attempts.,CheckFailedLogins,claude,T0149,CheckFailedLogins
+Profile the remote host's exposed services and release numbers.,NmapScan,claude,T0150,NmapScan
+Could we show routine host events in syslog.,ReadSyslog,claude,T0151,ReadSyslog
+Filter out source address 192.0.2.222 at teh firewall — need this checked.,BlockIP,claude,T0152,BlockIP
+Check for a runaway process.,ListProcesses,claude,T0153,ListProcesses
+Any active TCP listeners after service restart?,ListeningPorts,claude,T0154,PortScan
+Attach my shell to the remote firewall appliance.,SSHConnect,claude,T0155,SSHConnect
+Any account lockout patterns from failed access?,CheckFailedLogins,claude,T0156,CheckFailedLogins
+Highlight anomalous failed access attempts.,CheckFailedLogins,claude,T0157,CheckFailedLogins
+See if anything local listens on 8080.,ListeningPorts,claude,T0158,ListeningPorts
+Display network listeners including loopback.,ListeningPorts,claude,T0159,ListeningPorts
+Open the generic Linux system log.,ReadSyslog,claude,T0160,ReadSyslog
+Could we sign into the production host from my terminal.,SSHConnect,claude,T0161,SSHConnect
+Open an interactive login to the worker host.,SSHConnect,claude,T0162,SSHConnect
+Open the machine's main syslog file.,ReadSyslog,claude,T0163,ReadSyslog
+Show process activity on the local instance.,ListProcesses,claude,T0164,ListProcesses
+Search for known flaws in the specified Docker Engine version.,CheckVulnerability,claude,T0165,CheckVulnerability
+Run a service detection sweep against the lab IP.,NmapScan,claude,T0166,NmapScan
+Display general daemon notices and warnings from the log.,ReadSyslog,claude,T0167,ReadSyslog
+"Look up published CVEs for OpenSSH 8.2p1, for teh lab.",CheckVulnerability,claude,T0168,CheckVulnerability
+Read syslog around the last reboot.,ReadSyslog,claude,T0169,ReadSyslog
+Identify open TCP ports on the customer-approved target.,PortScan,claude,T0170,PortScan
+Check if firewall changes exposed 5432 externally.,PortScan,claude,T0171,PortScan
+See whether 22 and 443 are open on the test server.,PortScan,claude,T0172,PortScan
+Run a port-only probe of the test router.,PortScan,claude,T0173,PortScan
+Identify high-CPU background services.,ListProcesses,claude,T0174,ListProcesses
+Which TCP endpoints are bound on this host?,ListeningPorts,claude,T0175,PortScan
+Deny packets sourced at 203.0.113.67.,BlockIP,claude,T0176,BlockIP
+Find out whether the target exposes Apache or nginx and their versions.,NmapScan,claude,T0177,NmapScan
+Check whether localhost has a listener on 6379.,ListeningPorts,claude,T0178,PortScan
+Probe the demo host for open TCP endpoints.,PortScan,claude,T0179,PortScan
+See whether the target presents OpenSSH 8 or 9.,NmapScan,claude,T0180,NmapScan
+Find advisories related to Kubernetes 1.23.,CheckVulnerability,claude,T0181,CheckVulnerability
+"Show process activity on teh local instance, on this one.",ListProcesses,claude,T0182,ListProcesses
+Summarize invalid credentials used against this machine.,CheckFailedLogins,claude,T0183,CheckFailedLogins
+Show current task list with CPU percentages.,ListProcesses,claude,T0184,ListProcesses
+Log in remotely to the Ubuntu VM using my SSH account.,SSHConnect,claude,T0185,SSHConnect
+"Check teh public CVE record for curl 7.68, and send the result.",CheckVulnerability,claude,T0186,NmapScan
+Identify possible password spraying on local accounts.,CheckFailedLogins,claude,T0187,CheckFailedLogins
+Set up an SSH login to the maintenance instance.,SSHConnect,claude,T0188,SSHConnect
+Create a host firewall rule denying 203.0.113.144.,BlockIP,claude,T0189,BlockIP
+Show CPU consumers among the current processes.,ListProcesses,claude,T0190,ListProcesses
+Determine whether the staging server runs an outdated HTTP daemon.,NmapScan,claude,T0191,CheckVulnerability
+Block 203.0.113.45 at the firewall.,BlockIP,claude,T0192,BlockIP
+Collect software fingerprints from a remote IP.,NmapScan,claude,T0193,NmapScan
+Add a firewall deny entry for 192.0.2.54.,BlockIP,claude,T0194,BlockIP
+Determine what software is bound to exposed ports on target.,NmapScan,claude,T0195,NmapScan
+Inspect system-level log lines from the last hour.,ReadSyslog,claude,T0196,ReadSyslog
+Enumerate active listeners on the current instance.,ListeningPorts,claude,T0197,ListeningPorts
+Are there publicly known bugs in ProFTPD 1.3.5?,CheckVulnerability,claude,T0198,CheckVulnerability
+"Get me into teh cloud VM terminal, before the handoff.",SSHConnect,claude,T0199,SSHConnect
+Find the remote appliance's accessible services and build numbers.,NmapScan,claude,T0200,NmapScan
+Verify the app is listening locally on 9000.,ListeningPorts,claude,T0201,PortScan
+Read unfiltered general logs from this box.,ReadSyslog,claude,T0202,ReadAuthLog
+Could we does this version of HAProxy have a documented security flaw.,CheckVulnerability,claude,T0203,CheckVulnerability
+Discover what protocol services the remote host offers.,NmapScan,claude,T0204,NmapScan
+Quarantine the abusive source IP 203.0.113.91 in firewall policy.,BlockIP,claude,T0205,BlockIP
+We should identify disclosed issues affecting Exim 4.92?,CheckVulnerability,claude,T0206,CheckVulnerability
+Summarize this host's platform details.,GetSystemInfo,claude,T0207,GetSystemInfo
+What is bound to port 3000 on this workstation?,ListeningPorts,claude,T0208,PortScan
+Inspect authentication messages recorded on this host.,ReadAuthLog,claude,T0209,ReadAuthLog
+Show the remote machine's open services with product versions.,NmapScan,claude,T0210,NmapScan
+Pull up a top-like overview of active tasks.,ListProcesses,claude,T0211,GetSystemInfo
+Check which local endpoints have LISTEN status.,ListeningPorts,claude,T0212,ListeningPorts
+Blacklist the IP 198.51.100.136 on this machine.,BlockIP,claude,T0213,BlockIP
+Identify the FTP server software and version on the test box.,NmapScan,claude,T0214,CheckVulnerability
+Fetch miscellaneous host log messages.,ReadSyslog,claude,T0215,ReadSyslog
+Make a shell connection to the office gateway.,SSHConnect,claude,T0216,SSHConnect
+Lookup vulnerabilities tied to the identified OpenSSL release.,CheckVulnerability,claude,T0217,CheckVulnerability
+Display unfiltered system event records.,ReadSyslog,claude,T0218,ReadSyslog
+What is using the CPU on my laptop?,ListProcesses,claude,T0219,ListProcesses
+Just retrieve system service messages from this computer.,ReadSyslog,claude,T0220,ReadSyslog
+Review host-wide events from the original syslog.,ReadSyslog,claude,T0221,ReadSyslog
+Look at all recent system events without an auth-only filter.,ReadSyslog,claude,T0222,ReadSyslog
+Check the public CVE record for curl 7.68.,CheckVulnerability,claude,T0223,CheckVulnerability
+Read the local general-purpose system log.,ReadSyslog,claude,T0224,ReadAuthLog
+Check whether the public test endpoint has port 25 open.,PortScan,claude,T0225,PortScan
+Research whether RabbitMQ 3.8 has recorded exploits.,CheckVulnerability,claude,T0226,CheckVulnerability
+Just is 5432 listening on this machine.,ListeningPorts,claude,T0227,PortScan
+Could we display network listeners including loopback.,ListeningPorts,claude,T0228,ListeningPorts
+Show which ports this machine is listening on.,ListeningPorts,claude,T0229,ListeningPorts
+"Find any resource-heavy running processes, before I close teh ticket.",ListProcesses,claude,T0230,ListProcesses
+Which TCP entry points are open on the partner host?,PortScan,claude,T0231,PortScan
+"Surface possible brute force attempts against teh machine, before I close the ticket.",CheckFailedLogins,claude,T0232,PortScan
+Retrieve the current uptime with OS details.,GetSystemInfo,claude,T0233,GetSystemInfo
+Find the PID responsible for 95 percent CPU.,ListProcesses,claude,T0234,ListProcesses
+Connect as deploy to the web node.,SSHConnect,claude,T0235,SSHConnect
+Show ordinary system warnings and service messages.,ReadSyslog,claude,T0236,ReadSyslog
+Open the unfiltered auth log for audit review.,ReadAuthLog,claude,T0237,ReadAuthLog
+Retrieve advisories for Log4j 2.14.1.,CheckVulnerability,claude,T0238,CheckVulnerability
+Reject all incoming traffic from 192.0.2.111.,BlockIP,claude,T0239,BlockIP
+"Show teh authentication log on this machine, before I close the ticket.",ReadAuthLog,claude,T0240,ReadAuthLog
+Research exploit history for SMBv1.,CheckVulnerability,claude,T0241,CheckVulnerability
+Display today's unfiltered sign-in entries.,ReadAuthLog,claude,T0242,ReadAuthLog
+Any chance you can fingerprint the web stack on the training instance.,NmapScan,claude,T0243,NmapScan
+List active processes on this machine.,ListProcesses,claude,T0244,ListProcesses
+Enumerate network-facing daemons with version details.,NmapScan,claude,T0245,NmapScan
+Create an SSH session to the test instance.,SSHConnect,claude,T0246,SSHConnect
+We should survey the versioned listeners on the partner test endpoint.,NmapScan,claude,T0247,NmapScan
+Assess known flaws in an old vsftpd release.,CheckVulnerability,claude,T0248,CheckVulnerability
+Connect to the staging jump box over SSH.,SSHConnect,claude,T0249,SSHConnect
+Show known security issues for Jenkins 2.263.,CheckVulnerability,claude,T0250,CheckVulnerability
+Surface possible brute force attempts against the machine.,CheckFailedLogins,claude,T0251,PortScan
+Just deny packets sourced at 203.0.113.67.,BlockIP,claude,T0252,BlockIP
+"Find teh sockets waiting for connections here, if possible.",ListeningPorts,claude,T0253,ListeningPorts
+Authenticate to the development box over SSH.,SSHConnect,claude,T0254,SSHConnect
+Show the general system log on this machine.,ReadSyslog,claude,T0255,ReadSyslog
+Show the system log from this instance.,ReadSyslog,claude,T0256,ReadSyslog
+Report OS release hostname and uptime.,GetSystemInfo,claude,T0257,GetSystemInfo
+Show me the full auth history log from this server.,ReadAuthLog,claude,T0258,ReadAuthLog
+Read the local log containing miscellaneous system messages.,ReadSyslog,claude,T0259,ReadAuthLog
+Does this version of HAProxy have a documented security flaw?,CheckVulnerability,claude,T0260,CheckVulnerability
+Inspect current host network bindings.,ListeningPorts,claude,T0261,ListeningPorts
+Fetch login validation entries from the auth file.,ReadAuthLog,claude,T0262,ReadAuthLog
+"Connect to teh staging jump box over SSH, as part of triage.",SSHConnect,claude,T0263,SSHConnect
+Could we make the firewall refuse 192.0.2.201.,BlockIP,claude,T0264,BlockIP
+Sign into the production host from my terminal.,SSHConnect,claude,T0265,SSHConnect
+We should enumerate the port numbers exposed by the appliance.,PortScan,claude,T0266,PortScan
+Fingerprint applications running on the remote server.,NmapScan,claude,T0267,NmapScan
+Identify repeated authentication failures by source IP.,CheckFailedLogins,claude,T0268,CheckFailedLogins
+Show the running processes and CPU use.,ListProcesses,claude,T0269,ListProcesses
+Detect the SSH implementation on the gateway along with other services.,NmapScan,claude,T0270,NmapScan
+We should deny inbound traffic from 198.51.100.22.,BlockIP,claude,T0271,BlockIP
+Display local socket listeners for an audit.,ListeningPorts,claude,T0272,ListeningPorts
+Get me into the cloud VM terminal.,SSHConnect,claude,T0273,SSHConnect
+Just what operating system is this host running.,GetSystemInfo,claude,T0274,GetSystemInfo
+"Show which ports this machine is listening on, and send teh result.",ListeningPorts,claude,T0275,ListeningPorts
+Display the local system inventory basics.,GetSystemInfo,claude,T0276,GetSystemInfo
+Look up published CVEs for OpenSSH 8.2p1.,CheckVulnerability,claude,T0277,CheckVulnerability
+Fingerprint the web stack on the training instance.,NmapScan,claude,T0278,NmapScan
+Just initiate a secure shell connection to db-replica-2.,SSHConnect,claude,T0279,SSHConnect
+Show users with repeated denied logons.,CheckFailedLogins,claude,T0280,CheckFailedLogins
+Survey the versioned listeners on the partner test endpoint.,NmapScan,claude,T0281,NmapScan
+Identify the process using the most CPU.,ListProcesses,claude,T0282,ListProcesses
+Show locally opened listening ports.,ListeningPorts,claude,T0283,ListeningPorts
+We should start a terminal login on the database jump host.,SSHConnect,claude,T0284,SSHConnect
+Establish remote command-line access to the NAS.,SSHConnect,claude,T0285,SSHConnect
+"Figure out what software answers on teh target's TCP ports, before the handoff.",NmapScan,claude,T0286,NmapScan
+Grab the recent authentication records from the local server.,ReadAuthLog,claude,T0287,ReadAuthLog
+Read login and sudo auth events from the system log file.,ReadAuthLog,claude,T0288,ReadAuthLog
+Drop traffic from 198.51.100.178 immediately.,BlockIP,claude,T0289,BlockIP
+Check whether root has been hit with incorrect passwords.,CheckFailedLogins,claude,T0290,CheckFailedLogins
+Enumerate local processes with PID and CPU load.,ListProcesses,claude,T0291,ListProcesses
+Tell me how long this Linux instance has been up.,GetSystemInfo,claude,T0292,GetSystemInfo
+Inventory service banners on the vendor sandbox.,NmapScan,claude,T0293,NmapScan
+List the machine's server sockets by local port.,ListeningPorts,claude,T0294,ListeningPorts
+Prevent further inbound connections from 203.0.113.209 via firewall.,BlockIP,claude,T0295,BlockIP
+Find the sockets waiting for connections here.,ListeningPorts,claude,T0296,ListeningPorts
+Show listeners on the current Linux VM.,ListeningPorts,claude,T0297,ListeningPorts
+Check whether nginx 1.18 has known vulnerabilities.,CheckVulnerability,claude,T0298,CheckVulnerability
+Detect repeated invalid-user attempts.,CheckFailedLogins,claude,T0299,CheckFailedLogins
+Display processes' locally bound network ports.,ListeningPorts,claude,T0300,ListeningPorts
+See whether the service is listening on 0.0.0.0 locally.,ListeningPorts,claude,T0301,PortScan
+Give me the server's basic platform fingerprint.,GetSystemInfo,claude,T0302,NmapScan
+Drop packets from the specified hostile IP.,BlockIP,claude,T0303,BlockIP
+View current running commands and CPU stats.,ListProcesses,claude,T0304,ListProcesses
+Show the current machine name and platform.,GetSystemInfo,claude,T0305,GetSystemInfo
+Show process names and processor usage.,ListProcesses,claude,T0306,ListProcesses
+Report the kernel release and current uptime.,GetSystemInfo,claude,T0307,GetSystemInfo
+Print recent PAM authentication entries.,ReadAuthLog,claude,T0308,ReadAuthLog
+Inspect machine identity and last boot duration.,GetSystemInfo,claude,T0309,GetSystemInfo
+We should see which running job is slowing the machine.,ListProcesses,claude,T0310,ListProcesses
+Profile the remote target's RPC and mail service versions.,NmapScan,claude,T0311,NmapScan
+Print system authentication records as they were logged.,ReadAuthLog,claude,T0312,ReadAuthLog
+Block network access from 203.0.113.31.,BlockIP,claude,T0313,BlockIP
+Could we retrieve the current uptime with OS details.,GetSystemInfo,claude,T0314,GetSystemInfo
+Open my usual SSH terminal into the lab server.,SSHConnect,claude,T0315,SSHConnect
+Look for CVEs associated with an old BIND release.,CheckVulnerability,claude,T0316,CheckVulnerability
+Read the latest syslog messages locally.,ReadSyslog,claude,T0317,ReadSyslog
+Research security advisories for Redis 6.0.,CheckVulnerability,claude,T0318,CheckVulnerability
+"Access teh remote Linux box using port 22, thanks.",SSHConnect,claude,T0319,SSHConnect
+Show original SSH authentication messages on this server.,ReadAuthLog,claude,T0320,ReadAuthLog
+Identify TCP ports served by this computer.,ListeningPorts,claude,T0321,PortScan
+Show the chronological system event trail.,ReadSyslog,claude,T0322,ReadSyslog
+Find CVE references for a specific Tomcat build.,CheckVulnerability,claude,T0323,CheckVulnerability
+Survey accessible ports on the external VM.,PortScan,claude,T0324,PortScan
+Retrieve all PAM login events including success.,ReadAuthLog,claude,T0325,Unknown
+List processes after the deployment.,ListProcesses,claude,T0326,ListProcesses
+Check what is executing on the host right now.,ListProcesses,claude,T0327,ListProcesses
+List exposed sockets on the remote address by port number.,PortScan,claude,T0328,PortScan
+Enumerate reachable ports at the lab IP.,PortScan,claude,T0329,PortScan
+Identify suspicious source IPs attempting bad passwords.,CheckFailedLogins,claude,T0330,CheckFailedLogins
+Which ports have waiting sockets right now?,ListeningPorts,claude,T0331,ListeningPorts
+Any chance you can show kernel version for the machine.,GetSystemInfo,claude,T0332,GetSystemInfo
+Is 5432 listening on this machine?,ListeningPorts,claude,T0333,PortScan
+Count rejected SSH passwords from last night.,CheckFailedLogins,claude,T0334,CheckFailedLogins
+Show vulnerability disclosures concerning RDP on Windows Server 2012.,CheckVulnerability,claude,T0335,CheckVulnerability
+What is this node's hostname?,GetSystemInfo,claude,T0336,GetSystemInfo
+Quickly check open ports at 192.0.2.44.,PortScan,claude,T0337,PortScan
+Is anyone guessing SSH passwords here?,CheckFailedLogins,claude,T0338,SSHConnect
+Any chance you can show process names and processor usage.,ListProcesses,claude,T0339,ListProcesses
+What did the system log record around 3am?,ReadSyslog,claude,T0340,ReadSyslog
+We should show which ports this machine is listening on?,ListeningPorts,claude,T0341,ListeningPorts
+List local sockets in LISTEN state.,ListeningPorts,claude,T0342,ListeningPorts
+"Show teh general system log on this machine, as part of triage.",ReadSyslog,claude,T0343,ReadSyslog
+"Find failed sudo authentication attempts on this host, for teh security review.",CheckFailedLogins,claude,T0344,CheckFailedLogins
+Verify whether port 3306 is reachable from here.,PortScan,claude,T0345,PortScan
+Stop connections originating from 203.0.113.7 using a firewall rule.,BlockIP,claude,T0346,BlockIP
+Print basic system facts for our VM.,GetSystemInfo,claude,T0347,GetSystemInfo
+Launch a remote terminal to the build runner.,SSHConnect,claude,T0348,SSHConnect
+Start an encrypted shell on the backup server.,SSHConnect,claude,T0349,SSHConnect
+Evaluate published vulnerabilities for Oracle WebLogic 12c.,CheckVulnerability,claude,T0350,CheckVulnerability
+Ban 198.51.100.9 at the host firewall.,BlockIP,claude,T0351,BlockIP
+Find remotely accessible ports on the QA server.,PortScan,claude,T0352,PortScan
+Any chance you can use SSH to reach the old Debian server.,SSHConnect,claude,T0353,SSHConnect
+Read the raw system logging feed.,ReadSyslog,claude,T0354,ReadSyslog
+Display local sshd login records from auth.log.,ReadAuthLog,claude,T0355,ReadAuthLog
+Inspect local listening TCP and UDP sockets.,ListeningPorts,claude,T0356,ListeningPorts
+Find failed sudo authentication attempts on this host.,CheckFailedLogins,claude,T0357,CheckFailedLogins
+See if someone has been brute-forcing local accounts.,CheckFailedLogins,claude,T0358,CheckFailedLogins
+"Verify teh app is listening locally on 9000, thanks.",ListeningPorts,claude,T0359,PortScan
+Find documented exploits affecting Apache httpd 2.4.49.,CheckVulnerability,claude,T0360,CheckVulnerability
+See what vulnerabilities affect PHP 7.4.,CheckVulnerability,claude,T0361,CheckVulnerability
+Show every process with its CPU footprint.,ListProcesses,claude,T0362,ListProcesses
+Use SSH to reach the old Debian server.,SSHConnect,claude,T0363,SSHConnect
+Retrieve system identity and boot age.,GetSystemInfo,claude,T0364,GetSystemInfo
+Inspect /var/log/auth.log on this computer.,ReadAuthLog,claude,T0365,ReadAuthLog
+Which remote addresses kept failing authentication?,CheckFailedLogins,claude,T0366,CheckFailedLogins
+Firewall off source 198.51.100.64.,BlockIP,claude,T0367,BlockIP
+Inspect active jobs before restarting anything.,ListProcesses,claude,T0368,GetSystemInfo
+Display the process table sorted by CPU.,ListProcesses,claude,T0369,ListProcesses
+Find failed login attempts on this machine.,CheckFailedLogins,claude,T0370,CheckFailedLogins
+Find which network services are running on the external endpoint.,NmapScan,claude,T0371,NmapScan
+List bound listening addresses and ports on the machine.,ListeningPorts,claude,T0372,ListeningPorts
+Any chance you can scan the training box for reachable ports.,PortScan,claude,T0373,PortScan
+Discover HTTP server type and SSH version in one remote survey.,NmapScan,claude,T0374,NmapScan
+Look for accidentally exposed high-numbered ports on the demo node.,PortScan,claude,T0375,PortScan
+Find the host's externally open port range.,PortScan,claude,T0376,PortScan
+Which tasks are consuming processor time?,ListProcesses,claude,T0377,PortScan
+Just inventory service banners on the vendor sandbox.,NmapScan,claude,T0378,NmapScan
+Provide hostname and elapsed time since boot.,GetSystemInfo,claude,T0379,GetSystemInfo
+Find reported RCE vulnerabilities in a named web server version.,CheckVulnerability,claude,T0380,CheckVulnerability
+Inventory names and versions of services on the test gateway.,NmapScan,claude,T0381,NmapScan
+Display authentication system messages in chronological order.,ReadAuthLog,claude,T0382,ReadAuthLog
+Test a remote node for listening TCP ports.,PortScan,claude,T0383,PortScan
+Just check if the partner sandbox has any unexpected ports open.,PortScan,claude,T0384,PortScan
+Read the authentication evidence directly from the log.,ReadAuthLog,claude,T0385,ReadAuthLog
+We should look for failed admin logins on the box.,CheckFailedLogins,claude,T0386,CheckFailedLogins
+Display messages from the general syslog source.,ReadSyslog,claude,T0387,ReadSyslog
+Probe 1 through 1024 on the lab server for open ports.,PortScan,claude,T0388,PortScan
+Dump the authentication log without filtering failures.,ReadAuthLog,claude,T0389,ReadAuthLog
+See whether this server runs Debian or Ubuntu.,GetSystemInfo,claude,T0390,GetSystemInfo
+"Block 203.0.113.45 at teh firewall, on this one.",BlockIP,claude,T0391,BlockIP
+Find unsuccessful SSH sign-ins during the maintenance window.,CheckFailedLogins,claude,T0392,CheckFailedLogins
+Log into the sandbox server with key authentication.,SSHConnect,claude,T0393,SSHConnect
+Look for bursts of rejected sign-ins on the server.,CheckFailedLogins,claude,T0394,CheckFailedLogins
+Inspect worker processes and their CPU usage.,ListProcesses,claude,T0395,ListProcesses
+Show the authentication log on this machine.,ReadAuthLog,claude,T0396,ReadAuthLog
+Identify the services and versions advertised by the public test host.,NmapScan,claude,T0397,NmapScan
+View normal system activity records in the log.,ReadSyslog,claude,T0398,ReadSyslog
+Make the firewall refuse 192.0.2.201.,BlockIP,claude,T0399,BlockIP
+Access the dedicated host as root via secure shell.,SSHConnect,claude,T0400,SSHConnect
+How old is this boot session.,GetSystemInfo,claude,T0401,GetSystemInfo
+Check whether Elasticsearch 7.10 is associated with CVEs.,CheckVulnerability,claude,T0402,CheckVulnerability
+Inspect the remote host's service banners.,NmapScan,claude,T0403,NmapScan
+"Identify teh services and versions advertised by the public test host, thanks.",NmapScan,claude,T0404,NmapScan
